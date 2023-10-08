@@ -8,6 +8,12 @@
 (function () {
 	'use strict';
 
+	// init tooltip
+	const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+	const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+
+
 	const loadJS = (src) => {
 		return new Promise((resolve, reject) => {
 			let head = document.querySelector('head');
