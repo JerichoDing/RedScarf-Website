@@ -1640,3 +1640,8 @@ section {
 	color: var(--bs-white);
 	text-decoration: none;
 }
+
+
+.about-bg{
+	background-image: url();
+}

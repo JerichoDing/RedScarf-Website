@@ -1,10 +1,4 @@
-/**
- * Template Name: Techie
- * Updated: Sep 18 2023 with Bootstrap v5.3.2
- * Template URL: https://bootstrapmade.com/techie-free-skin-bootstrap-3/
- * Author: BootstrapMade.com
- * License: https://bootstrapmade.com/license/
- */
+
 (function () {
 	'use strict';
 
@@ -12,8 +6,7 @@
 	const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 	const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
-
-
+	
 	const loadJS = (src) => {
 		return new Promise((resolve, reject) => {
 			let head = document.querySelector('head');
@@ -66,10 +59,16 @@
 		el.addEventListener('scroll', listener);
 	};
 
+	
+	let backtotop = select('.back-to-top');
+	let navbarlinks = select('#navbar .scrollto', true);
+	let preloader = select('#preloader');
+	let selectHeader = select('#header');
+
 	/**
 	 * Navbar links active state on scroll
 	 */
-	let navbarlinks = select('#navbar .scrollto', true);
+
 	const navbarlinksActive = () => {
 		let position = window.scrollY + 200;
 		navbarlinks.forEach((navbarlink) => {
@@ -110,7 +109,7 @@
 	/**
 	 * Toggle .header-scrolled class to #header when page is scrolled
 	 */
-	let selectHeader = select('#header');
+
 	if (selectHeader) {
 		const headerScrolled = () => {
 			if (window.scrollY > 100) {
@@ -126,7 +125,7 @@
 	/**
 	 * Back to top button
 	 */
-	let backtotop = select('.back-to-top');
+	
 	if (backtotop) {
 		const toggleBacktotop = () => {
 			if (window.scrollY > 100) {
@@ -170,7 +169,6 @@
 		'click',
 		'.scrollto',
 		function (e) {
-			console.log(121212,this.hash);
 			if (this.hash && select(this.hash)) {
 				e.preventDefault();
 
@@ -201,7 +199,7 @@
 	/**
 	 * Preloader
 	 */
-	let preloader = select('#preloader');
+
 	if (preloader) {
 		window.addEventListener('load', () => {
 			preloader.remove();
@@ -319,6 +317,9 @@
 		translatePage()
 		location.reload();
 	});
+
+
+	
 
 	/**
 	 * Initiate Pure Counter
