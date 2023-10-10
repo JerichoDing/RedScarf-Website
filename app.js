@@ -37,10 +37,13 @@ app.use(async(ctx, next) => {
 
 //接收处理所有消息
 app.use(reply());
+// 静态目录
 app.use(require('koa-static')(__dirname + '/public'))
+app.use(require('koa-static')(__dirname + '/pages'))
 
 // routes
 app.use(router.routes(), router.allowedMethods())
+
 
 router.get("/test", async (ctx) => {
       const testTemplate =  EndSkin.create(path.resolve(__dirname, "./public/oauth.html"));

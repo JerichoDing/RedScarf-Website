@@ -52,7 +52,6 @@ router.get("/getUserInfo", async(ctx, next) => {
     }
     let result = await wechatApi.getOauthAccessToken(code);
     let data = await wechatApi.getOauthUserinfo(result.access_token, result.openid);
-
     ctx.body = data;
 })
 

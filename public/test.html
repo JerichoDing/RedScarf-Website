@@ -14,10 +14,11 @@
 <body>
     <div>123</div>
     <script>
+        const domain = '${domain}'
         $(function() {
             let shareUrl = location.href.split('#')[0];
             $.ajax({
-                url: "https://eaa9-119-130-129-245.ngrok-free.app/jssdk",
+                url: `${domain}/jssdk`,
                 data: {
                     url: shareUrl
                 },
