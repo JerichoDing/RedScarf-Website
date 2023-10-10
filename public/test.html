@@ -7,14 +7,15 @@
     <title>Document</title>
     <script src="https://libs.cdnjs.net/zepto/1.2.0/zepto.min.js"></script>
     <script src="https://res2.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
-    <script src="./js/vconsole.min.js"></script>
+    <script src="/assets/vendor/vconsole.min.js"></script>
 	<script>var vConsole = new VConsole();</script>
 </head>
 
 <body>
     <div>123</div>
     <script>
-        const domain = '${domain}'
+        const domain = '{$domain}'
+        console.log(12121,domain);
         $(function() {
             let shareUrl = location.href.split('#')[0];
             $.ajax({

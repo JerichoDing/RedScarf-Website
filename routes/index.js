@@ -1,5 +1,6 @@
 const router = require('koa-router')()
-
+const EndSkin = require('endskin');
+const path = require('path');
 const menu = require("../wechat/menu")
 const sha1 = require("sha1")
 const { appID, appsecret, url } = require("../config/config").wechat;
@@ -54,5 +55,40 @@ router.get("/getUserInfo", async(ctx, next) => {
     let data = await wechatApi.getOauthUserinfo(result.access_token, result.openid);
     ctx.body = data;
 })
+
+router.get(`/`, async (ctx) => {
+    if(!ctx.query.signature){
+        const Template = EndSkin.create(
+            path.resolve(__dirname,`../pages/index.html`)
+        );
+        ctx.body = Template.html();
+    }
+   
+});
+// 前端路由
+const routers = ['','index','academic-appeals']
+routers.forEach(element => {
+    router.get(`/${element}`, async (ctx) => {
+        const Template = EndSkin.create(
+            path.resolve(__dirname,`../pages/${element}.html`)
+        );
+        ctx.body = Template.html();
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 module.exports = router

@@ -4,7 +4,25 @@
 const xml2js = require("xml2js");
 const template = require("../reply/template")
 const { writeFile, readFile } = require("fs")
+const fs = require("fs")
 const path = require("path")
+
+
+function getAllHtmlFiles(directoryPath) {
+    return new Promise((resolve,reject)=>{
+        fs.readdir(directoryPath, (err, files) => {
+            if (err) {
+                reject(err);
+            }
+            const htmlFiles = files.filter(file => path.extname(file) === '.html');
+            resolve(htmlFiles);
+          });
+    })
+   
+  }
+  
+ 
+
 
 // xml2js
 const parseXML = (xml) => {
@@ -98,6 +116,7 @@ const readFileAsync = (fileName) => {
     })
 }
 module.exports = {
+    getAllHtmlFiles,
     parseXML,
     formatMessage,
     tpl2xml,
