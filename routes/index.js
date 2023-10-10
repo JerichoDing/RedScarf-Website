@@ -14,9 +14,19 @@ router.get('/updateMenu', async (ctx, next) => {
 	let result = await wechatApi.createMenu(menu);
 	ctx.body = result;
 });
+// 测试JS-SDK使用权限签名算法
+router.get('/jssdk', async (ctx) => {
+	const testTemplate = EndSkin.create(
+		path.resolve(__dirname, '../public/test.html')
+	);
+	testTemplate.assign({
+		domain: url,
+	});
+	ctx.body = testTemplate.html();
+});
 
 //用于JS-SDK使用权限签名算法
-router.get('/jssdk', async (ctx, next) => {
+router.get('/jsapi', async (ctx, next) => {
 	/* JS-SDK使用权限(签名算法)
           签名生成规则如下：参与签名的字段包括noncestr（随机字符串）,
           有效的jsapi_ticket, timestamp（时间戳）, url（当前网页的URL，不包含#及其后面部分） 。
@@ -68,27 +78,25 @@ router.get('/getUserInfo', async (ctx, next) => {
 	ctx.body = data;
 });
 
-//TODO: 前端路由 
-const routers = ['', 'index', 'academic-appeals','404','portfolio-details'];
+//TODO: 核心渲染前端路由
+const routers = ['', 'index', 'academic-appeals', '404', 'portfolio-details'];
 routers.forEach((el) => {
 	router.get(`/${el}`, async (ctx) => {
 		// 微信的请求路由
-		if (ctx.query.signature) { return; }
+		if (ctx.query.signature) {
+			return;
+		}
 		const fileName = el === '' ? 'index' : el;
-        
-        EndSkin.setRoot(path.resolve(__dirname,'../pages/components/'))
+		EndSkin.setRoot(path.resolve(__dirname, '../pages/components/'));
 
 		const Template = EndSkin.create(
 			path.resolve(__dirname, `../pages/${fileName}.html`)
 		);
-        Template.assign({
-            // 传给html的变量
-        })
+		Template.assign({
+			// 传给html的变量
+		});
 		ctx.body = Template.html();
 	});
 });
-
-
-
 
 module.exports = router;
