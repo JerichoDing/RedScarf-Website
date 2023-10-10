@@ -49,19 +49,26 @@ app.use(require('koa-static')(__dirname + '/public'));
 // routes
 app.use(router.routes(), router.allowedMethods());
 
-
+app.use(async (ctx, next) => {
+    await next();
+    console.log(111,ctx.status);
+    if(parseInt(ctx.status) === 404 ){
+      ctx.response.redirect("/404")
+    }
+  })
 
 
 router.get('/test', async (ctx) => {
 	const testTemplate = EndSkin.create(
 		path.resolve(__dirname, './public/test.html')
 	);
-	console.log(1111, url);
 	testTemplate.assign({
 		domain: url,
 	});
 	ctx.body = testTemplate.html();
 });
+
+
 
 // error-handling
 app.on('error', (err, ctx) => {
