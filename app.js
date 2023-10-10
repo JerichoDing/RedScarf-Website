@@ -5,8 +5,8 @@ const json = require('koa-json');
 const onerror = require('koa-onerror');
 const bodyparser = require('koa-bodyparser');
 // const logger = require('koa-logger');
+var staticCache = require('koa-static-cache')
 const cors = require('koa2-cors');
-const EndSkin = require('endskin');
 const router = require('./routes/index');
 const reply = require('./reply');
 const { url } = require('./config/config').wechat;
@@ -37,6 +37,9 @@ app.use(json());
 //接收处理所有消息
 app.use(reply());
 // 静态目录
+app.use(staticCache(path.join(__dirname, 'public'), {
+    maxAge: 365 * 24 * 60 * 60
+  }))
 app.use(require('koa-static')(__dirname + '/public'));
 
 // routes
@@ -44,7 +47,6 @@ app.use(router.routes(), router.allowedMethods());
 
 app.use(async (ctx, next) => {
     await next();
-    console.log(111,ctx.status);
     if(parseInt(ctx.status) === 404 ){
       ctx.response.redirect("/404")
     }
