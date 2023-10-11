@@ -18,7 +18,12 @@ module.exports = () => {
 
 		let str = [token, timestamp, nonce].sort().join('');
 		const sha = sha1(str);
+		if(!signature){
+			await next();
+			return;
+		}
 		console.log('sha', sha, signature);
+		//如果是GET请求，说明是验证服务器有效性
 		if (ctx.method === 'GET' && sha === signature) {
 			//如果一样说明消息来自于微信服务器，返回echostr给微信服务器
 			ctx.body = echostr;

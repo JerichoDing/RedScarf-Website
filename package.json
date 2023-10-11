@@ -23,9 +23,11 @@
     "koa-static-cache": "^5.1.4",
     "koa-views": "^6.2.0",
     "koa2-cors": "^2.0.6",
+    "mysql2": "^3.6.1",
     "raw-body": "^2.4.1",
     "request": "^2.88.0",
     "request-promise": "^4.2.5",
+    "sequelize": "^6.33.0",
     "sha1": "^1.1.1",
     "xml2js": "^0.4.23"
   },
