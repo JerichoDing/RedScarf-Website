@@ -28,7 +28,7 @@ apiRouter.get('/addUser', async (ctx, next) => {
     return userHandler.createUser(ctx, user)
 })
 apiRouter.get('/deleteItem/:id', userHandler.deleteUser)
-apiRouter.get('/allUserInfo', userHandler.getInfo)
+apiRouter.get('/allUserInfo', userHandler.findAllUser)
 
 
 module.exports =  apiRouter

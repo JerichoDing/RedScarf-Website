@@ -29,23 +29,14 @@ async function deleteUser(ctx) {
 	ctx.body = data;
 }
 
-async function getInfo(ctx) {
+async function findAllUser(ctx) {
   const UserModel = USER(ctx.sequelize);
   const data = await UserModel.findAll()
-  // return new Promise((resolve, reject) => {
-  //   UserModel.findAll().then(res => {
-  //     resolve(res)
-  //   }).catch(err => {
-  //     reject(err)
-  //   })
-  // })
-
-	
 	ctx.body = data;
 }
 
 module.exports = {
 	createUser,
 	deleteUser,
-	getInfo,
+	findAllUser,
 };
