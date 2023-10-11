@@ -18,7 +18,7 @@ module.exports = () => {
 
 		let str = [token, timestamp, nonce].sort().join('');
 		const sha = sha1(str);
-		if(!signature){
+		if (!signature) {
 			await next();
 			return;
 		}
