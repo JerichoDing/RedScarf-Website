@@ -44,13 +44,13 @@
             }
 
             $("#oauth").on("click", function() {
-                location.href = "https://eaa9-119-130-129-245.ngrok-free.app/oauth";
+                location.href = "http://www.redscarfappeal.com/oauth";
             })
 
             var code = getQueryVariable("code");
             if (code) {
                 $.ajax({
-                    url: "https://eaa9-119-130-129-245.ngrok-free.app/getUserInfo",
+                    url: "http://www.redscarfappeal.com/getUserInfo",
                     data: {
                         code
                     },

@@ -15,7 +15,7 @@ module.exports = () => {
 	return async (ctx, next) => {
 		const { signature, timestamp, nonce, echostr } = ctx.query;
 		const token = config.wechat.token;
-
+		// 
 		let str = [token, timestamp, nonce].sort().join('');
 		const sha = sha1(str);
 		if (!signature) {

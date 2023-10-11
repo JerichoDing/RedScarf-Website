@@ -3,7 +3,7 @@ const EndSkin = require('endskin');
 const path = require('path');
 const menu = require('../wechat/menu');
 const sha1 = require('sha1');
-const { appID, appsecret, url } = require('../config/config').wechat;
+const { appid, appsecret, url } = require('../config/config').wechat;
 
 // 创建实例对象
 const Wechat = require('../wechat/wechat');
@@ -46,7 +46,7 @@ router.get('/jsapi', async (ctx, next) => {
 	const signature = sha1(str);
 
 	ctx.body = {
-		appId: appID,
+		appId: appid,
 		signature,
 		nonceStr,
 		timestamp,
@@ -57,9 +57,7 @@ router.get('/jsapi', async (ctx, next) => {
 router.get('/oauth', async (ctx, next) => {
 	let redirect_uri = `${url}/oauth.html`;
 	ctx.redirect(
-		`https://open.weixin.qq.com/connect/oauth2/authorize?appid=${appID}&redirect_uri=${encodeURIComponent(
-			redirect_uri
-		)}&response_type=code&scope=snsapi_userinfo&state=STATE&connect_redirect=1#wechat_redirect`
+		`https://open.weixin.qq.com/connect/oauth2/authorize?appid=${appid}&redirect_uri=${encodeURIComponent(redirect_uri)}&response_type=code&scope=snsapi_base&state=123&connect_redirect=1#wechat_redirect`
 	);
 });
 

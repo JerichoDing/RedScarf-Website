@@ -1,4 +1,4 @@
-const { appID, appsecret } = require('../config/config').wechat;
+const { appid, appsecret } = require('../config/config').wechat;
 const api = require('../config/api');
 const request = require('request-promise');
 const { writeFileAsync, readFileAsync } = require('../utils/tool');
@@ -22,7 +22,7 @@ class Wechat {
 	/**获取access_token */
 	async getAccessToken() {
 		try {
-			let url = `${api.access_token}?grant_type=client_credential&appid=${appID}&secret=${appsecret}`;
+			let url = `${api.access_token}?grant_type=client_credential&appid=${appid}&secret=${appsecret}`;
 			let result = await this.request({ url });
 			//设置过期时间
 			result.expires_in = Date.now() + (result.expires_in - 5 * 60) * 1000;
@@ -174,7 +174,7 @@ class Wechat {
 	/**通过code获取AccessToken（注意：这里是网页授权access_token，不是基础支持中的access_token）*/
 	async getOauthAccessToken(code) {
 		try {
-			let url = `${api.oauth_access_token}?appid=${appID}&secret=${appsecret}&code=${code}&grant_type=authorization_code`;
+			let url = `${api.oauth_access_token}?appid=${appid}&secret=${appsecret}&code=${code}&grant_type=authorization_code`;
 			let result = await this.request({ url });
 			return result;
 		} catch (error) {
