@@ -190,8 +190,7 @@ class Wechat {
 			let result = await this.request({ url });
 			return result;
 		} catch (error) {
-			console.log('获取用户信息失败！');
-			return error;
+			console.log('获取用户信息失败！'+JSON.stringify(error));
 		}
 	}
 }

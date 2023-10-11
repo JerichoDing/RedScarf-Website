@@ -1,16 +1,16 @@
-const { url } = require('../config/config').wechat;
+const { domain } = require('../config/config').wechat;
 
 module.exports = {
 	button: [
 		{
 			type: 'view',
 			name: '个人笔记',
-			url: `${url}`,
+			domain: `${domain}`,
 		},
 		{
 			type: 'view',
 			name: '语音识别',
-			url: 'http://caorui.wicp.vip',
+			domain: 'http://caorui.wicp.vip',
 		},
 		{
 			name: '戳我~',
@@ -18,7 +18,7 @@ module.exports = {
 				{
 					type: 'view',
 					name: '官网',
-					url: 'http://caorui.wicp.vip/',
+					domain: 'http://caorui.wicp.vip/',
 				},
 				{
 					type: 'click',

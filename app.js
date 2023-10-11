@@ -11,7 +11,7 @@ const cors = require('koa2-cors');
 const router = require('./routes/index');
 const apiRouter = require('./routes/api');
 const reply = require('./reply');
-const { url } = require('./config/config').wechat;
+
 
 
 
@@ -57,9 +57,10 @@ app.use(apiRouter.routes(), apiRouter.allowedMethods());
 
 app.use(async (ctx, next) => {
     await next();
-    if(parseInt(ctx.status) === 404 ){
-      ctx.response.redirect("/404")
-    }
+	// 请求的路由不存在，返回404
+    // if(parseInt(ctx.status) === 404 ){
+    //   ctx.response.redirect("/404")
+    // }
   })
 
 

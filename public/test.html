@@ -19,7 +19,7 @@
         $(function() {
             let shareUrl = location.href.split('#')[0];
             $.ajax({
-                url: `${domain}/jssdk`,
+                url: `${domain}/jsapi`,
                 data: {
                     url: shareUrl
                 },
@@ -37,6 +37,7 @@
                     });
 
                     wx.ready(function() {
+                        console.log('wx.ready success', data);
                         wx.updateAppMessageShareData({
                             title: '分享测试12dsd', // 分享标题
                             desc: '分享描述cgngn', // 分享描述
