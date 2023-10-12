@@ -1,13 +1,13 @@
-const apiRouter = require('koa-router')();
+const rooter = require('koa-router')();
 const userController = require('../controller/user.js');
 
-apiRouter.prefix('/api/user');
-apiRouter.get('/addUser', async (ctx, next) => {
+rooter.prefix('/api/user');
+rooter.get('/addUser', async (ctx, next) => {
 	const user = {
 		name: 'RedScarfAppeal',
 		openid: 'RedScarfAppeal',
 		phone: '9876543210',
-		password: 'pass321',
+		password: 'RedScarfAppeal',
 		createAt: '2023-10-09 09:12:34',
 		updateAt: '2023-10-09 09:12:34',
 		gender: 'Female',
@@ -24,20 +24,23 @@ apiRouter.get('/addUser', async (ctx, next) => {
 	};
 	return userController.createUser(ctx, user);
 });
-// apiRouter.get('/deleteItem/:id', userController.deleteUser)
-apiRouter.get('/findAllUser', async (ctx, next) => {
+// rooter.get('/deleteItem/:id', userController.deleteUser)
+rooter.get('/findAllUser', async (ctx, next) => {
 	return userController.findAllUser(ctx, { name: 'jericho' });
 });
-apiRouter.get('/updateUser', async (ctx, next) => {
+rooter.get('/updateUser', async (ctx, next) => {
 	return userController.updateUser(ctx, { id: 3 }, { name: 'Jericho4444' });
 });
 // 只匹配第一个满足条件的
-apiRouter.get('/login', async (ctx, next) => {
-	console.log(111122, ctx.query);
-	return userController.findUser(ctx, { name: 'jericho' });
-});
-apiRouter.get('/findUser', async (ctx, next) => {
+
+rooter.get('/findUser', async (ctx, next) => {
 	return userController.findUser(ctx, { name: 'jericho' });
 });
 
-module.exports = apiRouter;
+// 后台登录接口
+rooter.get('/login', async (ctx, next) => {
+	const {account, password, openid  } = ctx.query
+	return userController.findUser(ctx, {name:account, password, openid });
+});
+
+module.exports = rooter;

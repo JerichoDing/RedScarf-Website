@@ -7,13 +7,14 @@
 			content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
 		/>
 		<title>用户登录</title>
-		<link href="assets/img/favicon.ico" rel="icon" />
+		<link href="/assets/img/favicon.ico" rel="icon" />
 		<style>
 			* {
 				/* 初始化 */
 				margin: 0;
 				padding: 0;
 			}
+
 			body {
 				/* 100%窗口高度 */
 				height: 100vh;
@@ -28,16 +29,19 @@
 					rgba(116, 15, 214, 0.9) 100%
 				);
 			}
+
 			.login-box {
 				/* 相对定位 */
 				position: relative;
 				width: 320px;
 			}
+
 			.input-box {
 				/* 弹性布局 垂直排列 */
 				display: flex;
 				flex-direction: column;
 			}
+
 			.input-box input {
 				height: 40px;
 				border-radius: 3px;
@@ -47,9 +51,11 @@
 				border: none;
 				margin-bottom: 15px;
 			}
+
 			.input-box input:focus {
 				outline: 1px solid rgba(116, 15, 214, 0.7);
 			}
+
 			.input-box button {
 				border: none;
 				height: 45px;
@@ -58,12 +64,13 @@
 				border-radius: 3px;
 				cursor: pointer;
 			}
+
 			/* 接下来是猫头鹰的样式 */
 			.owl {
 				width: 211px;
 				height: 108px;
 				/* 背景图片 */
-				background: url('assets/img/owl-login.png') no-repeat;
+				background: url('/assets/img/owl-login.png') no-repeat;
 				/* 绝对定位 */
 				position: absolute;
 				top: -100px;
@@ -71,6 +78,7 @@
 				left: 50%;
 				transform: translateX(-50%);
 			}
+
 			.owl .hand {
 				width: 34px;
 				height: 34px;
@@ -85,15 +93,19 @@
 				/* 动画过渡 */
 				transition: 0.3s ease-out;
 			}
+
 			.owl .hand.hand-r {
 				left: 170px;
 			}
+
 			.owl.password .hand {
 				transform: translateX(42px) translateY(-15px) scale(0.7);
 			}
+
 			.owl.password .hand.hand-r {
 				transform: translateX(-42px) translateY(-15px) scale(0.7);
 			}
+
 			.owl .arms {
 				position: absolute;
 				top: 58px;
@@ -101,41 +113,32 @@
 				height: 41px;
 				overflow: hidden;
 			}
+
 			.owl .arms .arm {
 				width: 40px;
 				height: 65px;
 				position: absolute;
 				left: 20px;
 				top: 40px;
-				background: url('assets/img/owl-login-arm.png') no-repeat;
+				background: url('/assets/img/owl-login-arm.png') no-repeat;
 				transform: rotate(-20deg);
 				transition: 0.3s ease-out;
 			}
+
 			.owl .arms .arm.arm-r {
 				transform: rotate(20deg) scaleX(-1);
 				left: 158px;
 			}
+
 			.owl.password .arms .arm {
 				transform: translateY(-40px) translateX(40px);
 			}
+
 			.owl.password .arms .arm.arm-r {
 				transform: translateY(-40px) translateX(-40px) scaleX(-1);
 			}
 		</style>
-		<script src="assets/vendor/jquery-3.6.0.min.js"></script>
-		<script type="text/javascript">
-			$(function () {
-				$('#password')
-					.focus(function () {
-						// 密码框获得焦点，追加样式.password
-						$('#owl').addClass('password');
-					})
-					.blur(function () {
-						// 密码框失去焦点，移除样式.password
-						$('#owl').removeClass('password');
-					});
-			});
-		</script>
+		<script src="/assets/vendor/jquery-3.6.0.min.js"></script>
 	</head>
 
 	<body>
@@ -149,8 +152,8 @@
 				</div>
 			</div>
 			<div class="input-box">
-				<input type="text" placeholder="角色openId" id="openid"/>
-				<input type="text" placeholder="账号" id="account"/>
+				<input type="text" placeholder="角色openId" id="openid" />
+				<input type="text" placeholder="账号" id="account" />
 				<input type="password" placeholder="密码" id="password" />
 				<button onclick="login()">登录</button>
 			</div>
@@ -159,31 +162,49 @@
 </html>
 
 <script>
-   const login = function(){
-        const account = $('#account').val()
-        const password = $('#password').val()
-        const openid = $('#openid').val()
-        const domain = '{$domain}'
-        console.log('xxxxx',account,password, domain,openid)
-        $.ajax({
-            url: `${domain}/api/user/login`,
-            data: {
-                account,
-                openid,
-                password
-            },
-            success: function(data) {
-                console.log('data',data)
-                if(data.code == 200){
-                    alert('登录成功')
-                    // 跳转到后台查看页面
-                    location.href = domain
-                }else{
-                    alert('登录失败')
-                }
-            }
-        })
+	const login = function () {
+		const account = $('#account').val();
+		const password = $('#password').val();
+		const openid = $('#openid').val();
+		const domain = '{$domain}';
+		$.ajax({
+			url: `/api/user/login`,
+			data: {
+				account,
+				openid,
+				password,
+			},
+			success: function (data) {
+				console.log('data', data);
+				if (data.code === -1) {
+					alert(data.msg || '登录失败');
+				} else {
+					try {
+						const expires = new Date();
+					expires.setTime(expires.getTime() + 60 * 60 * 24 * 1000);
+					// 登录成功，保存cookie
+					document.cookie = `account=${account};expires=${expires}`;
+					document.cookie = `openid=${openid};expires=${expires}`;
+					document.cookie = `password=${password};expires=${expires}`;
+					// 跳转到后台查看页面
+					location.href = `/admin/users`;
+					} catch (error) {
+						alert(error.error || '程序异常');
+					}
+				}
+			},
+		});
+	};
 
-
-    }
+	$(function () {
+		$('#password')
+			.focus(function () {
+				// 密码框获得焦点，追加样式.password
+				$('#owl').addClass('password');
+			})
+			.blur(function () {
+				// 密码框失去焦点，移除样式.password
+				$('#owl').removeClass('password');
+			});
+	});
 </script>

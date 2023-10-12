@@ -91,7 +91,7 @@ router.get('/getUserInfo', async (ctx, next) => {
 });
 
 //TODO: 核心渲染前端路由
-const routers = ['', 'index', 'academic-appeals',  'portfolio-details','login'];
+const routers = ['', 'index', 'academic-appeals',  'portfolio-details','404'];
 routers.forEach((el) => {
 	router.get(`/${el}`, async (ctx) => {
 		// 微信的请求路由

@@ -5,16 +5,13 @@ const json = require('koa-json');
 const onerror = require('koa-onerror');
 const bodyparser = require('koa-bodyparser');
 // const logger = require('koa-logger');
-const middleConfig = require('./middlewares/index.js')
-var staticCache = require('koa-static-cache')
+const middleConfig = require('./middlewares/index.js');
+var staticCache = require('koa-static-cache');
 const cors = require('koa2-cors');
 const router = require('./routes/index');
 const apiRouter = require('./routes/api');
+const adminRouter = require('./routes/admin');
 const reply = require('./reply');
-
-
-
-
 
 // logger
 app.use(async (ctx, next) => {
@@ -29,7 +26,7 @@ onerror(app);
 // 跨域支持
 app.use(cors());
 
-app.use(middleConfig())
+app.use(middleConfig());
 // middlewares
 app.use(
 	bodyparser({
@@ -39,32 +36,30 @@ app.use(
 app.use(json());
 // app.use(logger());
 
-
-
 //接收处理所有消息
 app.use(reply());
 // 静态目录
 
+app.use(
+	staticCache(path.join(__dirname, 'public'), {
+		maxAge: 365 * 24 * 60 * 60,
+	})
+);
 
-app.use(staticCache(path.join(__dirname, 'public'), {
-    maxAge: 365 * 24 * 60 * 60
-  }))
-// app.use(require('koa-static')(__dirname + '/public'));
 
 // routes
 app.use(router.routes(), router.allowedMethods());
 app.use(apiRouter.routes(), apiRouter.allowedMethods());
+app.use(adminRouter.routes(), adminRouter.allowedMethods());
 
+// 404
 app.use(async (ctx, next) => {
-    await next();
+	await next();
 	// 请求的路由不存在，返回404
-    // if(parseInt(ctx.status) === 404 ){
-    //   ctx.response.redirect("/404")
-    // }
-  })
-
-
-
+	if (parseInt(ctx.status) === 404) {
+		ctx.response.redirect('/404');
+	}
+});
 
 // error-handling
 app.on('error', (err, ctx) => {
