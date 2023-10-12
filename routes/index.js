@@ -3,7 +3,7 @@ const EndSkin = require('endskin');
 const path = require('path');
 const menu = require('../wechat/menu');
 const sha1 = require('sha1');
-const { appid, appsecret, domain } = require('../config/config').wechat;
+const { appid, domain } = require('../config/config').wechat;
 
 // 创建实例对象
 const Wechat = require('../wechat/wechat');
@@ -55,14 +55,14 @@ router.get('/jsapi', async (ctx, next) => {
 
 //微信网页授权 获取用户信息
 router.get('/auth', async (ctx, next) => {
-	let redirect_uri = `${domain}/oauth.html`;
+	let redirect_uri = ctx.query.callbackUrl || domain``;
 	ctx.redirect(
 		`https://open.weixin.qq.com/connect/oauth2/authorize?appid=${appid}&redirect_uri=${encodeURIComponent(redirect_uri)}&response_type=code&scope=snsapi_userinfo&state=666&connect_redirect=1#wechat_redirect`
 	);
 });
 //微信网页授权 静默
 router.get('/oauth', async (ctx, next) => {
-	let redirect_uri = `${domain}/oauth.html`;
+	let redirect_uri = ctx.query.callbackUrl || domain``;
 	ctx.redirect(
 		`https://open.weixin.qq.com/connect/oauth2/authorize?appid=${appid}&redirect_uri=${encodeURIComponent(redirect_uri)}&response_type=code&scope=snsapi_base&state=7777&connect_redirect=1#wechat_redirect`
 	);
@@ -72,9 +72,7 @@ router.get('/oauth', async (ctx, next) => {
 router.get('/getUserInfo', async (ctx, next) => {
 	//获取code值
 	let { code, callbackUrl, isForce }  = ctx.query;
-	if(!callbackUrl){
-		callbackUrl = `${domain}/oauth`;
-	}
+	callbackUrl = decodeURIComponent(callbackUrl || domain);
 	const authType = isForce ? 'snsapi_userinfo' : 'snsapi_base';
 	if (!code) {
 		ctx.redirect(`${domain}/${authType}`);
@@ -93,7 +91,7 @@ router.get('/getUserInfo', async (ctx, next) => {
 });
 
 //TODO: 核心渲染前端路由
-const routers = ['', 'index', 'academic-appeals',  'portfolio-details'];
+const routers = ['', 'index', 'academic-appeals',  'portfolio-details','login'];
 routers.forEach((el) => {
 	router.get(`/${el}`, async (ctx) => {
 		// 微信的请求路由
@@ -108,6 +106,7 @@ routers.forEach((el) => {
 		);
 		Template.assign({
 			// 传给html的变量
+			domain: domain,
 		});
 		ctx.body = Template.html();
 	});

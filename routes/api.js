@@ -1,14 +1,11 @@
 const apiRouter = require('koa-router')();
+const userController = require('../controller/user.js');
 
-const userHandler = require('../controller/user.js')
-
-
-
-apiRouter.prefix('/api/user')
+apiRouter.prefix('/api/user');
 apiRouter.get('/addUser', async (ctx, next) => {
-    const user = {
-		name: 'jericho Smith',
-		openid: 'xyz789',
+	const user = {
+		name: 'RedScarfAppeal',
+		openid: 'RedScarfAppeal',
 		phone: '9876543210',
 		password: 'pass321',
 		createAt: '2023-10-09 09:12:34',
@@ -24,12 +21,23 @@ apiRouter.get('/addUser', async (ctx, next) => {
 		unionid: 'uvw123',
 		source: 'Mobile App',
 		sourcefrom: 'app.example.com',
-	}
-    return userHandler.createUser(ctx, user)
-})
-apiRouter.get('/deleteItem/:id', userHandler.deleteUser)
-apiRouter.get('/allUserInfo', userHandler.findAllUser)
+	};
+	return userController.createUser(ctx, user);
+});
+// apiRouter.get('/deleteItem/:id', userController.deleteUser)
+apiRouter.get('/findAllUser', async (ctx, next) => {
+	return userController.findAllUser(ctx, { name: 'jericho' });
+});
+apiRouter.get('/updateUser', async (ctx, next) => {
+	return userController.updateUser(ctx, { id: 3 }, { name: 'Jericho4444' });
+});
+// 只匹配第一个满足条件的
+apiRouter.get('/login', async (ctx, next) => {
+	console.log(111122, ctx.query);
+	return userController.findUser(ctx, { name: 'jericho' });
+});
+apiRouter.get('/findUser', async (ctx, next) => {
+	return userController.findUser(ctx, { name: 'jericho' });
+});
 
-
-module.exports =  apiRouter
-
+module.exports = apiRouter;

@@ -29,6 +29,7 @@
     "request-promise": "^4.2.5",
     "sequelize": "^6.33.0",
     "sha1": "^1.1.1",
+    "urijs": "^1.19.11",
     "xml2js": "^0.4.23"
   },
   "devDependencies": {
