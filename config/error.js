@@ -1,11 +1,13 @@
 module.exports = {
     SUCCESS: {
         code: 0,
-        msg: 'success'
+        toastMsg: 'success',
+        message: 'success' // 详细报错信息
     },
     FAIL: {
         code: -1,
-        msg: 'fail'
+        toastMsg: 'fail',
+        message: 'fail'
     },
     
 }

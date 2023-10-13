@@ -181,13 +181,13 @@
 				} else {
 					try {
 						const expires = new Date();
-					expires.setTime(expires.getTime() + 60 * 60 * 24 * 1000);
-					// 登录成功，保存cookie
-					document.cookie = `account=${account};expires=${expires}`;
-					document.cookie = `openid=${openid};expires=${expires}`;
-					document.cookie = `password=${password};expires=${expires}`;
-					// 跳转到后台查看页面
-					location.href = `/admin/users`;
+						expires.setTime(expires.getTime() + 60 * 60 * 24 * 1000);
+						// 登录成功，保存cookie
+						document.cookie = `account=${account};expires=${expires}`;
+						document.cookie = `openid=${openid};expires=${expires}`;
+						document.cookie = `password=${password};expires=${expires}`;
+						// 跳转到后台查看页面
+						location.href = `/admin/users`;
 					} catch (error) {
 						alert(error.error || '程序异常');
 					}

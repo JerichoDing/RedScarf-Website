@@ -113,6 +113,48 @@ const readFileAsync = (fileName) => {
 		});
 	});
 };
+
+
+
+/**
+ * 生成随机字符串
+ */
+const getUUID = (function () {
+	var i = 0, tailLength = 2;
+	var alphabet = "0123456789abcdefghijklmnopqrstuvwxyz";
+
+	var getTail = function () {
+		var s = (i++).toString(36);
+		if (i > Math.pow(16, tailLength))
+			i = 0;
+
+		return s.substring(s.length - tailLength);
+	};
+
+	return function (prefix, len) {
+		if (arguments.length < 2)
+			len = 10;
+		if (arguments.length < 1)
+			prefix = "";
+
+		var minLen = tailLength + 1;
+		if (len < minLen)
+			throw new Error("Length should not be little than " + minLen);
+		len -= tailLength;
+
+		var str = "";
+		while (len-- > 0) {
+			var index = Math.floor(Math.random() * alphabet.length);
+			str += alphabet.charAt(index);
+		}
+
+		return prefix + str + getTail();
+	};
+})();
+
+
+
+
 module.exports = {
 	getAllHtmlFiles,
 	parseXML,
@@ -120,4 +162,5 @@ module.exports = {
 	tpl2xml,
 	writeFileAsync,
 	readFileAsync,
+	getUUID,
 };

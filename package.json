@@ -9,6 +9,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "bowser": "^2.11.0",
+    "dayjs": "^1.11.10",
     "debug": "^4.1.1",
     "ejs": "3.1.9",
     "endskin": "^0.1.1",

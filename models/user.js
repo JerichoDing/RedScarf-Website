@@ -1,7 +1,6 @@
 const { Sequelize, DataTypes } = require('sequelize')
 
 const user = function (seq) {
-	console.log(seq);
     // 新建表user
     const UserModal = seq.define('User', {
       id: {
@@ -66,6 +65,7 @@ const user = function (seq) {
     }, {
       timestamps: false,
       freezeTableName: true,
+      autoIncrement: true,
     })
     return UserModal
 }

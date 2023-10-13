@@ -1,86 +1,75 @@
-const USER = require('../models/user');
+const USE_ACTION = require('./userAction');
 const STATUS = require('../config/error');
 
-async function createUser(ctx, user) {
-	const UserModel = USER(ctx.sequelize);
-	await UserModel.create(user)
-		.then((res) => {
-			console.log('创建', JSON.parse(JSON.stringify(res)));
-			ctx.body = {
-				...STATUS.SUCCESS,
-				data: res,
+async function createOneUser(ctx, user) {
+	if (!user.openid) {
+		return ctx.body = {
+			...STATUS.FAIL,
+			data: false,
+			msg: 'openid不能为空',
+		};
+	}
+	if (user.id) {
+		return ctx.body = {
+			...STATUS.FAIL,
+			data: false,
+			msg: 'id不能存在',
+		};
+	}
+	return USE_ACTION.createUser(ctx, user)
+		.catch((err) => {
+			 return ctx.body = {
+				...STATUS.FAIL,
+				data: false,
+				msg: '创建失败',
+				message: JSON.stringify(err),
 			};
 		})
-		.catch((err) => {
-			console.log(111, err.name);
+		.then((data) => {
+			 return ctx.body = {
+				...STATUS.SUCCESS,
+				data: data,
+				msg: '创建成功',
+			};
 		});
 }
+// 删除单个用户
 async function deleteUser(ctx) {
-	const UserModel = USER(ctx.sequelize);
-	const id = ctx.params.id;
-	await UserModel.destroy({
-		where: { id: id },
-	});
-	ctx.body = {
-		...STATUS.SUCCESS,
-		data: null,
-	};
+	const data = await USE_ACTION.deleteUser(ctx);
+	return ctx.body = data;
 }
+
 // 更新单个用户信息
 async function updateUser(ctx, inquire = {}, target = {}) {
-	//  查询 example:
-	//  await UserModel.update( { name: "Jericho" }, {  where: { id: 3 } });
-	const UserModel = USER(ctx.sequelize);
 	// 判断是否存在该用户
-	const user = await UserModel.findOne({ where: inquire });
+	const user = await USE_ACTION.findOneUser(ctx, { where: inquire });
 	if (user && user.id) {
-		await UserModel.update(target, { where: inquire });
-		ctx.body = {
-			...STATUS.SUCCESS,
-			msg: '更新成功',
-			data: null,
-		};
+		const data = USE_ACTION.updateUser(ctx, target, { where: inquire });
+		return ctx.body = data;
 	} else {
-		ctx.body = {
+		return ctx.body = {
 			...STATUS.FAIL,
-			data: null,
+			data: false,
 			msg: '用户不存在',
 		};
 	}
 }
-// 查询所有用户信息
-async function findAllUser(ctx, inquire = {}) {
-	const UserModel = USER(ctx.sequelize);
-	const data = await UserModel.findAll({
-		where: inquire,
-	});
-	ctx.body = {
-		...STATUS.SUCCESS,
-		data,
-	};
+
+// 查询所有用户信息, 分页由调用者处理
+async function findAllUsers(ctx) {
+	const data = await USE_ACTION.findAllUsers(ctx);
+	return ctx.body = data;
 }
 // 查询单个用户信息
-async function findUser(ctx, inquire = {}) {
-	const UserModel = USER(ctx.sequelize);
-	const data = await UserModel.findOne({ where: inquire });
-	if (data && data.id) {
-		ctx.body = {
-			...STATUS.SUCCESS,
-			data,
-		};
-	}else{
-		ctx.body = {
-			...STATUS.FAIL,
-			data:null,
-			msg:'用户不存在'
-		};
-	}
+async function findOneUser(ctx, inquire = {}) {
+	const data = await USE_ACTION.findOneUser(ctx, { where: inquire });
+	return ctx.body = data;
 }
 
 module.exports = {
-	createUser,
+	createOneUser,
 	deleteUser,
 	updateUser,
-	findAllUser,
-	findUser,
+	findAllUsers,
+	findOneUser,
 };

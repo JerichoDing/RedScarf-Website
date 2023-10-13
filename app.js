@@ -56,9 +56,9 @@ app.use(adminRouter.routes(), adminRouter.allowedMethods());
 app.use(async (ctx, next) => {
 	await next();
 	// 请求的路由不存在，返回404
-	if (parseInt(ctx.status) === 404) {
-		ctx.response.redirect('/404');
-	}
+	// if (parseInt(ctx.status) === 404) {
+	// 	ctx.response.redirect('/404');
+	// }
 });
 
 // error-handling
