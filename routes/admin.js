@@ -1,6 +1,6 @@
 const rooter = require('koa-router')();
 const userController = require('../controller/user.js');
-const USE_ACTION = require('../controller/userAction.js');
+const USER_ACTION = require('../controller/userAction.js');
 const EndSkin = require('endskin');
 const path = require('path');
 const { domain } = require('../config/config').wechat;
@@ -12,7 +12,7 @@ rooter.get('/users', async (ctx, next) => {
 	const template = EndSkin.create(
 		path.resolve(__dirname, '../pages/admin/users.html')
 	);
-	const { data } = await USE_ACTION.findAllUsers(ctx);
+	const { data } = await USER_ACTION.findAllUsers(ctx);
 	template.assign({ domain, list: JSON.stringify(data)} );
 	ctx.body = template.html();
 });

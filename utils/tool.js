@@ -6,6 +6,9 @@ const template = require('../reply/template');
 const { writeFile, readFile } = require('fs');
 const fs = require('fs');
 const path = require('path');
+const CryptoJS =  require('crypto-js')
+
+const { secretKey } = require('../config/config').security;
 
 function getAllHtmlFiles(directoryPath) {
 	return new Promise((resolve, reject) => {
@@ -154,6 +157,23 @@ const getUUID = (function () {
 
 
 
+/**
+ * 加密函数，加密同一个字符串生成的都不相同
+ * @param {*} str 
+ */
+ function encrypt(str) {
+    return CryptoJS.AES.encrypt(JSON.stringify(str), secretKey).toString();
+}
+
+/**
+ * 解密函数
+ * @param {*} str 
+ */
+ function decrypt(str) {
+    const bytes = CryptoJS.AES.decrypt(str, secretKey);
+    return JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
+}
+
 
 module.exports = {
 	getAllHtmlFiles,
@@ -163,4 +183,6 @@ module.exports = {
 	writeFileAsync,
 	readFileAsync,
 	getUUID,
+	encrypt,
+	decrypt,
 };

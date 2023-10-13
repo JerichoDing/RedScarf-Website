@@ -99,6 +99,7 @@ async function findAllUsers(ctx) {
 			'id',
 			'name',
 			'openid',
+			'unionid',
 			'phone',
 			'createAt',
 			'updateAt',

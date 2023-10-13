@@ -10,7 +10,6 @@ rooter.prefix('/api/user');
 rooter.get('/addUser', async (ctx, next) => {
 	const BrowserInfo = Browser.parse(ctx.headers['user-agent']);
 	const { browser, os, platform }  = BrowserInfo;
-	console.log('browser Info____'+ JSON.stringify(BrowserInfo));
 	const {  name, openid, phone , password, email, unionid, avatar, description} = ctx.query;
 	const user = {
 		name: name || tool.getUUID(`uid_${platform.type}_${os.name}_${browser.name}_`, 6),
@@ -21,7 +20,7 @@ rooter.get('/addUser', async (ctx, next) => {
 		avatar: avatar || '',
 		role: userTools.getRole(),
 		description:description || '',
-		unionid: unionid || '',
+		unionid: unionid || userTools.getUserDeviceInfo(ctx),
 		source: userTools.getSource(ctx),
 		sourcefrom: userTools.getSourceFrom(ctx),
 	}
@@ -29,21 +28,21 @@ rooter.get('/addUser', async (ctx, next) => {
 });
 // rooter.get('/deleteItem/:id', userController.deleteUser)
 rooter.get('/findAllUser', async (ctx, next) => {
-	return userController.findAllUser(ctx);
+	return userController.findAllUsers(ctx);
 });
+// TODO:
 rooter.get('/updateUser', async (ctx, next) => {
 	return userController.updateUser(ctx, { id: 3 }, { name: 'Jericho4444' });
 });
-// 只匹配第一个满足条件的
+//TODO: 只匹配第一个满足条件的 
 rooter.get('/findUser', async (ctx, next) => {
-	return userController.findUser(ctx, { name: 'jericho' });
+	return userController.findOneUser(ctx, { name: 'jericho' });
 });
 
 // 后台登录接口
 rooter.get('/login', async (ctx, next) => {
 	const {account, password, openid  } = ctx.query
-	console.log(12222,ctx.query);
-	return userController.findUser(ctx, {name:account, password, openid });
+	return userController.findOneUser(ctx, {name:account, password, openid });
 });
 
 

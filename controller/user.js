@@ -1,4 +1,4 @@
-const USE_ACTION = require('./userAction');
+const USER_ACTION = require('./userAction');
 const STATUS = require('../config/error');
 
 async function createOneUser(ctx, user) {
@@ -16,7 +16,7 @@ async function createOneUser(ctx, user) {
 			msg: 'id不能存在',
 		};
 	}
-	return USE_ACTION.createUser(ctx, user)
+	return USER_ACTION.createUser(ctx, user)
 		.catch((err) => {
 			 return ctx.body = {
 				...STATUS.FAIL,
@@ -35,16 +35,17 @@ async function createOneUser(ctx, user) {
 }
 // 删除单个用户
 async function deleteUser(ctx) {
-	const data = await USE_ACTION.deleteUser(ctx);
+	const data = await USER_ACTION.deleteUser(ctx);
 	return ctx.body = data;
 }
 
-// 更新单个用户信息
+// 更新单个用户信息, 
+// TODO: 不存在则创建
 async function updateUser(ctx, inquire = {}, target = {}) {
 	// 判断是否存在该用户
-	const user = await USE_ACTION.findOneUser(ctx, { where: inquire });
+	const user = await USER_ACTION.findOneUser(ctx, { where: inquire });
 	if (user && user.id) {
-		const data = USE_ACTION.updateUser(ctx, target, { where: inquire });
+		const data = USER_ACTION.updateUser(ctx, target, { where: inquire });
 		return ctx.body = data;
 	} else {
 		return ctx.body = {
@@ -57,12 +58,12 @@ async function updateUser(ctx, inquire = {}, target = {}) {
 
 // 查询所有用户信息, 分页由调用者处理
 async function findAllUsers(ctx) {
-	const data = await USE_ACTION.findAllUsers(ctx);
+	const data = await USER_ACTION.findAllUsers(ctx);
 	return ctx.body = data;
 }
 // 查询单个用户信息
 async function findOneUser(ctx, inquire = {}) {
-	const data = await USE_ACTION.findOneUser(ctx, { where: inquire });
+	const data = await USER_ACTION.findOneUser(ctx, { where: inquire });
 	return ctx.body = data;
 }
 
