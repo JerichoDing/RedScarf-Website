@@ -12,8 +12,8 @@ rooter.get('/users', async (ctx, next) => {
 	const template = EndSkin.create(
 		path.resolve(__dirname, '../pages/admin/users.html')
 	);
-	const list = await USE_ACTION.findAllUsers(ctx);
-	template.assign({ domain, list: JSON.stringify(list)} );
+	const { data } = await USE_ACTION.findAllUsers(ctx);
+	template.assign({ domain, list: JSON.stringify(data)} );
 	ctx.body = template.html();
 });
 rooter.get('/login', async (ctx, next) => {
