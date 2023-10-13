@@ -1,22 +1,42 @@
 const USER_ACTION = require('./userAction');
 const STATUS = require('../config/error');
+const UserTools = require('../utils/user-tools')
+const tool = require('../utils/tool.js');
+const Browser = require('bowser');
 
-async function createOneUser(ctx, user) {
-	if (!user.openid) {
-		return ctx.body = {
-			...STATUS.FAIL,
-			data: false,
-			msg: 'openid不能为空',
-		};
+
+async function createOneUser(ctx, user = {}) {
+	const BrowserInfo = Browser.parse(ctx.headers['user-agent']);
+	const { browser, os, platform }  = BrowserInfo;
+	let params = {
+		...ctx.query,
+		...user
 	}
-	if (user.id) {
+	const {  name, openid, phone , password, email, unionid, avatar, description} = params;
+	const newUser = {
+		name: name || tool.getUUID(`uid_${platform.type}_${os.name}_${browser.name}_`, 6),
+		openid: openid || tool.getUUID(`openid_`,16),// 生成唯一的openid
+		phone: phone || '',
+		password: password || '',
+		email: email || '',
+		avatar: avatar || '',
+		role: UserTools.getRole(),
+		description:description || '',
+		unionid: unionid || UserTools.getUserDeviceInfo(ctx),
+		source: UserTools.getSource(ctx),
+		sourcefrom: UserTools.getSourceFrom(ctx),
+	}
+
+	if (newUser.id) {
 		return ctx.body = {
 			...STATUS.FAIL,
 			data: false,
 			msg: 'id不能存在',
 		};
 	}
-	return USER_ACTION.createUser(ctx, user)
+
+
+	return USER_ACTION.createUser(ctx, newUser)
 		.catch((err) => {
 			 return ctx.body = {
 				...STATUS.FAIL,

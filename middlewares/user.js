@@ -1,5 +1,5 @@
 const USER_ACTION = require('../controller/userAction');
-const UserTools = require('../utils/userTools');
+const UserTools = require('../utils/user-tools');
 module.exports = () => {
 	// 以ip + ua信息 自动创建新用户
 	// 并种下该用户的唯一cookie 在后续不再创建该用户

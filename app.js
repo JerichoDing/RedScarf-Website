@@ -14,8 +14,6 @@ const apiRouter = require('./routes/api');
 const adminRouter = require('./routes/admin');
 const reply = require('./reply');
 
-const userTools = require('./utils/userTools.js')
-
 // logger
 app.use(async (ctx, next) => {
 	const start = new Date();

@@ -1,30 +1,14 @@
 const rooter = require('koa-router')();
-const Browser = require('bowser');
+
 
 
 const userController = require('../controller/user.js');
-const tool = require('../utils/tool.js');
-const userTools = require('../utils/userTools.js');
-const user = require("../models/user.js");
+
+
 rooter.prefix('/api/user');
 rooter.get('/addUser', async (ctx, next) => {
-	const BrowserInfo = Browser.parse(ctx.headers['user-agent']);
-	const { browser, os, platform }  = BrowserInfo;
-	const {  name, openid, phone , password, email, unionid, avatar, description} = ctx.query;
-	const user = {
-		name: name || tool.getUUID(`uid_${platform.type}_${os.name}_${browser.name}_`, 6),
-		openid: openid || tool.getUUID(`openid_`,16),// 生成唯一的openid
-		phone: phone|| '',
-		password: password || '',
-		email: email || '',
-		avatar: avatar || '',
-		role: userTools.getRole(),
-		description:description || '',
-		unionid: unionid || userTools.getUserDeviceInfo(ctx),
-		source: userTools.getSource(ctx),
-		sourcefrom: userTools.getSourceFrom(ctx),
-	}
-	return userController.createOneUser(ctx, user);
+
+	return userController.createOneUser(ctx);
 });
 // rooter.get('/deleteItem/:id', userController.deleteUser)
 rooter.get('/findAllUser', async (ctx, next) => {

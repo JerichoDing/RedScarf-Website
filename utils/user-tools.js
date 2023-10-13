@@ -1,7 +1,7 @@
 const Browser = require('bowser');
 const TOOL = require('./tool');
 
-const userTools = {
+const UserTools = {
 	getRole(role) {
 		const roles = ['admin', 'tourist', 'parent', 'student'];
 		return roles.includes(role) ? role : 'tourist';
@@ -29,17 +29,17 @@ const userTools = {
 	},
 	getUserDeviceInfo(ctx) {
 		const uniqueName =
-			userTools.getSourceFrom(ctx) +
+			UserTools.getSourceFrom(ctx) +
 			'_RedScarfAppeal_' +
-			userTools.getClientIP(ctx);
+			UserTools.getClientIP(ctx);
 		return uniqueName;
 	},
 	getEncryptOpenId(ctx) {
-		return TOOL.encrypt(userTools.getUserDeviceInfo(ctx));
+		return TOOL.encrypt(UserTools.getUserDeviceInfo(ctx));
 	},
 	getDecryptOpenId(str) {
 		return TOOL.decrypt(str);
 	},
 };
 
-module.exports = userTools;
+module.exports = UserTools;
