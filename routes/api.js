@@ -10,8 +10,8 @@ rooter.prefix('/api/user');
 rooter.get('/addUser', async (ctx, next) => {
 	const BrowserInfo = Browser.parse(ctx.headers['user-agent']);
 	const { browser, os, platform }  = BrowserInfo;
-	console.log('BrowserInfo----'+ JSON.stringify(BrowserInfo));
-	const { name, openid, phone , password, email, unionid, avatar, description} = ctx.query;
+	console.log('browser Info____'+ JSON.stringify(BrowserInfo));
+	const {  name, openid, phone , password, email, unionid, avatar, description} = ctx.query;
 	const user = {
 		name: name || tool.getUUID(`uid_${platform.type}_${os.name}_${browser.name}_`, 6),
 		openid: openid || tool.getUUID(`openid_`,16),// 生成唯一的openid
