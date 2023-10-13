@@ -57,14 +57,14 @@ router.get('/jsapi', async (ctx, next) => {
 router.get('/auth', async (ctx, next) => {
 	let redirect_uri = ctx.query.callbackUrl || domain``;
 	ctx.redirect(
-		`https://open.weixin.qq.com/connect/oauth2/authorize?appid=${appid}&redirect_uri=${encodeURIComponent(redirect_uri)}&response_type=code&scope=snsapi_userinfo&state=666&connect_redirect=1#wechat_redirect`
+		`https://open.weixin.qq.com/connect/oauth2/authorize?appid=${appid}&redirect_uri=${encodeURIComponent(redirect_uri)}&response_type=code&scope=snsapi_userinfo&state=STATE&connect_redirect=1#wechat_redirect`
 	);
 });
 //微信网页授权 静默
 router.get('/oauth', async (ctx, next) => {
 	let redirect_uri = ctx.query.callbackUrl || domain``;
 	ctx.redirect(
-		`https://open.weixin.qq.com/connect/oauth2/authorize?appid=${appid}&redirect_uri=${encodeURIComponent(redirect_uri)}&response_type=code&scope=snsapi_base&state=7777&connect_redirect=1#wechat_redirect`
+		`https://open.weixin.qq.com/connect/oauth2/authorize?appid=${appid}&redirect_uri=${encodeURIComponent(redirect_uri)}&response_type=code&scope=snsapi_base&state=STATE&connect_redirect=1#wechat_redirect`
 	);
 });
 
