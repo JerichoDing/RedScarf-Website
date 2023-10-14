@@ -173,7 +173,17 @@ const getUUID = (function () {
     const bytes = CryptoJS.AES.decrypt(str, secretKey);
     return JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
 }
+function isWxBrowser(ctx) {
+    return testUA(ctx, 'micromessenger');
+  }
 
+function testUA(ctx, str) {
+    const ua = ctx.headers && ctx.headers['user-agent'] ? ctx.headers['user-agent'].toLowerCase() : '';
+    if (!str || typeof str !== 'string') throw new Error('请输入字符');
+    let reg = new RegExp(str, 'gi');
+    const res = reg.test(ua) // 必须要求这种写法  不可以直接返回 reg.test(ua) 
+    return res;
+  }
 
 module.exports = {
 	getAllHtmlFiles,
@@ -185,4 +195,6 @@ module.exports = {
 	getUUID,
 	encrypt,
 	decrypt,
+	isWxBrowser,
+	testUA,
 };

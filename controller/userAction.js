@@ -129,22 +129,23 @@ async function findAllUsers(ctx) {
 // 查询单个用户信息  登录的时候可以用到
 async function findOneUser(ctx, inquire = {}) {
 	const UserModel = USER(ctx.sequelize);
-	return UserModel.findOne({ where: inquire })
-		.then((res) => {
-			return {
-				...STATUS.SUCCESS,
-				data: res,
-				toastMsg: '查询成功',
-			};
-		})
-		.catch((err) => {
-			return {
-				...STATUS.FAIL,
-				data: false,
-				toastMsg: '查询失败',
-				message: JSON.stringify(err),
-			};
-		});
+	try {
+		const data = await UserModel.findOne({ where: inquire })
+		return {
+			...STATUS.SUCCESS,
+			data,
+			toastMsg: '查询成功',
+		};
+	} catch (error) {
+		return {
+			...STATUS.FAIL,
+			data: false,
+			toastMsg: '查询失败',
+			message: JSON.stringify(error),
+		};
+	}
+	return 
+	
 }
 
 module.exports = {

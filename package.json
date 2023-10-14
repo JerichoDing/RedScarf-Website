@@ -26,6 +26,7 @@
     "koa-static-cache": "^5.1.4",
     "koa-views": "^6.2.0",
     "koa2-cors": "^2.0.6",
+    "md5": "^2.3.0",
     "mysql2": "^3.6.1",
     "raw-body": "^2.4.1",
     "request": "^2.88.0",

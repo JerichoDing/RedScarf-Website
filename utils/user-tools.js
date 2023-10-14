@@ -1,4 +1,5 @@
 const Browser = require('bowser');
+const md5 = require('md5');
 const TOOL = require('./tool');
 
 const UserTools = {
@@ -29,10 +30,10 @@ const UserTools = {
 	},
 	getUserDeviceInfo(ctx) {
 		const uniqueName =
-			UserTools.getSourceFrom(ctx) +
+		  ctx.headers['user-agent'] +
 			'_RedScarfAppeal_' +
 			UserTools.getClientIP(ctx);
-		return uniqueName;
+		return md5(uniqueName);
 	},
 	getEncryptOpenId(ctx) {
 		return TOOL.encrypt(UserTools.getUserDeviceInfo(ctx));
@@ -40,6 +41,20 @@ const UserTools = {
 	getDecryptOpenId(str) {
 		return TOOL.decrypt(str);
 	},
+	setCookie(ctx, key, val, extra){
+		// 用户有关的cookie有效期30天
+		const expires = new Date();
+		expires.setTime(expires.getTime() + 60 * 60 * 24 * 1000 * 30);
+		ctx.cookies.set(key, val, {
+			expires, // cookie失效时间
+			httpOnly: false, // 是否只用于http请求中获取
+			overwrite: false, // 是否允许重写
+			...extra
+		});
+	},
+	getCookie(ctx, key){
+		return ctx.cookies.get(key)
+	}
 };
 
 module.exports = UserTools;
