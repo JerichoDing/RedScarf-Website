@@ -74,17 +74,9 @@ router.get('/getUserInfo', async (ctx, next) => {
 	console.log('授权参数', domain ,JSON.stringify(ctx.query), authUrl, code);
 	if (!code) {
 		ctx.redirect(`${authUrl}`);
-		return;
+		
 	}
-	let result = await wechatApi.getOauthAccessToken(code);
-	let data = await wechatApi.getOauthUserinfo(
-		result.access_token,
-		result.openid
-	);
-	const { openid, nickname, headimgurl } = data;
-	// 保存用户信息
-	console.log('保存用户信息' + JSON.stringify(data));
-	ctx.redirect(`${backurl}`);
+
 });
 
 //TODO: 核心渲染前端路由
