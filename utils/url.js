@@ -4,7 +4,7 @@
 
 /**
  * @see http://medialize.github.io/URI.js/docs.html
- * @file 基于urijs封装的zktURI接口，最底层的基础工具函数,后期可封装基于原生URL及URLSearchParams方法
+ * @file 基于urijs封装的fancyURI接口，最底层的基础工具函数,后期可封装基于原生URL及URLSearchParams方法
  *               origin
        __________|__________
       /                     \
@@ -29,19 +29,17 @@
 
 const URI = require('urijs');
 
-/**
- * @exports zkt.uri
- */
-const zktURI = {
+
+const fancyURI = {
 	getUrl(url) {
-		return url || window.location.href;
+		return url;
 	},
 	uri(url) {
-		const _url = zktURI.getUrl(url);
+		const _url = fancyURI.getUrl(url);
 		return new URI(_url);
 	},
 	callURIFunc(url, methodName, ...args) {
-		let uri = zktURI.uri(url);
+		let uri = fancyURI.uri(url);
 		const result = uri[methodName](...args);
 		uri = null;
 		return result;
@@ -50,8 +48,8 @@ const zktURI = {
 		return URI[methodName](...args);
 	},
 	search(key, url) {
-		const searchs = zktURI.callURIFunc(url, 'search', true);
-		// const uri = zktURI.uri(url);
+		const searchs = fancyURI.callURIFunc(url, 'search', true);
+		// const uri = fancyURI.uri(url);
 		// const searchs = uri.search(key);
 		if (key) {
 			return searchs[key];
@@ -73,29 +71,29 @@ const zktURI = {
 			_url = value;
 			_value = undefined;
 		}
-		const result = zktURI.callURIFunc(_url, 'addSearch', key, _value);
+		const result = fancyURI.callURIFunc(_url, 'addSearch', key, _value);
 		return result;
 	},
 	removeSearch(key, url) {
-		const result = zktURI.callURIFunc(url, 'removeSearch', key);
-		// let uri = zktURI.uri(url);
+		const result = fancyURI.callURIFunc(url, 'removeSearch', key);
+		// let uri = fancyURI.uri(url);
 		// uri.removeSearch(key);
 		// const result = uri.toString();
 		// uri = null;
 		return result;
 	},
 	directory(url) {
-		const result = zktURI.callURIFunc(url, 'directory');
-		// const uri = zktURI.uri(url);
+		const result = fancyURI.callURIFunc(url, 'directory');
+		// const uri = fancyURI.uri(url);
 		// return uri.directory();
 		return result;
 	},
 	pathWithRiskControl(url) {
-		const result = zktURI.callURIFunc(url, 'pathname');
+		const result = fancyURI.callURIFunc(url, 'pathname');
 		return result;
 	},
 	path(url) {
-		let uri = zktURI.uri(url);
+		let uri = fancyURI.uri(url);
 		const filename = uri.filename();
 		let result = '';
 		if (filename.startsWith('appid_')) {
@@ -107,12 +105,12 @@ const zktURI = {
 		return result;
 	},
 	projectPath(url) {
-		const result = zktURI.callURIFunc(url, 'segment', 0);
+		const result = fancyURI.callURIFunc(url, 'segment', 0);
 		return result;
 	},
 	parse(url) {
-		const _url = zktURI.getUrl(url);
-		const result = zktURI.callURIStaticFunc('parse', _url);
+		const _url = fancyURI.getUrl(url);
+		const result = fancyURI.callURIStaticFunc('parse', _url);
 		return result;
 	},
 	/**
@@ -121,8 +119,8 @@ const zktURI = {
 	 * @param origin  目标域名
 	 * @returns 返回替换后的url
 	 */
-	replaceOrigin(originalUrl = location.href, origin = window.location.origin) {
-		return zktURI.callURIFunc(originalUrl, 'origin', origin).toString();
+	replaceOrigin(originalUrl, origin) {
+		return fancyURI.callURIFunc(originalUrl, 'origin', origin).toString();
 	},
 	/**
 	 * 替换pathname
@@ -130,9 +128,9 @@ const zktURI = {
 	 * @param origin  目标pathname
 	 * @returns 返回替换后的url
 	 */
-	replaceRouter(originalUrl = location.href, origin = zktURI.path()) {
-		return zktURI.callURIFunc(originalUrl, 'pathname', origin).toString();
+	replaceRouter(originalUrl, origin = fancyURI.path()) {
+		return fancyURI.callURIFunc(originalUrl, 'pathname', origin).toString();
 	},
 };
 
-module.exports = zktURI();
+module.exports = fancyURI;

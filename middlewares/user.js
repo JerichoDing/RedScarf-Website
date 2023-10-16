@@ -1,6 +1,7 @@
 const USER_ACTION = require('../controller/userAction');
 const UserTools = require('../utils/user-tools');
 const Tool = require('../utils/tool');
+const fancyURI = require('../utils/url');
 
 const Wechat = require('../wechat/wechat');
 const wechatApi = new Wechat();
@@ -9,7 +10,7 @@ const { domain } = require('../config/config').wechat;
 
 // 创建用户并种cookie
 const createUserAndSetCookie = async (ctx, user) => {
-	await USER_ACTION.createUser(ctx, { unionid: user.unionid });
+	await USER_ACTION.createUser(ctx, user);
 	console.log('用户创建成功', user);
 	UserTools.setCookie(ctx, 'uuid', user.unionid);
 	console.log('set cookie -->', user.unionid);
@@ -47,17 +48,16 @@ module.exports = async (ctx, next) => {
 					result.access_token,
 					result.openid
 				);
-				const { openid, nickname, headimgurl } = data;
 				// 保存用户信息
 				console.log('微信用户信息' + JSON.stringify(data), callbackUrl);
 				// 创建微信用户
 				await createUserAndSetCookie(ctx, {
-					openid: openid,
-					unionid,
-					name: nickname,
-					avatar: headimgurl,
+					openid: data.openid,
+					unionid:data.unionid,
+					name: data.nickname,
+					avatar: data.headimgurl,
 				});
-				// ctx.redirect(`${callbackUrl}`);
+				ctx.redirect(`${fancyURI.removeSearch('code', callbackUrl)}`);
 				return next();
 			} catch (error) {}
 		} else {
@@ -67,8 +67,10 @@ module.exports = async (ctx, next) => {
 	}
 	// 判断该用户是否在数据库中
 	const isUserExist = await checkUserByCookieId(ctx, unionid);
-	if (isUserExist) { return next(); }
-	
+	if (isUserExist) {
+		return next();
+	}
+
 	// 创建非微信用户
 	await createUserAndSetCookie(ctx, { unionid });
 	return next();
