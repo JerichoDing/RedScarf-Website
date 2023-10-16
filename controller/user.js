@@ -1,90 +1,79 @@
 const USER_ACTION = require('./userAction');
 const STATUS = require('../config/error');
-const UserTools = require('../utils/user-tools')
+const UserTools = require('../utils/user-tools');
 const tool = require('../utils/tool.js');
-const Browser = require('bowser');
 
 
 async function createOneUser(ctx, user = {}) {
-	const BrowserInfo = Browser.parse(ctx.headers['user-agent']);
-	const { browser, os, platform }  = BrowserInfo;
+	
 	let params = {
 		...ctx.query,
-		...user
-	}
-	const {  name, openid, phone , password, email, unionid, avatar, description, role, source} = params;
+		...user,
+	};
+	delete params.password;
+	params = tool.removeEmptyValues(params)
 	const newUser = {
-		name: name || tool.getUUID(`uid_${platform.type}_${os.name}_${browser.name}_`, 10),
-		openid: openid || tool.getUUID(`openid_`,16),// 生成唯一的openid
-		phone: phone || '',
-		password: password || '',
-		email: email || '',
-		avatar: avatar || '',
-		role: UserTools.getRole(role),
-		description:description || '',
-		unionid: unionid || UserTools.getUserDeviceInfo(ctx),
-		source: UserTools.getSource(ctx, source),
-		sourcefrom: UserTools.getSourceFrom(ctx),
-	}
+		...UserTools.getDefaultUser(ctx),
+		...params,
+	};
 
 	if (newUser.id) {
-		return ctx.body = {
+		return (ctx.body = {
 			...STATUS.FAIL,
 			data: false,
 			msg: 'id不能存在',
-		};
+		});
 	}
-
 
 	return USER_ACTION.createUser(ctx, newUser)
 		.catch((err) => {
-			 return ctx.body = {
+			return (ctx.body = {
 				...STATUS.FAIL,
 				data: false,
 				msg: '创建失败',
 				message: JSON.stringify(err),
-			};
+			});
 		})
 		.then((data) => {
-			 return ctx.body = {
+			return (ctx.body = {
 				...STATUS.SUCCESS,
 				data: data,
 				msg: '创建成功',
-			};
+			});
 		});
 }
 // 删除单个用户
 async function deleteUser(ctx) {
 	const data = await USER_ACTION.deleteUser(ctx);
-	return ctx.body = data;
+	return (ctx.body = data);
 }
 
-// 更新单个用户信息, 
+// 更新单个用户信息,
 // TODO: 不存在则创建
 async function updateUser(ctx, inquire = {}, target = {}) {
 	// 判断是否存在该用户
 	const user = await USER_ACTION.findOneUser(ctx, { where: inquire });
 	if (user && user.id) {
 		const data = USER_ACTION.updateUser(ctx, target, { where: inquire });
-		return ctx.body = data;
+		return (ctx.body = data);
 	} else {
-		return ctx.body = {
+		return (ctx.body = {
 			...STATUS.FAIL,
 			data: false,
 			msg: '用户不存在',
-		};
+		});
 	}
 }
 
 // 查询所有用户信息, 分页由调用者处理
 async function findAllUsers(ctx) {
 	const data = await USER_ACTION.findAllUsers(ctx);
-	return ctx.body = data;
+	return (ctx.body = data);
 }
 // 查询单个用户信息
 async function findOneUser(ctx, inquire = {}) {
 	const data = await USER_ACTION.findOneUser(ctx, { where: inquire });
-	return ctx.body = data;
+	return (ctx.body = data);
 }
 
 module.exports = {

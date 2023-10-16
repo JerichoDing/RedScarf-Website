@@ -7,7 +7,6 @@ const userController = require('../controller/user.js');
 
 rooter.prefix('/api/user');
 rooter.get('/addUser', async (ctx, next) => {
-
 	return userController.createOneUser(ctx);
 });
 // rooter.get('/deleteItem/:id', userController.deleteUser)

@@ -30,7 +30,7 @@ const UserTools = {
 	},
 	getUserDeviceInfo(ctx) {
 		const uniqueName =
-		  ctx.headers['user-agent'] +
+			ctx.headers['user-agent'] +
 			'_RedScarfAppeal_' +
 			UserTools.getClientIP(ctx);
 		return md5(uniqueName);
@@ -41,7 +41,7 @@ const UserTools = {
 	getDecryptOpenId(str) {
 		return TOOL.decrypt(str);
 	},
-	setCookie(ctx, key, val, extra){
+	setCookie(ctx, key, val, extra) {
 		// 用户有关的cookie有效期30天
 		const expires = new Date();
 		expires.setTime(expires.getTime() + 60 * 60 * 24 * 1000 * 30);
@@ -49,12 +49,33 @@ const UserTools = {
 			expires, // cookie失效时间
 			httpOnly: false, // 是否只用于http请求中获取
 			overwrite: false, // 是否允许重写
-			...extra
+			...extra,
 		});
 	},
-	getCookie(ctx, key){
-		return ctx.cookies.get(key)
-	}
+	getCookie(ctx, key) {
+		return ctx.cookies.get(key);
+	},
+	// 获取默认用户
+	getDefaultUser(ctx) {
+		const BrowserInfo = Browser.parse(ctx.headers['user-agent']);
+		const { browser, os, platform } = BrowserInfo;
+		return {
+			name: tool.getUUID(
+				`uid_${platform.type}_${os.name}_${browser.name}_`,
+				10
+			),
+			openid: tool.getUUID(`openid_`, 16), // 生成唯一的openid
+			phone: '',
+			password: '',
+			email: '',
+			avatar: '',
+			role: UserTools.getRole(),
+			description: '',
+			unionid: UserTools.getUserDeviceInfo(ctx),
+			source: UserTools.getSource(ctx),
+			sourcefrom: UserTools.getSourceFrom(ctx),
+		};
+	},
 };
 
 module.exports = UserTools;

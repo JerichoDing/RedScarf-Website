@@ -156,7 +156,14 @@ const getUUID = (function () {
 })();
 
 
-
+function removeEmptyValues(obj) {
+	return Object.entries(obj).reduce((acc, [key, value]) => {
+	  if (value !== null && value !== undefined && value !== '') {
+		acc[key] = value;
+	  }
+	  return acc;
+	}, {});
+  }
 /**
  * 加密函数，加密同一个字符串生成的都不相同
  * @param {*} str 
@@ -197,4 +204,5 @@ module.exports = {
 	decrypt,
 	isWxBrowser,
 	testUA,
+	removeEmptyValues
 };
