@@ -10,8 +10,9 @@ async function createOneUser(ctx, user = {}) {
 		...ctx.query,
 		...user,
 	};
-	delete params.password;
 	params = tool.removeEmptyValues(params)
+	params.password = '';// 不支持添加密码，需要手动添加
+
 	const newUser = {
 		...UserTools.getDefaultUser(ctx),
 		...params,

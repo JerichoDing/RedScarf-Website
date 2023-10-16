@@ -8,22 +8,13 @@ const UserTools = require('../utils/user-tools')
 
 // 创建单个用户 注意openid是唯一的, 不能重复
 async function createUser(ctx, user) {
-	const BrowserInfo = Browser.parse(ctx.headers['user-agent']);
-	const { browser, os, platform }  = BrowserInfo;
-	const {  name, openid, phone , password, email, unionid, avatar, description, role, source } = user;
+
+	user = tool.removeEmptyValues(user)
+	user.password = ''; // 不支持添加密码，需要手动添加
 	const newUser = {
-		name: name || tool.getUUID(`uid_${platform.type}_${os.name}_${browser.name}_`, 10),
-		openid: openid || tool.getUUID(`openid_`,16),// 生成唯一的openid
-		phone: phone || '',
-		password: password || '',
-		email: email || '',
-		avatar: avatar || '',
-		role: UserTools.getRole(role),
-		description:description || '',
-		unionid: unionid || UserTools.getUserDeviceInfo(ctx),
-		source: UserTools.getSource(ctx, source),
-		sourcefrom: UserTools.getSourceFrom(ctx),
-	}
+		...UserTools.getDefaultUser(ctx),
+		...user,
+	};
 
 	await ctx.sequelize.sync();
 	const UserModel = USER(ctx.sequelize);
