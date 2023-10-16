@@ -60,11 +60,11 @@ const UserTools = {
 		const BrowserInfo = Browser.parse(ctx.headers['user-agent']);
 		const { browser, os, platform } = BrowserInfo;
 		return {
-			name: tool.getUUID(
+			name: TOOL.getUUID(
 				`uid_${platform.type}_${os.name}_${browser.name}_`,
 				10
 			),
-			openid: tool.getUUID(`openid_`, 16), // 生成唯一的openid
+			openid: TOOL.getUUID(`openid_`, 16), // 生成唯一的openid
 			phone: '',
 			password: '',
 			email: '',

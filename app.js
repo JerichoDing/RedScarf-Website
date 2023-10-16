@@ -14,6 +14,8 @@ const apiRouter = require('./routes/api');
 const adminRouter = require('./routes/admin');
 const reply = require('./reply');
 
+
+console.log('env->',process.env.ENV, process.env.NODE_ENV);
 // logger
 app.use(async (ctx, next) => {
 	const start = new Date();
@@ -46,6 +48,7 @@ app.use(
 		maxAge: 365 * 24 * 60 * 60,
 	})
 );
+
 
 
 // routes

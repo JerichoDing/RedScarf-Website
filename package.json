@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "node bin/www",
-    "dev": "./node_modules/.bin/nodemon bin/www",
-    "prd": "pm2 start bin/www",
+    "start": "cross-env ENV=dev NODE_ENV=development  node bin/www",
+    "prd": "cross-env ENV=prd NODE_ENV=prd  pm2 start bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "bowser": "^2.11.0",
+    "cross-env": "^7.0.3",
     "crypto-js": "^4.1.1",
     "dayjs": "^1.11.10",
     "debug": "^4.1.1",
