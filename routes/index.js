@@ -10,10 +10,10 @@ const Wechat = require('../wechat/wechat');
 const wechatApi = new Wechat();
 
 //menu.js文件重新配置菜单
-// router.get('/updateMenu', async (ctx, next) => {
-// 	let result = await wechatApi.createMenu(menu);
-// 	ctx.body = result;
-// });
+router.get('/updateMenu', async (ctx, next) => {
+	let result = await wechatApi.createMenu(menu);
+	ctx.body = result;
+});
 
 // 测试JS-SDK使用权限签名算法
 router.get('/jssdk', async (ctx) => {

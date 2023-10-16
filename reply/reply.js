@@ -18,9 +18,19 @@ module.exports = async (message) => {
 		options.mediaId = message.MediaId;
 		console.log(message.Recognition);
 	} else if (message.MsgType === 'event') {
-		console.log('Event',message);
+		console.log('Event', message);
 		if (message.Event === 'subscribe') {
-			replyBody = '欢迎您的关注~\n' ;
+			replyBody =
+				'你好呀同学/家长[玫瑰]\n' +
+				'欢迎关注红领巾留学申诉\n' +
+				'我们有13年留学申诉经验\n' +
+				'项目覆盖英国/美国/加拿大/澳洲/新西兰/中国香港等地区\n\n' +
+				'主要服务\n' +
+				'挂科申诉｜学术不端｜退课撤课\n' +
+				'论文延期｜退学申诉｜学位申诉\n' +
+				'分数申诉｜休学申请｜offer申诉\n' +
+				'咨询请加老师vx️：honglingjin02\n' +
+				'添加备注“公众号”\n';
 		} else if (message.Event === 'unsubscribe') {
 			console.log('用户取消关注了！');
 		} else if (message.Event === 'CLICK') {

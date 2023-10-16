@@ -130,7 +130,9 @@ class Wechat {
 
 	/**--------菜单相关----------------------------------------------------------------------------------------------------------------------------------------- */
 
-	/** 创建菜单 */
+	/** 创建菜单 
+	 * https://developers.weixin.qq.com/doc/offiaccount/Custom_Menus/Creating_Custom-Defined_Menu.html
+	*/
 	async createMenu(menu) {
 		try {
 			//创建之前要先删除菜单
