@@ -55,43 +55,37 @@ router.get('/jsapi', async (ctx, next) => {
 
 //微信网页授权 获取用户信息
 router.get('/auth', async (ctx, next) => {
-	let redirect_uri = ctx.query.callbackUrl || domain``;
+	const { callbackUrl, type } = ctx.query;
 	ctx.redirect(
-		`https://open.weixin.qq.com/connect/oauth2/authorize?appid=${appid}&redirect_uri=${encodeURIComponent(redirect_uri)}&response_type=code&scope=snsapi_userinfo&state=STATE&connect_redirect=1#wechat_redirect`
-	);
-});
-//微信网页授权 静默
-router.get('/oauth', async (ctx, next) => {
-	let redirect_uri = ctx.query.callbackUrl || domain``;
-	ctx.redirect(
-		`https://open.weixin.qq.com/connect/oauth2/authorize?appid=${appid}&redirect_uri=${encodeURIComponent(redirect_uri)}&response_type=code&scope=snsapi_base&state=STATE&connect_redirect=1#wechat_redirect`
+		`https://open.weixin.qq.com/connect/oauth2/authorize?appid=${appid}&redirect_uri=${encodeURIComponent(
+			callbackUrl
+		)}&response_type=code&scope=snsapi_${type}&state=STATE&connect_redirect=1#wechat_redirect`
 	);
 });
 
 //获取授权后的用户信息，必须有一个返回页面
 router.get('/getUserInfo', async (ctx, next) => {
 	//获取code值
-	let { code, callbackUrl, isForce }  = ctx.query;
+	let { code, callbackUrl = domain, type } = ctx.query;
 	callbackUrl = decodeURIComponent(callbackUrl || domain);
-	const authType = isForce ? 'snsapi_userinfo' : 'snsapi_base';
 	if (!code) {
-		ctx.redirect(`${domain}/${authType}`);
+		ctx.redirect(`${domain}/${type}`);
 	}
 	let result = await wechatApi.getOauthAccessToken(code);
 	let data = await wechatApi.getOauthUserinfo(
 		result.access_token,
 		result.openid
 	);
-	
+
 	const { openid, nickname, headimgurl } = data;
-	//TODO： 保存用户信息
-	// console.log(data);
+	// 保存用户信息
+	console.log(111, data);
 
 	ctx.redirect(`${callbackUrl}`);
 });
 
 //TODO: 核心渲染前端路由
-const routers = ['', 'index', 'academic-appeals',  'portfolio-details','404'];
+const routers = ['', 'index', 'academic-appeals', 'portfolio-details', '404'];
 routers.forEach((el) => {
 	router.get(`/${el}`, async (ctx) => {
 		// 微信的请求路由
