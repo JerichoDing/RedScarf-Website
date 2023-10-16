@@ -10,10 +10,11 @@ const Wechat = require('../wechat/wechat');
 const wechatApi = new Wechat();
 
 //menu.js文件重新配置菜单
-router.get('/updateMenu', async (ctx, next) => {
-	let result = await wechatApi.createMenu(menu);
-	ctx.body = result;
-});
+// router.get('/updateMenu', async (ctx, next) => {
+// 	let result = await wechatApi.createMenu(menu);
+// 	ctx.body = result;
+// });
+
 // 测试JS-SDK使用权限签名算法
 router.get('/jssdk', async (ctx) => {
 	const testTemplate = EndSkin.create(
@@ -55,10 +56,11 @@ router.get('/jsapi', async (ctx, next) => {
 
 //微信网页授权 获取用户信息
 router.get('/auth', async (ctx, next) => {
-	const { callbackUrl, type } = ctx.query;
+	const { backurl, type = 'base' } = ctx.query;
+	// type: base(静默授权) userinfo(授权)
 	ctx.redirect(
 		`https://open.weixin.qq.com/connect/oauth2/authorize?appid=${appid}&redirect_uri=${encodeURIComponent(
-			callbackUrl
+			backurl
 		)}&response_type=code&scope=snsapi_${type}&state=STATE&connect_redirect=1#wechat_redirect`
 	);
 });
@@ -66,22 +68,23 @@ router.get('/auth', async (ctx, next) => {
 //获取授权后的用户信息，必须有一个返回页面
 router.get('/getUserInfo', async (ctx, next) => {
 	//获取code值
-	let { code, callbackUrl = domain, type } = ctx.query;
-	callbackUrl = decodeURIComponent(callbackUrl || domain);
+	let {code, backurl = domain, type='base' } = ctx.query;
+	
+	const authUrl = `${domain}/auth?type=${type}&backurl=${encodeURIComponent(backurl)}`
+	console.log('授权参数', domain ,JSON.stringify(ctx.query), authUrl, code);
 	if (!code) {
-		ctx.redirect(`${domain}/${type}`);
+		ctx.redirect(`${authUrl}`);
+		return;
 	}
 	let result = await wechatApi.getOauthAccessToken(code);
 	let data = await wechatApi.getOauthUserinfo(
 		result.access_token,
 		result.openid
 	);
-
 	const { openid, nickname, headimgurl } = data;
 	// 保存用户信息
-	console.log(111, data);
-
-	ctx.redirect(`${callbackUrl}`);
+	console.log('保存用户信息' + JSON.stringify(data));
+	ctx.redirect(`${backurl}`);
 });
 
 //TODO: 核心渲染前端路由

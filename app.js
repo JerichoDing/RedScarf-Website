@@ -49,11 +49,11 @@ app.use(
 
 
 // routes
+app.use(userMiddleware);
 app.use(router.routes(), router.allowedMethods());
 app.use(apiRouter.routes(), apiRouter.allowedMethods());
 app.use(adminRouter.routes(), adminRouter.allowedMethods());
 
-app.use(userMiddleware());
 
 
 

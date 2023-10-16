@@ -12,7 +12,7 @@ async function createOneUser(ctx, user = {}) {
 		...ctx.query,
 		...user
 	}
-	const {  name, openid, phone , password, email, unionid, avatar, description} = params;
+	const {  name, openid, phone , password, email, unionid, avatar, description, role, source} = params;
 	const newUser = {
 		name: name || tool.getUUID(`uid_${platform.type}_${os.name}_${browser.name}_`, 6),
 		openid: openid || tool.getUUID(`openid_`,16),// 生成唯一的openid
@@ -20,10 +20,10 @@ async function createOneUser(ctx, user = {}) {
 		password: password || '',
 		email: email || '',
 		avatar: avatar || '',
-		role: UserTools.getRole(),
+		role: UserTools.getRole(role),
 		description:description || '',
 		unionid: unionid || UserTools.getUserDeviceInfo(ctx),
-		source: UserTools.getSource(ctx),
+		source: UserTools.getSource(ctx, source),
 		sourcefrom: UserTools.getSourceFrom(ctx),
 	}
 

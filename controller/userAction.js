@@ -1,12 +1,34 @@
+// 服务内部调用的方法
+
 const USER = require('../models/user');
 const STATUS = require('../config/error');
-const dayjs = require('dayjs');
+const tool = require('../utils/tool.js');
+const Browser = require('bowser');
+const UserTools = require('../utils/user-tools')
 
 // 创建单个用户 注意openid是唯一的, 不能重复
 async function createUser(ctx, user) {
+	const BrowserInfo = Browser.parse(ctx.headers['user-agent']);
+	const { browser, os, platform }  = BrowserInfo;
+	const {  name, openid, phone , password, email, unionid, avatar, description, role, source } = user;
+	const newUser = {
+		name: name || tool.getUUID(`uid_${platform.type}_${os.name}_${browser.name}_`, 6),
+		openid: openid || tool.getUUID(`openid_`,16),// 生成唯一的openid
+		phone: phone || '',
+		password: password || '',
+		email: email || '',
+		avatar: avatar || '',
+		role: UserTools.getRole(role),
+		description:description || '',
+		unionid: unionid || UserTools.getUserDeviceInfo(ctx),
+		source: UserTools.getSource(ctx, source),
+		sourcefrom: UserTools.getSourceFrom(ctx),
+	}
+
+
 	await ctx.sequelize.sync();
 	const UserModel = USER(ctx.sequelize);
-	const userinfo = await UserModel.findOne({ where: { openid: user.openid } });
+	const userinfo = await UserModel.findOne({ where: { openid: newUser.openid } });
 	// 判断是否存在该用户
 	if (userinfo && userinfo.openid) {
 		return {
