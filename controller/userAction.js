@@ -25,7 +25,6 @@ async function createUser(ctx, user) {
 		sourcefrom: UserTools.getSourceFrom(ctx),
 	}
 
-
 	await ctx.sequelize.sync();
 	const UserModel = USER(ctx.sequelize);
 	const userinfo = await UserModel.findOne({ where: { openid: newUser.openid } });
@@ -38,7 +37,7 @@ async function createUser(ctx, user) {
 		};
 	}
 	try {
-		await UserModel.create(user, { returning: true });
+		await UserModel.create(newUser, { returning: true });
 		return {
 			...STATUS.SUCCESS,
 			data:true,
