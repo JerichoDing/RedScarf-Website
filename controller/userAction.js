@@ -12,7 +12,7 @@ async function createUser(ctx, user) {
 	const { browser, os, platform }  = BrowserInfo;
 	const {  name, openid, phone , password, email, unionid, avatar, description, role, source } = user;
 	const newUser = {
-		name: name || tool.getUUID(`uid_${platform.type}_${os.name}_${browser.name}_`, 6),
+		name: name || tool.getUUID(`uid_${platform.type}_${os.name}_${browser.name}_`, 10),
 		openid: openid || tool.getUUID(`openid_`,16),// 生成唯一的openid
 		phone: phone || '',
 		password: password || '',
