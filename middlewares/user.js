@@ -28,8 +28,7 @@ const checkUserByCookieId = async (ctx, uuid) => {
 };
 
 module.exports = async (ctx, next) => {
-
-	if(ctx.url.indexOf('assets')>-1){
+	if (ctx.url.indexOf('assets') > -1) {
 		return next();
 	}
 	console.log('是否微信环境----', Tool.isWxBrowser(ctx), ctx.url);
@@ -57,11 +56,11 @@ module.exports = async (ctx, next) => {
 				// 创建微信用户
 				await createUserAndSetCookie(ctx, {
 					openid: data.openid,
-					unionid:data.unionid,
+					unionid: data.unionid,
 					name: data.nickname,
 					avatar: data.headimgurl,
 				});
-				let url = fancyURI.removeSearch('code', callbackUrl)
+				let url = fancyURI.removeSearch('code', callbackUrl);
 				// state 目前没有用到
 				url = fancyURI.removeSearch('state', url);
 				ctx.redirect(`${url}`);
