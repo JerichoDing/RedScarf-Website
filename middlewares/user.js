@@ -28,7 +28,11 @@ const checkUserByCookieId = async (ctx, uuid) => {
 };
 
 module.exports = async (ctx, next) => {
-	console.log('是否微信环境----', Tool.isWxBrowser(ctx), ctx.headers['user-agent']);
+
+	if(ctx.url.indexOf('assets')>-1){
+		return next();
+	}
+	console.log('是否微信环境----', Tool.isWxBrowser(ctx), ctx.url);
 	const callbackUrl = `${domain}${ctx.url}`;
 	const cookieId = UserTools.getCookie(ctx, 'uuid');
 	const uuid = UserTools.getUserDeviceInfo(ctx);
