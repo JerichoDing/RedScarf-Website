@@ -39,7 +39,7 @@
     max-width: 1140px;
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: 1440px) {
   .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
     max-width: 1320px;
   }
@@ -956,7 +956,7 @@
     --bs-gutter-y: 3rem;
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: 1440px) {
   .col-xxl {
     flex: 1 0 0%;
   }
@@ -3583,7 +3583,7 @@
     padding-right: 3rem !important;
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: 1440px) {
   .d-xxl-inline {
     display: inline !important;
   }
