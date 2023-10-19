@@ -30,7 +30,7 @@ const checkUserByCookieId = async (ctx, uuid) => {
 module.exports = async (ctx, next) => {
 
 	if(ctx.url.indexOf('assets')>-1){
-		return next();
+		await next();
 	}
 	console.log('是否微信环境----', Tool.isWxBrowser(ctx), ctx.url);
 	const callbackUrl = `${domain}${ctx.url}`;

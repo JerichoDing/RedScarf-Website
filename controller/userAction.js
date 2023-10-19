@@ -3,7 +3,6 @@
 const USER = require('../models/user');
 const STATUS = require('../config/error');
 const tool = require('../utils/tool.js');
-const Browser = require('bowser');
 const UserTools = require('../utils/user-tools')
 
 // 创建单个用户 注意openid是唯一的, 不能重复
