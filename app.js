@@ -45,7 +45,8 @@ app.use(reply());
 
 app.use(
 	staticCache(path.join(__dirname, 'public'), {
-		maxAge: 365 * 24 * 60 * 60,
+		// maxAge: 365 * 24 * 60 * 60,
+		maxAge: 10,
 	})
 );
 
@@ -60,15 +61,7 @@ app.use(adminRouter.routes(), adminRouter.allowedMethods());
 
 
 
-// 404
-app.use(async (ctx, next) => {
 
-	await next();
-	// 请求的路由不存在，返回404
-	if (parseInt(ctx.status) === 404) {
-		ctx.response.redirect('/404');
-	}
-});
 
 // error-handling
 app.on('error', (err, ctx) => {
