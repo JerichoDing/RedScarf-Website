@@ -40,7 +40,7 @@ module.exports = async (ctx, next) => {
 			}
 		}
 		// 没有cookie 或者cookie失效的情况 start
-	
+
 		// 微信用户组注册逻辑
 		if (Tool.isWxBrowser(ctx)) {
 			const { code } = ctx.query;
