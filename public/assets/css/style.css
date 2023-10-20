@@ -545,21 +545,38 @@ section {
 .appeals-intro-title {
 	font-size: 28px;
 	font-style: italic;
-	color: var(--bs-primary);
+	
 	font-weight: 600;
+	position: relative;
 }
 .appeals-intro-info {
 	color: #89847f;
 	font-size: 14px;
 	line-height: 1.2;
 	text-align: center;
+	position: relative;
 }
+.appeals-intro-container .d-inline-flex{
+	padding: 10px 15px;
+	border-radius: 5px;
+	color: var(--bs-primary);
+	transition: all 0.2s;
+}
+.appeals-intro-container .d-inline-flex:hover{
+	background-color: var(--bs-primary-700);
+	color: var(--bs-white);
+	cursor:grab;
+}
+.appeals-intro-container .d-inline-flex:hover .appeals-intro-info{
+	color: var(--bs-white);
+	font-size: 16px;
+}
+
 .center-circle-box {
 	position: absolute;
 	top: 240px;
 	left: 50%;
 	transform: translateX(-50%);
-	background-color: #0a0;
 	width: 400px;
 	height: 400px;
 }
@@ -570,12 +587,58 @@ section {
 }
 .center-circle img {
 	width: 100px;
-	height: 100px;
 	margin: 0;
-.center-circle-img-1{}
-.center-circle-img-2{}
-.center-circle-img-3{}
-.center-circle-img-4{}
+	position: absolute;
+}
+.center-circle .center-circle-img-1{
+	top: 0;
+    left: 50px;
+    width: 140px;
+	animation: circle-up-down 4s ease-in-out infinite;
+	
+}
+.center-circle .center-circle-img-2{
+	top: 100px;
+    right: 108px;
+    width: 110px;
+	animation: circle-up-down 3.6s ease-in-out infinite reverse;
+}
+
+.center-circle .center-circle-img-3{
+	bottom: 140px;
+    left: 10px;
+    width: 90px;
+	animation: circle-up-down 3.5s ease-in-out infinite alternate-reverse;
+	
+}
+.center-circle .center-circle-img-4{
+	bottom: 70px;
+    right: 200px;
+    width: 80px;
+	animation: circle-up-down 3s ease-in-out infinite reverse;
+	
+}
+.center-circle .center-circle-img:hover{
+	animation-play-state: paused;
+}
+.center-circle .center-circle-img:not(:hover){
+	animation-play-state: running;
+}
+
+@keyframes circle-up-down {
+	0% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(-20%);
+	}
+
+	100% {
+		transform: translateY(0);
+	}
+}
+
 /* appeals-intro  end*/
 /**
 * Mobile Navigation 
