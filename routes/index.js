@@ -96,6 +96,7 @@ routers.forEach((el) => {
 		Template.assign({
 			// 传给html的变量
 			domain: domain,
+			version: new Date().getTime(),
 		});
 		ctx.body = Template.html();
 	});

@@ -98,15 +98,15 @@ li {
 .rsa-btn-submit {
 	background-color: rgb(247, 203, 129);
 }
-.hover-btn{
-  position: relative;
-  user-select: none;
-  cursor: pointer;
-  overflow: hidden;
+.hover-btn {
+	position: relative;
+	user-select: none;
+	cursor: pointer;
+	overflow: hidden;
 }
 .hover-btn::before {
-  width: 120%;
-  height: 120%;
+	width: 120%;
+	height: 120%;
 	content: '';
 	position: absolute;
 	right: 0;
@@ -114,18 +114,18 @@ li {
 	bottom: 0;
 	top: 100%;
 	transition: all 0.3s;
-  background-color: #fff;
+	background-color: #fff;
 }
 .hover-btn:hover::before {
-	background: var(--bs-primary-800)!important;
+	background: var(--bs-primary-800) !important;
 	z-index: 0;
-  height: 100%;
-  top: 0;
+	height: 100%;
+	top: 0;
 }
-.hover-btn:hover span{
-  color: var(--bs-white)!important;
-  z-index: 1;
-    position: relative;
+.hover-btn:hover span {
+	color: var(--bs-white) !important;
+	z-index: 1;
+	position: relative;
 }
 .rsa-btn-link {
 	width: 150px;
@@ -133,22 +133,24 @@ li {
 	height: 30px;
 	font-size: 16px;
 }
-.ml-1{
+.ml-1 {
 	margin-left: 10px;
 }
-.ml-2{
+.ml-2 {
 	margin-left: 20px;
 }
-.ml-3{
+.ml-3 {
 	margin-left: 30px;
 }
-.ml-4{
+.ml-4 {
 	margin-left: 40px;
 }
-.ml-5{
+.ml-5 {
 	margin-left: 50px;
 }
-
+.mt-10 {
+	margin-top: 100px;
+}
 
 section {
 	padding-top: 50px;
@@ -306,7 +308,7 @@ section {
 .navbar > ul > li {
 	white-space: nowrap;
 	width: 90px;
-	display: flex;	
+	display: flex;
 	align-items: center;
 	justify-content: center;
 }
@@ -332,23 +334,21 @@ section {
 	margin-left: 5px;
 }
 
-
 .navbar a:hover:before,
 .navbar li:hover > a:before,
 .navbar .active:before {
 	visibility: visible;
 	width: 100%;
-	
 }
 
-.navbar>ul>li>a:hover,
-.navbar>ul>li .active,
-.navbar>ul>li .active:focus {
+.navbar > ul > li > a:hover,
+.navbar > ul > li .active,
+.navbar > ul > li .active:focus {
 	color: var(--bs-white);
 	background-color: var(--bs-primary-500);
 	border-radius: 30px;
-    padding: 6px 15px;
-    user-select: none;
+	padding: 6px 15px;
+	user-select: none;
 }
 
 .navbar .dropdown ul {
@@ -443,15 +443,14 @@ section {
 	background-repeat: no-repeat;
 	z-index: -1;
 }
-.what-is-academic-appeal-intro{
+.what-is-academic-appeal-intro {
 	padding-top: 0;
 	margin-top: -50px;
-
 }
-.what-is-academic-appeal-top{
+.what-is-academic-appeal-top {
 	position: relative;
 }
-.what-is-academic-appeal{
+.what-is-academic-appeal {
 	width: 600px;
 	height: 750px;
 	background-image: url('/assets/images/what-is-academic-appeal.png');
@@ -461,7 +460,7 @@ section {
 	z-index: -1;
 }
 
-.academic-appeal-example .example-item{
+.academic-appeal-example .example-item {
 	width: 400px;
 	height: 50px;
 	background-image: url('/assets/images/example-bg.png');
@@ -472,16 +471,9 @@ section {
 	padding: 0 30px 0 60px;
 	color: var(--bs-white);
 }
-.academic-appeal-why-us {
-	height: 150px;
-	background-image: url('/assets/images/advantage.png');
-	background-position: 0 0;
-	background-size: 450px 150px;
-	background-repeat: no-repeat;
-	z-index: -1;
+.why-us-section {
+	padding-top: 50px;
 }
-
-
 
 /* advantage  end*/
 /* what-is-appeal  start*/
@@ -518,23 +510,73 @@ section {
 	background-size: 100%;
 	background-repeat: no-repeat;
 	top: 140px;
-  right: 100px;
+	right: 100px;
 	z-index: -1;
 }
 .what-appeal-express {
 	font-size: 20px;
 	font-weight: 400;
 }
-.appeal-list img{
-  width: 300px;
-  height: 215px;
+.appeal-list img {
+	width: 300px;
+	height: 215px;
 }
-.appeal-list h5{
-  text-align: center;
+.appeal-list h5 {
+	text-align: center;
 }
-
 
 /* what-is-appeal   end*/
+/* appeals-intro   start */
+#appeals-intro {
+	position: relative;
+	min-height: 800px;
+	font-family: SourceHanSansCN-Bold;
+}
+#appeals-intro .appeals-intro-top {
+	width: 286px;
+	height: 440px;
+	background-image: url('/assets/images/appeals-intro-top.png');
+	background-position: center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	top: -100px;
+	z-index: -1;
+}
+.appeals-intro-title {
+	font-size: 28px;
+	font-style: italic;
+	color: var(--bs-primary);
+	font-weight: 600;
+}
+.appeals-intro-info {
+	color: #89847f;
+	font-size: 14px;
+	line-height: 1.2;
+	text-align: center;
+}
+.center-circle-box {
+	position: absolute;
+	top: 240px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #0a0;
+	width: 400px;
+	height: 400px;
+}
+.center-circle {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.center-circle img {
+	width: 100px;
+	height: 100px;
+	margin: 0;
+.center-circle-img-1{}
+.center-circle-img-2{}
+.center-circle-img-3{}
+.center-circle-img-4{}
+/* appeals-intro  end*/
 /**
 * Mobile Navigation 
 */
@@ -776,7 +818,6 @@ section {
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
-
 
 .section-bg {
 	background-color: #f6f9fe;
@@ -1052,19 +1093,19 @@ section {
 	background-position: center;
 	margin-bottom: 15px;
 }
-.service-member-name.sort-1{
+.service-member-name.sort-1 {
 	background-image: url('/assets/images/avatar-1-1.png');
 }
-.service-member-name.sort-2{
+.service-member-name.sort-2 {
 	background-image: url('/assets/images/avatar-2-1.png');
 }
-.service-member-name.sort-3{
+.service-member-name.sort-3 {
 	background-image: url('/assets/images/avatar-3-1.png');
 }
-.service-member-name.sort-4{
+.service-member-name.sort-4 {
 	background-image: url('/assets/images/avatar-4-1.png');
 }
-.service-member-name.sort-5{
+.service-member-name.sort-5 {
 	background-image: url('/assets/images/avatar-5-1.png');
 }
 .service-team .service-member-title {
@@ -1076,7 +1117,7 @@ section {
 	padding-bottom: 15px;
 	border-bottom: 3px solid var(--bs-border-color);
 }
-.service-team .service-member-title.vice-color{
+.service-team .service-member-title.vice-color {
 	color: rgb(243, 178, 142);
 }
 .service-team .service-member-intro {
@@ -1127,7 +1168,7 @@ section {
 	background-color: var(--bs-white);
 	border-radius: 30px;
 	box-shadow: 5px 5px 0px 0px #000;
-  user-select: none;
+	user-select: none;
 	font-weight: 600;
 	font-size: 28px;
 	cursor: pointer;
@@ -1177,7 +1218,7 @@ section {
 #apply .apply-box {
 	position: relative;
 	z-index: 1;
-  margin-top: -220px;
+	margin-top: -220px;
 }
 #apply .apply-box .apply-form-bg {
 	padding: 0 120px;
@@ -1205,7 +1246,7 @@ section {
 	position: relative;
 	border-radius: 20px;
 	overflow: hidden;
-  min-width: 400px;
+	min-width: 400px;
 	color: var(--bs-white);
 }
 .apply-title {
@@ -1243,12 +1284,12 @@ section {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-  background-color: rgb(252, 243, 243);
-  border-radius: 20px;
-  height: 120px;
-  justify-content: center;
-  width: 350px;
-  padding: 0 30px;
+	background-color: rgb(252, 243, 243);
+	border-radius: 20px;
+	height: 120px;
+	justify-content: center;
+	width: 350px;
+	padding: 0 30px;
 }
 .apply-submit .rsa-btn-submit {
 	width: 100%;
@@ -1262,63 +1303,59 @@ section {
 	margin-top: 15px;
 	cursor: pointer;
 	user-select: none;
-  color: #854623;
+	color: #854623;
 }
 
 /* apply end */
 /* tutor start */
 
-
-#tutor .container{
-  padding-top: 100px;
-  position: relative;
-
+#tutor .container {
+	padding-top: 100px;
+	position: relative;
 }
-.title-img-right{
-  width: 50%;
-  position: absolute;
-  top: 50px;
-  right: 0;
+.title-img-right {
+	width: 50%;
+	position: absolute;
+	top: 50px;
+	right: 0;
 }
-#tutor .container .row img{
-  width: 320px;
+#tutor .container .row img {
+	width: 320px;
 }
 /* tutor end */
 /* video start */
 #video {
-  background-color: var(--bs-white);
-  position: relative;
-  height: 900px;
-  overflow: hidden;
-
+	background-color: var(--bs-white);
+	position: relative;
+	height: 900px;
+	overflow: hidden;
 }
-.video-img-left{
-  width: 200px;
-  position: absolute;
-  top: 250px;
-  left: 0;
+.video-img-left {
+	width: 200px;
+	position: absolute;
+	top: 250px;
+	left: 0;
 }
-.video-img-box{
-  background-image: url('/assets/images/video-bg.png');
+.video-img-box {
+	background-image: url('/assets/images/video-bg.png');
 	width: 90%;
 	height: 900px;
 	background-size: 90%;
 	background-repeat: no-repeat;
-  position: relative;
-  margin-left: 200px;
+	position: relative;
+	margin-left: 200px;
 }
 
-
 /* video end */
-#train{
-  position: relative;
-  height: 600px;
-  background-image: url('/assets/images/train-bg.png');
+#train {
+	position: relative;
+	height: 600px;
+	background-image: url('/assets/images/train-bg.png');
 	width: 100;
 	background-size: cover;
 	background-repeat: no-repeat;
-  overflow: hidden;
-  cursor: pointer;
+	overflow: hidden;
+	cursor: pointer;
 }
 
 /* area start */
@@ -1391,7 +1428,6 @@ section {
 	border-radius: 10px;
 	box-shadow: inset 0 0 6px var(--bs-white);
 }
-
 
 /* ranking end */
 
