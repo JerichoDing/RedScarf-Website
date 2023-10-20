@@ -8,7 +8,7 @@ const translations = {
         红领巾智库: 'RedScarf Think',
 		学术辅导: 'Tutoring',
 		申诉阵容: 'Team',
-		联系导师: 'Contact Us',
+		联系导师: 'Contact us',
 		什么是学术申诉: "What's Academic Appeals",
 		'作弊/剽窃': 'Cheating/Plagiarism',
 		共谋: 'Collusion',

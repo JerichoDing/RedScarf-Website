@@ -65,6 +65,10 @@ li {
 }
 
 /* common style start */
+.cursor{
+	cursor: pointer;
+	user-select: none;
+}
 .h-500 {
 	height: 500px;
 }
@@ -289,6 +293,14 @@ section {
 /**
 * Desktop Navigation 
 */
+.language-icon {
+	color: var(--bs-primary-600);
+	cursor: pointer;
+	font-size: 20px;
+}
+.language-icon:hover {
+	color: var(--bs-primary);
+}
 .navbar {
 	padding: 0;
 }
@@ -545,7 +557,7 @@ section {
 .appeals-intro-title {
 	font-size: 28px;
 	font-style: italic;
-	
+
 	font-weight: 600;
 	position: relative;
 }
@@ -556,20 +568,19 @@ section {
 	text-align: center;
 	position: relative;
 }
-.appeals-intro-container .d-inline-flex{
+.appeals-intro-container .d-inline-flex {
 	padding: 10px 15px;
 	border-radius: 5px;
 	color: var(--bs-primary);
 	transition: all 0.2s;
 }
-.appeals-intro-container .d-inline-flex:hover{
+.appeals-intro-container .d-inline-flex:hover {
 	background-color: var(--bs-primary-700);
 	color: var(--bs-white);
-	cursor:grab;
+	cursor: grab;
 }
-.appeals-intro-container .d-inline-flex:hover .appeals-intro-info{
+.appeals-intro-container .d-inline-flex:hover .appeals-intro-info {
 	color: var(--bs-white);
-	font-size: 16px;
 }
 
 .center-circle-box {
@@ -590,38 +601,35 @@ section {
 	margin: 0;
 	position: absolute;
 }
-.center-circle .center-circle-img-1{
+.center-circle .center-circle-img-1 {
 	top: 0;
-    left: 50px;
-    width: 140px;
+	left: 50px;
+	width: 140px;
 	animation: circle-up-down 4s ease-in-out infinite;
-	
 }
-.center-circle .center-circle-img-2{
+.center-circle .center-circle-img-2 {
 	top: 100px;
-    right: 108px;
-    width: 110px;
+	right: 108px;
+	width: 110px;
 	animation: circle-up-down 3.6s ease-in-out infinite reverse;
 }
 
-.center-circle .center-circle-img-3{
+.center-circle .center-circle-img-3 {
 	bottom: 140px;
-    left: 10px;
-    width: 90px;
-	animation: circle-up-down 3.5s ease-in-out infinite alternate-reverse;
-	
+	left: 10px;
+	width: 90px;
+	animation: circle-left-right 3.5s ease-in-out infinite alternate-reverse;
 }
-.center-circle .center-circle-img-4{
+.center-circle .center-circle-img-4 {
 	bottom: 70px;
-    right: 200px;
-    width: 80px;
+	right: 200px;
+	width: 80px;
 	animation: circle-up-down 3s ease-in-out infinite reverse;
-	
 }
-.center-circle .center-circle-img:hover{
+.center-circle .center-circle-img:hover {
 	animation-play-state: paused;
 }
-.center-circle .center-circle-img:not(:hover){
+.center-circle .center-circle-img:not(:hover) {
 	animation-play-state: running;
 }
 
@@ -638,8 +646,52 @@ section {
 		transform: translateY(0);
 	}
 }
+@keyframes circle-left-right {
+	0% {
+		transform: translateX(0);
+	}
+
+	50% {
+		transform: translateX(-20%);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+.three-places {
+	position: absolute;
+	bottom: 0;
+	right: 150px;
+	width: 500px;
+	height: 350px;
+	background-image: url('/assets/images/three-places.png');
+	background-position: center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.important .title-img {
+	width: 400px;
+}
+.important .row {
+	position: relative;
+}
+.important .col img {
+	width: 100%;
+}
+.important .col .eight-dots {
+	position: absolute;
+	bottom: 110px;
+	left: 50px;
+	transform: translateY(-50%);
+	width: 80px;
+}
+.important .col .arrow-top {
+	width: 300px;
+}
 
 /* appeals-intro  end*/
+
 /**
 * Mobile Navigation 
 */

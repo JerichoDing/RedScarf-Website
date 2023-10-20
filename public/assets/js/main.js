@@ -1,12 +1,14 @@
-
 (function () {
 	'use strict';
 
 	// init tooltip
-	const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-	const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+	const tooltipTriggerList = document.querySelectorAll(
+		'[data-bs-toggle="tooltip"]'
+	);
+	const tooltipList = [...tooltipTriggerList].map(
+		(tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+	);
 
-	
 	const loadJS = (src) => {
 		return new Promise((resolve, reject) => {
 			let head = document.querySelector('head');
@@ -23,8 +25,6 @@
 			};
 		});
 	};
-
-	
 
 	/**
 	 * Easy selector helper function
@@ -59,7 +59,6 @@
 		el.addEventListener('scroll', listener);
 	};
 
-	
 	let backtotop = select('.back-to-top');
 	let navbarlinks = select('#navbar .scrollto', true);
 	let preloader = select('#preloader');
@@ -69,24 +68,24 @@
 	 * Navbar links active state on scroll
 	 */
 
-	const navbarlinksActive = () => {
-		let position = window.scrollY + 200;
-		navbarlinks.forEach((navbarlink) => {
-			if (!navbarlink.hash) return;
-			let section = select(navbarlink.hash);
-			if (!section) return;
-			if (
-				position >= section.offsetTop &&
-				position <= section.offsetTop + section.offsetHeight
-			) {
-				navbarlink.classList.add('active');
-			} else {
-				navbarlink.classList.remove('active');
-			}
-		});
-	};
-	window.addEventListener('load', navbarlinksActive);
-	onscroll(document, navbarlinksActive);
+	// const navbarlinksActive = () => {
+	// 	let position = window.scrollY + 200;
+	// 	navbarlinks.forEach((navbarlink) => {
+	// 		if (!navbarlink.hash) return;
+	// 		let section = select(navbarlink.hash);
+	// 		if (!section) return;
+	// 		if (
+	// 			position >= section.offsetTop &&
+	// 			position <= section.offsetTop + section.offsetHeight
+	// 		) {
+	// 			navbarlink.classList.add('active');
+	// 		} else {
+	// 			navbarlink.classList.remove('active');
+	// 		}
+	// 	});
+	// };
+	// window.addEventListener('load', navbarlinksActive);
+	// onscroll(document, navbarlinksActive);
 
 	/**
 	 * Scrolls to an element with header offset
@@ -111,37 +110,36 @@
 	 */
 
 	if (selectHeader) {
-		let headerOffset = selectHeader.offsetTop
-    let nextElement = selectHeader.nextElementSibling
-    const headerFixed = () => {
-      if ((headerOffset - window.scrollY) <= 0) {
-        console.log();
-        selectHeader.classList.add('fixed-top')
-        nextElement.classList.add('scrolled-offset')
-      } else {
-        selectHeader.classList.remove('fixed-top')
-        nextElement.classList.remove('scrolled-offset')
-      }
-    }
-    window.addEventListener('load', headerFixed)
-    onscroll(document, headerFixed)
+		let headerOffset = selectHeader.offsetTop;
+		let nextElement = selectHeader.nextElementSibling;
+		const headerFixed = () => {
+			if (headerOffset - window.scrollY <= 0) {
+				console.log();
+				selectHeader.classList.add('fixed-top');
+				nextElement.classList.add('scrolled-offset');
+			} else {
+				selectHeader.classList.remove('fixed-top');
+				nextElement.classList.remove('scrolled-offset');
+			}
+		};
+		window.addEventListener('load', headerFixed);
+		onscroll(document, headerFixed);
 	}
-  /**
-   * Header fixed top on scroll
-   */
- 
+	/**
+	 * Header fixed top on scroll
+	 */
+
 	/**
 	 * Back to top button
 	 */
-	
-	if (backtotop) {
-    on('click','.back-to-top',function(e){
-      window.scrollTo({
-        top:0,
-        behavior:'smooth'
-      })
-    })
 
+	if (backtotop) {
+		on('click', '.back-to-top', function (e) {
+			window.scrollTo({
+				top: 0,
+				behavior: 'smooth',
+			});
+		});
 
 		const toggleBacktotop = () => {
 			if (window.scrollY > 100) {
@@ -234,10 +232,9 @@
 		// },
 		slidesPerView: 'auto',
 		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
-		  },
-	
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
 	});
 
 	/**
@@ -309,7 +306,7 @@
 			mirror: false,
 		});
 	});
-	
+
 	const translatePage = () => {
 		const elements = document.getElementsByClassName('translate');
 		for (let i = 0; i < elements.length; i++) {
@@ -322,21 +319,17 @@
 	// 获取当前语言
 	const currentLang = localStorage.getItem('lang') || 'zh-cn'; // 默认中文
 	document.documentElement.lang = currentLang;
-	console.log('language', currentLang,translations);
-	translatePage()
+	console.log('language', currentLang, translations);
+	translatePage();
 	/**
 	 * switch language
 	 */
 	on('click', '.language-icon', function (e) {
 		const lang = document.documentElement.lang === 'en' ? 'zh-cn' : 'en';
 		localStorage.setItem('lang', lang);
-		translatePage()
+		translatePage();
 		location.reload();
 	});
-
-
-
-	
 
 	/**
 	 * Initiate Pure Counter
