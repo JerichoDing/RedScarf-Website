@@ -271,16 +271,20 @@ section {
 	box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
-#header .logo {
-	margin: 0;
-	padding: 0;
-	line-height: 1;
-	font-weight: 600;
-	letter-spacing: 0.8px;
-}
+#header .header-logo  {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-wrap: nowrap;
+	color: var(--bs-primary);
 
-#header .logo img {
-	width: 500px;
+	
+}
+#header .header-logo .slogan{
+	font-style: italic;
+}
+#header .header-logo img {
+	max-width: 200px;
 }
 
 .scrolled-offset {
@@ -293,6 +297,9 @@ section {
 /**
 * Desktop Navigation 
 */
+.navbar-right {
+	margin-left: 10px;
+}
 .language-icon {
 	color: var(--bs-primary-600);
 	cursor: pointer;
@@ -417,6 +424,9 @@ section {
 }
 
 @media (max-width: 1366px) {
+	.slogan-box{
+		display: none;
+	}
 	.navbar .dropdown .dropdown ul {
 		left: -90%;
 	}
