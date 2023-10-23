@@ -316,20 +316,41 @@
 			}
 		}
 	};
-	// 获取当前语言
-	const currentLang = localStorage.getItem('lang') || 'zh-cn'; // 默认中文
-	document.documentElement.lang = currentLang;
-	console.log('language', currentLang, translations);
-	translatePage();
+
+	/**
+	 * translate.js start
+	 */
+	translate.language.setLocal('chinese_simplified');
+	translate.execute();
+
+
+	on('click', '.language-icon', function (e) {
+		const languageLocal = translate.language.getLocal() || 'chinese_simplified';
+		languageLocal === 'english'
+			? translate.language.setLocal('chinese_simplified')
+			: translate.language.setLocal('english');
+		console.log(122222, languageLocal);
+		translate.execute();
+	});
+
+	/**
+	 * translate.js end
+	 */
+
 	/**
 	 * switch language
 	 */
-	on('click', '.language-icon', function (e) {
-		const lang = document.documentElement.lang === 'en' ? 'zh-cn' : 'en';
-		localStorage.setItem('lang', lang);
-		translatePage();
-		location.reload();
-	});
+	// const currentLang = localStorage.getItem('lang') || 'zh-cn'; // 默认中文
+	// document.documentElement.lang = currentLang;
+	// console.log('language', currentLang, translations);
+	// translatePage();
+
+	// on('click', '.language-icon', function (e) {
+	// 	const lang = document.documentElement.lang === 'en' ? 'zh-cn' : 'en';
+	// 	localStorage.setItem('lang', lang);
+	// 	translatePage();
+	// 	location.reload();
+	// });
 
 	/**
 	 * Initiate Pure Counter
