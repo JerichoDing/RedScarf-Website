@@ -178,6 +178,15 @@ li {
     right: 75px;
     top: 100px;
 }
+.btns-right .row.right-fixed{
+	position: absolute;
+    right: 0;
+    top: 0;
+}
+.btns-right .row.right-fixed img{
+	height: 100px;
+
+}
 .btns-right button {
 	margin-left: 20px;
 }
@@ -433,7 +442,7 @@ section {
 .navbar > ul > li .active,
 .navbar > ul > li .active:focus {
 	color: var(--bs-white);
-	background-color: var(--bs-primary-500);
+	background-color: var(--bs-primary-900);
 	border-radius: 30px;
 	padding: 6px 15px;
 	user-select: none;
@@ -762,6 +771,19 @@ section {
 	animation-play-state: running;
 }
 
+@keyframes visible-transparent {
+	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0.5;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
 @keyframes circle-up-down {
 	0% {
 		transform: translateY(0);
@@ -805,6 +827,45 @@ section {
 	width: 800px;
 	bottom: 0px;
 	background-image: url('/assets/images/three-places-none-ac-appeal.png');
+}
+.how-to-do{
+	width: 80%;
+	height: 700px;
+	background-position: center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-image: url('/assets/images/how-to-do.png');
+}
+.two-cases{
+	width: 80%;
+	height: 520px;
+	background-position: center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-image: url('/assets/images/two-cases.png');
+}
+.we-can-get{
+	
+	width: 450px;
+    height: 300px;
+	background-position: center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-image: url('/assets/images/we-can-get.png');
+}
+.we-can-get-results{
+	width: 700px;
+    height: 434px;
+	
+}
+.we-can-get-results-bg{
+	width: 800px;
+    height: 434px;
+	background-position: center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-image: url('/assets/images/triangle.png');
+	
 }
 .important .title-img {
 	width: 400px;
@@ -1642,6 +1703,7 @@ section {
 	padding-top: 0;
 	position: relative;
 }
+
 .video-img-box-2 {
 	background-image: url('/assets/images/video-bg-2.png');
 	width: 90%;
@@ -1652,8 +1714,12 @@ section {
 	z-index: -1;
 }
 /* video end */
+
 .feedback-from-patriarch{
 	width: 400px;
+}
+.feedback-from-patriarch-1{
+	width: 500px;
 }
 .feedback-subtitle{
 	font-size: 14px;
@@ -1667,13 +1733,74 @@ section {
 	position: relative;
 	height: 600px;
 	background-image: url('/assets/images/train-bg.png');
-	width: 100;
+	width: 100%;
 	background-size: cover;
 	background-repeat: no-repeat;
 	overflow: hidden;
 	cursor: pointer;
 }
+#last-info{
+	color: var(--bs-primary);
+}
+.last-info-title{
+	width: 400px;
+	margin-right: 70px;
+}
 
+.shining-stars{
+	position: relative;
+	width: 600px;
+	height: 600px;
+	background-image: url('/assets/images/last-info-box.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.shining-stars .star-item{
+	position: absolute;
+	top: 50px;
+	left: -20px;
+	width: 70px;
+	height: 80px;
+	background-image: url('/assets/images/shining-star.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 1;
+}
+.shining-stars .star-item.star-2{
+	top: 0px;
+	left: 500px;
+	width: 50px;
+	height: 60px;
+}
+.shining-stars .star-item.star-3{
+	top: 150px;
+    left: 460px;
+	width: 30px;
+	height: 40px;
+}
+.shining-stars .star-item.star-4{
+	top:  250px;
+    left: 50px;
+	width: 30px;
+	height: 40px;
+}
+.shining-stars .star-item.star-5{
+	top: 400px;
+	left: 600px;
+	width: 50px;
+	height: 60px;
+}
+.group-1{
+	animation: visible-transparent 1.8s ease infinite ;
+}
+.group-2{
+	animation: visible-transparent 1.5s ease infinite alternate-reverse;
+}
+.group-3{
+	animation: visible-transparent 1.5s ease infinite ;
+}
 /* feedback start */
 .feedback-box{
 	margin-top: 30px;
