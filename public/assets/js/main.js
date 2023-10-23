@@ -352,8 +352,21 @@
 	// 	location.reload();
 	// });
 
+
+
+// 特殊情况的切换
+
+
+
+
+
+
+
+
+
 	/**
 	 * Initiate Pure Counter
 	 */
+	
 	new PureCounter();
 })();

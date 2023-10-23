@@ -44,6 +44,15 @@ button {
 a, .active-text {
 	color: var(--bs-primary);
 	text-decoration: none;
+	cursor: pointer;
+}
+.hover-text {
+	display: inline-block;
+	color: var(--bs-white);
+	background-color: var(--bs-primary-800);
+	padding: 6px 15px;
+	border-radius: 20px;
+	
 }
 
 a:hover {
@@ -193,10 +202,28 @@ li {
 .ml-5 {
 	margin-left: 50px;
 }
+.pl-5 {
+	padding-left: 50px;
+}
 .mt-10 {
 	margin-top: 100px;
 }
 
+.font-18{
+	font-size: 18px;
+}
+.font-20{
+	font-size: 20px;
+}
+.font-24{
+	font-size: 24px;
+}
+.font-28{
+	font-size: 28px;
+}
+.font-30{
+	font-size: 30px;
+}
 section {
 	padding-top: 50px;
 	overflow: hidden;
@@ -525,7 +552,7 @@ section {
 }
 .what-is-non-academic-appeal{
 	width: 220px;
-	height: 400px;
+	height: 440px;
 	background-image: url('/assets/images/what-is-non-appeal.png');
 	background-position: 0 0;
 	background-size: 100%;
@@ -603,11 +630,48 @@ section {
 }
 
 /* what-is-appeal   end*/
+/* non-appeals-sort   start */
+#non-appeals-sort{
+	position: relative;
+}
+
+#non-appeals-sort .appeals-intro-bottom{
+	width: 150px;
+	height: 345px;
+	background-image: url('/assets/images/arrow-top-left.png');
+	background-position: center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	bottom: 0;
+	z-index: -1;
+}
+
+.policy-unscramble img{
+	height: 80px;
+    width: auto
+}
+
+.area-policy-box .earth-img{
+	width: 350px;
+}
+.area-policy-box  .area-title-stars{
+	color: #F0BF79;
+}
+.area-subtitle{
+	color: #888;
+	
+}
+/* non-appeals-sort   end */
+#non-appeals-area .policy-detail{
+	color: var(--bs-second-font-color);
+	font-size: 14px;
+	padding: 0 30px;
+}
 /* appeals-intro   start */
 #appeals-intro {
 	position: relative;
-	min-height: 800px;
 	font-family: SourceHanSansCN-Bold;
+	padding-bottom: 200px;
 }
 #appeals-intro .appeals-intro-top {
 	width: 286px;
@@ -724,16 +788,23 @@ section {
 		transform: translateX(0);
 	}
 }
-.three-places {
+.three-places{
 	position: absolute;
 	bottom: 0;
 	right: 150px;
 	width: 500px;
 	height: 350px;
-	background-image: url('/assets/images/three-places.png');
 	background-position: center;
 	background-size: 100%;
 	background-repeat: no-repeat;
+}
+.three-places.ac-appeal {
+	background-image: url('/assets/images/three-places.png');
+}
+.three-places.none-ac-appeal {
+	width: 800px;
+	bottom: 0px;
+	background-image: url('/assets/images/three-places-none-ac-appeal.png');
 }
 .important .title-img {
 	width: 400px;
