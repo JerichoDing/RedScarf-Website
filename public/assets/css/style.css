@@ -41,7 +41,7 @@ button {
 	border: 1px solid transparent;
 	outline: none;
 }
-a {
+a, .active-text {
 	color: var(--bs-primary);
 	text-decoration: none;
 }
@@ -49,6 +49,9 @@ a {
 a:hover {
 	color: #3b8af2;
 	text-decoration: none;
+}
+.font-italic{
+	font-style: italic;
 }
 
 h1,
@@ -519,6 +522,19 @@ section {
 	background-size: 600px 750px;
 	background-repeat: no-repeat;
 	z-index: -1;
+}
+.what-is-non-academic-appeal{
+	width: 220px;
+	height: 400px;
+	background-image: url('/assets/images/what-is-non-appeal.png');
+	background-position: 0 0;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	z-index: -1;
+}
+
+.non-academic-appeal-intro{
+	padding-right: 80px;
 }
 
 .academic-appeal-example .example-item {
