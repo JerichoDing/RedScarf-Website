@@ -215,7 +215,7 @@
 	 */
 
 	if (preloader) {
-		window.addEventListener('load', () => {
+		window.addEventListener('DOMContentLoaded', () => {
 			preloader.remove();
 		});
 	}

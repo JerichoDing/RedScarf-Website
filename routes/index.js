@@ -68,19 +68,27 @@ router.get('/auth', async (ctx, next) => {
 //获取授权后的用户信息，必须有一个返回页面
 router.get('/getUserInfo', async (ctx, next) => {
 	//获取code值
-	let {code, backurl = domain, type='base' } = ctx.query;
-	
-	const authUrl = `${domain}/auth?type=${type}&backurl=${encodeURIComponent(backurl)}`
-	console.log('授权参数', domain ,JSON.stringify(ctx.query), authUrl, code);
+	let { code, backurl = domain, type = 'base' } = ctx.query;
+
+	const authUrl = `${domain}/auth?type=${type}&backurl=${encodeURIComponent(
+		backurl
+	)}`;
+	console.log('授权参数', domain, JSON.stringify(ctx.query), authUrl, code);
 	if (!code) {
 		ctx.redirect(`${authUrl}`);
-		
 	}
-
 });
 
 //TODO: 核心渲染前端路由
-const routers = ['', 'index', 'academic-appeals', 'portfolio-details', '404'];
+const routers = [
+	'',
+	'index',
+	'academic-appeals',
+	'non-academic-appeals',
+	'third-appeals',
+	'portfolio-details',
+	'404',
+];
 routers.forEach((el) => {
 	router.get(`/${el}`, async (ctx) => {
 		// 微信的请求路由
