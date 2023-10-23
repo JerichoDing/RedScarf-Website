@@ -1756,6 +1756,13 @@ section {
 	background-repeat: no-repeat;
 	background-position: center;
 }
+.order-now{
+	position: absolute;
+	top: 200px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 200px;
+}
 .shining-stars .star-item{
 	position: absolute;
 	top: 50px;
