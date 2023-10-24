@@ -86,7 +86,6 @@ const routers = [
 	'academic-appeals',
 	'non-academic-appeals',
 	'third-appeals',
-	'portfolio-details',
 	'404',
 ];
 routers.forEach((el) => {
