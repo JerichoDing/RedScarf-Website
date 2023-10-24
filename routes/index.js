@@ -88,6 +88,7 @@ const routers = [
 	'third-appeals',
 	'contact-us',
 	'404',
+	'common',
 ];
 routers.forEach((el) => {
 	router.get(`/${el}`, async (ctx) => {
