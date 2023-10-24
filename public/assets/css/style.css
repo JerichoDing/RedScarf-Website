@@ -404,7 +404,7 @@ section {
 
 .navbar > ul > li {
 	white-space: nowrap;
-	width: 90px;
+	min-width: 100px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -415,7 +415,7 @@ section {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 0 3px;
+	padding: 0 2px;
 	font-size: 15px;
 	font-weight: 600;
 	color: var(--bs-primary);
@@ -444,7 +444,7 @@ section {
 	color: var(--bs-white);
 	background-color: var(--bs-primary-900);
 	border-radius: 30px;
-	padding: 6px 15px;
+	padding: 5px 10px;
 	user-select: none;
 }
 
@@ -1850,7 +1850,7 @@ section {
 }
 
 .feedback-box .col .feed-item-line{
-	height: 2px;
+	height: 1px;
 	width: 100%;
 	border-radius: 2px;
 	background-color: var(--bs-white);
@@ -2980,16 +2980,21 @@ section {
 #footer .footer-top .social-links a {
 	font-size: 18px;
 	display: inline-block;
-	background: var(--bs-primary-800);
-	color: #fff;
+	/* background: var(--bs-primary-800); */
+	color: var(--bs-primary-800);
 	line-height: 1;
 	padding: 8px 0;
 	margin-right: 4px;
-	border-radius: 4px;
 	text-align: center;
 	width: 36px;
 	height: 36px;
 	transition: 0.3s;
+}
+#footer .footer-top .social-links a svg{
+	fill: var(--bs-primary-800);
+	width: 20px;
+	height: 20px;
+	margin-bottom: 5px;
 }
 #footer #bottombar {
 	background: linear-gradient(
@@ -3002,9 +3007,11 @@ section {
 	width: 100%;
 }
 #footer .footer-top .social-links a:hover {
-	background: var(--bs-primary);
-	color: #fff;
+	color: var(--bs-primary);;
 	text-decoration: none;
+}
+#footer .footer-top .social-links a:hover svg {
+	fill: var(--bs-primary);;
 }
 
 #footer .copyright {
