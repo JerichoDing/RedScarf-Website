@@ -40,35 +40,38 @@
 
 		<div class="container ">
 			<img class="title-img" src="/assets/images/what-is-third.png" alt="">
-			<p class="active-text mt-3">作为英国政府及教育部授权的第三方独立机构，掌握高于大学校委会的最终裁决权，是在英国校内申诉完全不被学校允许后，学生最终的申诉(投诉)手段。第三方申诉的结果可以更改学校的最终裁定。</p>
+			<p class="active-text mt-3">
+				作为英国政府及教育部授权的第三方独立机构，掌握高于大学校委会的最终裁决权，是在英国校内申诉完全不被学校允许后，学生最终的申诉(投诉)手段。第三方申诉的结果可以更改学校的最终裁定。</p>
 			<div class="row">
 				<div class="tabs policy-tabs d-flex align-items-center mt-3 mb-3">
-					<div class="policy-tab-item active-text bold hover-text">澳大利亚(Ombusman)</div> <div class="policy-tab-item active-text bold ml-3">北爱尔兰 (NIPSO)</div>
+					<div class="policy-tab-item active-text bold hover-text">澳大利亚(Ombusman)</div>
+					<div class="policy-tab-item active-text bold ml-3">北爱尔兰 (NIPSO)</div>
 					<div class="policy-tab-item active-text bold ml-3">苏格兰 (SPSO)</div>
 					<div class="policy-tab-item active-text bold ml-3">英格兰/威尔士 (OIA)
 					</div>
 				</div>
 			</div>
-			          
-			<div class="row policy-detail"> 澳大利亚的监察专员 (Ombudsman)是一个独立的公共机构，负责调查、解决和提供关于公共服务和某些私营部门服务的投诉的建议。 以下是澳大利亚监察专员的主要职能和服务范围 </div>
+
+			<div class="row policy-detail"> 澳大利亚的监察专员 (Ombudsman)是一个独立的公共机构，负责调查、解决和提供关于公共服务和某些私营部门服务的投诉的建议。
+				以下是澳大利亚监察专员的主要职能和服务范围 </div>
 		</div>
 
 
-		<section id="video-section" class="mt-5">
+		<section id="video-third" class="mt-5">
 			<div class="container ">
 				<div class="row d-flex align-items-center">
 					<div class="col d-flex flex-column ">
-						<div class="active-text font-italic bold font-24">导师分享回放</div>
-						<div class="third-video-stars  d-flex align-items-center ">
+						<div class="active-text font-italic bold font-24 mb-2">导师分享回放</div>
+						<div class="third-video-stars  d-flex align-items-center mb-2">
 							<span>
 								<i class="bi bi-star-fill"></i>
 								<i class="bi bi-star-fill"></i>
 								<i class="bi bi-star-fill"></i>
 								<i class="bi bi-star-fill"></i>
 							</span>
-								&nbsp;
-								&nbsp;
-								&nbsp;
+							&nbsp;
+							&nbsp;
+							&nbsp;
 							<span>评分：4.8/5</span>
 						</div>
 						<div class="active-text font-18 mt-2 mb-2">主要体系划分：</div>
@@ -104,8 +107,68 @@
 				</div>
 			</div>
 		</section>
-		
-	
+		<section id="order-section">
+			<div class="ellipse-top fixed-section-icon fixed-left">
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col col-6 d-flex flex-column align-items-center justify-content-center">
+						<div class="order-box d-flex justify-content-start align-items-center">
+							<img class="btn-now " src="/assets/images/order-now-btn.png" alt="">
+							<div class="arrow-animation d-flex justify-content-center">
+								<img class="arrow-1" src="/assets/images/arrow-1.png" alt="">
+								<img class="arrow-2" src="/assets/images/arrow-2.png" alt="">
+								<img class="arrow-3" src="/assets/images/arrow-3.png" alt="">
+							</div>
+						</div>
+						<div class="pl-2 mt-3 mb-4"> 为留学生打造本地化服务链接，保姆式托管，改变每一个留学生的困境 </div>
+						<div class="btns">
+							<button class="text-center rsa-btn rsa-btn-normal hover-btn">
+								<span>了解更多</span>
+							</button>
+							<button class="text-center rsa-btn rsa-btn-normal hover-btn">
+								<span>我的微信</span>
+							</button>
+						</div>
+					</div>
+					<div class="col col-6">
+						<img src="/assets/images/order-now-right.png" alt="">
+					</div>
+				</div>
+
+			</div>
+
+			<div class="container feedback-from-patriarch-1 d-flex align-items-center flex-column mt-5">
+				<div class="row">
+					<img src="/assets/images/feedback-from-patriarch-1.png" alt="">
+				</div>
+				<div class="row feedback-sub-btn mt-4 mb-4">
+					<button class="text-center rsa-btn rsa-btn-link rsa-btn-middle  active hover-btn">
+						<span>查看更多评价</span>
+					</button>
+				</div>
+			</div>
+			{include feedback.html}
+		</section>
+		<section id="advantage-list">
+			<div class="container">
+				<div class="row d-flex align-items-center">
+					<div class="col-md-6  d-flex  mb-5 mb-lg-0 advantage-top-img justify-content-start">
+					</div>
+					<div class="col-md-6 d-flex  mb-5 mb-lg-0 justify-content-end ">
+						<button class="text-center rsa-btn rsa-btn-link">了解更多</button>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				{include advantage-list.html}
+			</div>
+		</section>
+		<section id="contact-us">
+			
+		</section>
+
+
 
 
 
@@ -119,14 +182,14 @@
 </html>
 <script>
 	var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 3,
-      spaceBetween: 30,
-	  centeredSlides: true,
-	  loop: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-		uniqueNavElements :false,
-      },
-    });
+		slidesPerView: 3,
+		spaceBetween: 30,
+		centeredSlides: true,
+		loop: true,
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+			uniqueNavElements: false,
+		},
+	});
 </script>

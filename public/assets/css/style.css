@@ -705,6 +705,68 @@ section {
 	top: -100px;
 	z-index: -1;
 }
+#video-third {
+	position: relative;
+	overflow: auto;
+}
+#order-section {
+	position: relative;
+	overflow: auto;
+}
+
+#order-section .order-box .btn-now {
+	width: 300px;
+	cursor: pointer;
+}
+#order-section .arrow-animation{
+	position: relative;
+}
+#order-section .arrow-animation img {
+	width: 40px;
+	position: absolute;
+	top: -35px;
+	animation: anim-arrow 0.8s linear infinite;
+}
+#order-section .arrow-animation .arrow-1{
+	left: 0;
+}
+#order-section .arrow-animation .arrow-2{
+	left: 48px;
+	animation-delay: 0.4s;
+
+}
+#order-section .arrow-animation .arrow-3{
+	
+	left: 90px;
+	animation: anim-arrow 0.8s linear infinite reverse;
+}
+#order-section button {
+	border-radius: 30px;
+}
+
+@keyframes anim-arrow {
+	0% {
+		left: 0px;
+	}
+	30% {
+
+		left: 48px;
+	}
+	100% {
+		left: 90px;
+	}
+}
+
+.ellipse-top {
+	width: 116px;
+	height: 440px;
+	background-image: url('/assets/images/ellipse.png');
+	background-position: center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	top: -100px;
+	z-index: -1;
+}
 .appeals-intro-title {
 	font-size: 28px;
 	font-style: italic;
@@ -1027,7 +1089,7 @@ section {
 	padding: 0;
 	margin: 0;
 }
-#hero.third-appeal{
+#hero.third-appeal {
 	height: 430px;
 }
 #hero .swiper-box {
@@ -1189,7 +1251,7 @@ section {
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
-.third-appeal-1{
+.third-appeal-1 {
 	position: relative;
 }
 .third-appeal-1 .swiper-container {
@@ -1220,7 +1282,7 @@ section {
 	min-width: 30%;
 	overflow: hidden;
 }
-.third-appeal-1 .swiper-container .swiper-slide img{
+.third-appeal-1 .swiper-container .swiper-slide img {
 	height: 100%;
 	object-fit: cover;
 }
@@ -1228,19 +1290,22 @@ section {
 .third-appeal-1 .swiper-container .swiper-slide-duplicate-active {
 	transform: scale(1);
 }
-.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
 	position: absolute;
-	bottom:-30px;
+	bottom: -30px;
 }
-.swiper-pagination-bullet-active{
+.swiper-pagination-bullet-active {
 	background-color: var(--bs-primary-800);
 }
 
-.third-appeal-2>img{
+.third-appeal-2 > img {
 	width: 100%;
 }
-.third-video-stars{
-	color: #F0BF79;
+.third-video-stars {
+	color: #f0bf79;
 }
 
 .section-bg {
@@ -1792,7 +1857,7 @@ section {
 	position: relative;
 	z-index: -1;
 }
-.pl-2{
+.pl-2 {
 	line-height: 2;
 }
 /* video end */
