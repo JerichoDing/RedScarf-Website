@@ -84,6 +84,12 @@ li {
 .h-500 {
 	height: 500px;
 }
+.h-600 {
+	height: 600px;
+}
+.h-800 {
+	height: 800px;
+}
 .fixed-section-icon {
 	position: absolute;
 }

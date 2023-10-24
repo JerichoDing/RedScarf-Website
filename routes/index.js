@@ -81,11 +81,12 @@ router.get('/getUserInfo', async (ctx, next) => {
 
 //TODO: 核心渲染前端路由
 const routers = [
-	'',
+	'', //首页
 	'index',
 	'academic-appeals',
 	'non-academic-appeals',
 	'third-appeals',
+	'contact-us',
 	'404',
 ];
 routers.forEach((el) => {
