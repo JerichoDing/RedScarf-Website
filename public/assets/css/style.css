@@ -108,7 +108,9 @@ li {
 .title-img {
 	width: 300px;
 }
-
+input,textarea{
+	border-color: transparent;
+}
 .rsa-btn {
 	background-color: rgb(102, 122, 247);
 	color: var(--bs-white);
@@ -657,10 +659,13 @@ section {
 	width: 300px;
 	height: 215px;
 }
+
 .appeal-list h5 {
 	text-align: center;
 }
-
+.hr-center .row img{
+	width: 100%;
+}
 /* what-is-appeal   end*/
 /* non-appeals-sort   start */
 #non-appeals-sort {
@@ -714,6 +719,82 @@ section {
 	top: -100px;
 	z-index: -1;
 }
+#contact-us-2{
+	position: relative;
+	overflow: auto;
+}
+#contact-us-2 .appeals-intro-top {
+	width: 120px;
+    height: 250px;
+	background-image: url('/assets/images/appeals-intro-top-left.png');
+	background-position: center;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	top: 10px;
+	z-index: -1;
+}
+/* .contact-us-2-left {
+	background-image: url('/assets/images/contact-hr-right.png');
+	width: 300px;
+	height: 600px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	position: relative;
+	z-index: -1;
+	border-radius: 10px;
+} */
+.email-form-contact{
+	position: relative;
+	color: var(--bs-white);
+	width: 620px;
+	height: 40px;
+}
+.email-form-contact img{
+	position: absolute;
+	top: 0;
+	height: 40px;
+}
+.email-form-contact .email-bg{
+	left: 0;
+}
+.email-form-contact .email-bg-1{
+	left: 465px;
+	height: 40px;
+}
+.email-form-contact .email-bg-2{
+	left: 486px;
+	height: 40px;
+}
+.email-form-contact .email-content{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.contact-middle-info span{
+	color: var(--bs-white);
+	font-size: 14px;
+	padding: 4px 10px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px;
+	background-color: var(--bs-primary);
+	user-select: none;
+	margin: 10px 0;
+}
+.items-content input{
+	width: 100%;
+	height: 40px;
+	border-radius: 10px;
+	border-color: transparent;
+	background-color: var(--bs-white);
+	padding: 0 10px;
+	border:1px solid;
+}
+.contact-middle-info li{
+	list-style: disc;
+}
+
 #video-third {
 	position: relative;
 	overflow: auto;
@@ -1783,10 +1864,15 @@ section {
 #apply .apply-box .apply-form-bg {
 	padding: 0 120px;
 }
+.apply-left-envelope{
+	position: absolute;
+	top: 200px;
+    left: 450px;
+}
 .apply-form-bg {
 	width: 100%;
 	height: 750px;
-	background-image: url('/assets/images/apply-form.png');
+	background-image: url('/assets/images/20230113031358144.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -1928,6 +2014,7 @@ section {
 	position: relative;
 	z-index: -1;
 }
+
 .pl-2 {
 	line-height: 2;
 }

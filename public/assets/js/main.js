@@ -368,5 +368,7 @@
 	 * Initiate Pure Counter
 	 */
 	
-	new PureCounter();
+	new PureCounter({
+		separator: ',',
+	});
 })();

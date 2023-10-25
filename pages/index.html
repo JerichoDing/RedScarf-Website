@@ -153,66 +153,7 @@
 
 
 		<section id="team">
-			<div class="container">
-				<div class="row d-flex justify-content-start align-items-end">
-					<div class="col-md-6  d-flex flex-md-column mb-5 mb-lg-0 team-badge">
-						<img src="/assets/images/badge.png" alt="">
-						<h3 class="title">红领巾用数据证明实力</h3>
-						<h3 class="title">作为留学生家长认可的留学申诉团队</h3>
-					</div>
-					<div class="col-md-4 offset-md-2 mb-5 mb-lg-0 team-members">
-						<img src="/assets/images/five-people.png" alt="">
-					</div>
-				</div>
-			</div>
-			<div class="container team-intro">
-				我们致力于帮助留学生解决留学各个阶段的申诉问题，并帮助学生重新回归到正常的学习和生活中，我们的胜诉成功率高达98%。<br /> 团队导师从业至少拥有7年以上申诉经验。
-			</div>
-			<div class="container service-count">
-				<div class="row d-flex align-items-center justify-content-between">
-					<div class="col d-flex align-items-center justify-content-center">
-						<div class="service-count-item d-flex flex-md-column">
-							<div class="service-count-item-box  d-flex align-items-end">
-								<div class="service-count-item-icon"></div>
-								<div data-purecounter-start="0" data-purecounter-end="23000"
-									 data-purecounter-duration="1" class="service-count-item-number purecounter  ">
-								</div>
-								<span class="service-count-item-suffix ">+</span>
-								<span class="service-count-item-unit">件</span>
-							</div>
-							<div class="service-count-item-title">服务总量</div>
-						</div>
-					</div>
-					<div class="col d-flex align-items-center justify-content-center">
-						<div class="service-count-item d-flex flex-md-column">
-							<div class="service-count-item-box  d-flex align-items-end">
-								<div class="service-count-item-icon"></div>
-								<div data-purecounter-start="0" data-purecounter-end="12000"
-									 data-purecounter-duration="1" class="service-count-item-number purecounter  ">
-								</div>
-								<span class="service-count-item-suffix ">+</span>
-								<span class="service-count-item-unit">件</span>
-							</div>
-							<div class="service-count-item-title">申诉已处理案例</div>
-						</div>
-					</div>
-					<div class="col d-flex align-items-center justify-content-center">
-						<div class="service-count-item d-flex flex-md-column">
-							<div class="service-count-item-box  d-flex align-items-end">
-								<div class="service-count-item-icon"></div>
-								<div data-purecounter-start="0" data-purecounter-end="10000"
-									 data-purecounter-duration="1" class="service-count-item-number purecounter  ">
-								</div>
-								<span class="service-count-item-suffix ">+</span>
-								<span class="service-count-item-unit">件</span>
-							</div>
-							<div class="service-count-item-title">课程辅导</div>
-						</div>
-					</div>
-
-
-				</div>
-			</div>
+			{include team-number.html}
 			<div class="container apply-now">
 				<div class="row">
 					<div class="col  team-bottom">
@@ -275,7 +216,7 @@
 							<div class="service-member-name sort-4"></div>
 							<div class="service-member-title  vice-color">
 								<span>英国利兹大学</span>&nbsp;&nbsp;|
-								<span> 本科毕业  &nbsp;&nbsp;&nbsp; 教育学</span>
+								<span> 本科毕业 &nbsp;&nbsp;&nbsp; 教育学</span>
 							</div>
 							<div class="service-member-intro">从事高等教育领域10余年，善于把握每个学生申诉脉络，帮助复盘，为海外留学生提
 								供个性化需求方案，被留学生群体评为最懂学生的老师，及时解救学业问题的“家长”。
@@ -312,30 +253,7 @@
 			<!-- apply-top-circle  semi-circle -->
 			{include scroll-svg.html}
 
-			<div class="container apply-box">
-				<div class=" apply-form-bg d-flex justify-content-between align-items-center flex-row">
-					<img class="apply-left-img" src="/assets/images/apply-left.png" alt="">
-					<div class="apply-form">
-						<div class="container d-flex flex-column align-items-center pt-5">
-							<div class="row apply-title">立即预约，解锁上岸密码</div>
-							<div class="row  apply-subtitle">快速预约享受显示免费咨询服务，每天名额有限！</div>
-							<div class="row d-flex flex-column apply-inner-form">
-								<div class="form-item">
-									<span>姓名</span>
-									<input type="text" class="form-control" placeholder="请输入你的名字">
-								</div>
-								<div class="form-item">
-									<span>手机号码</span>
-									<input type="text" class="form-control" placeholder="请输入手机号码">
-								</div>
-							</div>
-							<div class="apply-submit">
-								<button class=" rsa-btn rsa-btn-submit ">立即预约</button>
-								<span class="apply-feedback">帮助反馈</span>
-							</div>
-						</div>
-					</div>
-				</div>
+			{include apply-box.html}
 		</section>
 
 		<!-- 课程辅导 -->
