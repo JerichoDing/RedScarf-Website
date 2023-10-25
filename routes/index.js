@@ -80,7 +80,7 @@ router.get('/getUserInfo', async (ctx, next) => {
 });
 
 //TODO: 核心渲染前端路由
-const routers = [
+const frontRouters = [
 	'', //首页
 	'index',
 	'academic-appeals',
@@ -89,8 +89,19 @@ const routers = [
 	'contact-us',
 	'404',
 	'common',
+	'course-guidance/Preview',// 课程预习
+	'course-guidance/Course', // 课程辅导
+	'course-guidance/CoursePaper', // 论文辅导
+	'course-guidance/Assignment', // 作业辅导
+	'course-guidance/Exam', // 考试辅导
+	'course-guidance/Proofreading', // Proofreading
+	'course-guidance/Selection', // 选课指导
+	'course-guidance/Turnitin', // Turnitin查重
+	'course-guidance/ArtTutorial', // 艺术类课业辅导
+	'course-guidance/PhDRp', // 博士RP辅导
+	'course-guidance/ModelEssay', // 高分范文
 ];
-routers.forEach((el) => {
+frontRouters.forEach((el) => {
 	router.get(`/${el}`, async (ctx) => {
 		// 微信的请求路由
 		if (ctx.query.signature) {

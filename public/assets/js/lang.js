@@ -6,7 +6,7 @@ const translations = {
 		非学术申诉: 'Non-Academic',
 		第三方申诉: 'Third-Party',
         红领巾智库: 'RedScarf Think',
-		学术辅导: 'Tutoring',
+		课程辅导: 'Tutoring',
 		申诉阵容: 'Team',
 		联系导师: 'Contact us',
 		什么是学术申诉: "What's Academic Appeals",
