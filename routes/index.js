@@ -79,7 +79,7 @@ router.get('/getUserInfo', async (ctx, next) => {
 	}
 });
 
-//TODO: 核心渲染前端路由
+//TODO: 手动添加前端路由
 const frontRouters = [
 	'', //首页
 	'index',
@@ -103,7 +103,7 @@ const frontRouters = [
 ];
 frontRouters.forEach((el) => {
 	router.get(`/${el}`, async (ctx) => {
-		// 微信的请求路由
+		// 微信的请求路由，不做处理
 		if (ctx.query.signature) {
 			return;
 		}
@@ -113,9 +113,12 @@ frontRouters.forEach((el) => {
 		const Template = EndSkin.create(
 			path.resolve(__dirname, `../pages/${fileName}.html`)
 		);
+		let isPrd = domain.indexOf('redscarfappeal') > 0? 1:0
+		console.log(111,isPrd);
 		Template.assign({
 			// 传给html的变量
 			domain: domain,
+			isPrd,
 			version: new Date().getTime(),
 		});
 		ctx.body = Template.html();
