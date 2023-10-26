@@ -135,7 +135,7 @@ $(function () {
 			// },
 		},
 	});
-	// 海马大数据(数字递增)
+	// 红领巾大数据(数字递增)
 	// $('.counter').countUp();
 	// $('.counter1').countUp();
 	// 我们的课程体系
@@ -623,7 +623,7 @@ $(function () {
 	$('.ind1_video i').click(function () {
 		$('.ind1_tc').fadeOut();
 	});
-	// 海马课堂成长历程
+	// 红领巾课堂成长历程
 	var swiper = new Swiper('.ab3', {
 		loop: true,
 		slidesPerView: 3,
@@ -743,7 +743,7 @@ $(function () {
 			$(this).addClass('current').siblings('li').removeClass('current');
 		});
 	});
-	// 海马生活
+	// 红领巾生活
 	var swiper = new Swiper('.join3_one .swiper-container', {
 		// loop:true,
 		// autoplay:true,
