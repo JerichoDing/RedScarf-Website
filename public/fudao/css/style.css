@@ -90,7 +90,7 @@
     z-index: 100;
     padding: 8px 0 5px;
     white-space: nowrap;
-    background: #ffffff url(../images/xia1.png)center top 2px no-repeat;
+    background: #ffffff url(/fudao/images/xia1.png)center top 2px no-repeat;
     border-radius: 0 0 10px 10px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
     transition: all 0.6s; 
@@ -203,7 +203,7 @@
 /*    border-bottom: 1px solid #cccccc;*/
 }
 .onli .a,ul.levelu>li.on>a{
-    background: url(../images/yyy.png)right center no-repeat;
+    background: url(/fudao/images/yyy.png)right center no-repeat;
 }
 .a {
     font-size: 18px;
@@ -214,7 +214,7 @@
     box-sizing: border-box;
 }
 .l.bg .a,ul.levelu>li.on.bg1>a{
-    background: url(../images/yyy1.png)right center no-repeat; 
+    background: url(/fudao/images/yyy1.png)right center no-repeat; 
 }
 .levelu {
     display: none;
@@ -268,7 +268,7 @@ ul.levelu>li.on>a{
     outline: none;
 }
 .aa .aaz{
-    background: url(../images/z.png) no-repeat;
+    background: url(/fudao/images/z.png) no-repeat;
     background-size: cover;
     left: 5%;
 }
@@ -279,10 +279,10 @@ ul.levelu>li.on>a{
     right: 5%;
 }
 /*.aa .aaz:hover{
-    background: url(../images/z1.png) no-repeat;
+    background: url(/fudao/images/z1.png) no-repeat;
 }
 .aa .aay:hover{
-    background: url(../images/y1.png) no-repeat;
+    background: url(/fudao/images/y1.png) no-repeat;
 }*/
 .ban2{
     position: absolute;
@@ -373,7 +373,7 @@ a.ind1_more{
     left: -155px;
     width: 155px;
     height: 210px;
-    background: url(../images/x_01.png)no-repeat;
+    background: url(/fudao/images/x_01.png)no-repeat;
 }
 .ind1_lf:after{
     content: "";
@@ -382,7 +382,7 @@ a.ind1_more{
     right: -170px;
     width: 198px;
     height: 48px;
-    background: url(../images/yx.png)no-repeat;
+    background: url(/fudao/images/yx.png)no-repeat;
 }
 .ind1_tu{
     position: relative;
@@ -407,7 +407,7 @@ a.ind1_more{
     transform: translate(-50%,-50%);
     width: 120px;
     height: 120px;
-    background: url(../images/bf.jpg)no-repeat;
+    background: url(/fudao/images/bf.jpg)no-repeat;
 }
 .about1_ri.ind1_tu:after{
     display: none;
@@ -469,7 +469,7 @@ a.ind1_more{
     width: 56.4%;
     color: #ffffff;
     padding: 85px 70px;
-    background: url(../images/ind2_03.jpg)top center no-repeat;
+    background: url(/fudao/images/ind2_03.jpg)top center no-repeat;
     background-size: cover;
 }
 .ind2_ti{
@@ -847,7 +847,7 @@ a.ind2_more{
     transform: translate(-50%,0);
     width: 18px;
     height: 15px;
-    background: url(../images/sjt.png)no-repeat;
+    background: url(/fudao/images/sjt.png)no-repeat;
     z-index: 10;
 }
 .ind3_one{
@@ -906,7 +906,7 @@ a.ind2_more{
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
 }
 .ind3_ri ul li:hover:after{
-    background: url(../images/sjt1.png)no-repeat;
+    background: url(/fudao/images/sjt1.png)no-repeat;
 }
 .ind3_ri ul li:hover .ind3_one{
     display: none;
@@ -950,19 +950,19 @@ a.ind2_more{
     z-index: 9;
 }
 .ind4_lf ul li:first-child:after{
-    background: url(../images/41.png)no-repeat;
+    background: url(/fudao/images/41.png)no-repeat;
 }
 .ind4_lf ul li:nth-child(2){
     background: var(--bs-primary-700);
 }
 .ind4_lf ul li:nth-child(2):after{
-    background: url(../images/42.png)no-repeat;
+    background: url(/fudao/images/42.png)no-repeat;
 }
 .ind4_lf ul li:nth-child(3){
     background: #f4c771;
 }
 .ind4_lf ul li:nth-child(3):after{
-    background: url(../images/43.png)no-repeat;
+    background: url(/fudao/images/43.png)no-repeat;
 }
 .ind4_ri{
     width: 23.64%;
@@ -1430,7 +1430,7 @@ a.ind6_more {
 }
 .index9{
     padding: 70px 0 30px;
-    background: url(../images/9_03.jpg)top center no-repeat;
+    background: url(/fudao/images/9_03.jpg)top center no-repeat;
     background-size: cover;
 }
 /*.ind9{
@@ -1469,7 +1469,7 @@ a.ind6_more {
     width: 60px;
     height: 52px;
     z-index: 9;
-    background: url(../images/9jt.png)no-repeat;
+    background: url(/fudao/images/9jt.png)no-repeat;
 }
 .ind9_ti{
     display: flex;
@@ -1538,7 +1538,7 @@ a.ind9_more:hover{
     font-weight: bold;
     padding-left: 40px;
     padding-right: 20px;
-    background: url(../images/9x.png)left center no-repeat;
+    background: url(/fudao/images/9x.png)left center no-repeat;
 }
 .zhu{
     flex: 1;
@@ -1547,7 +1547,7 @@ a.ind9_more:hover{
     font-size: 20px;
     color: #0b0b0b;
     padding-left: 40px;
-    background: url(../images/9q.png)left top no-repeat;
+    background: url(/fudao/images/9q.png)left top no-repeat;
 }
 .zhu_ms{
     flex: 1;
@@ -1573,7 +1573,7 @@ a.ind9_more:hover{
     left: 0;
     width: 21px;
     height: 14px;
-    background: url(../images/9z.png)no-repeat;
+    background: url(/fudao/images/9z.png)no-repeat;
 }
 .ind9_con:after{
     content: "";
@@ -1582,7 +1582,7 @@ a.ind9_more:hover{
     right: 0;
     width: 21px;
     height: 14px;
-    background: url(../images/9y.png)no-repeat;
+    background: url(/fudao/images/9y.png)no-repeat;
 }
 .ind9_m{
     display: none;
@@ -2037,7 +2037,7 @@ a.more{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    background: url(../images/3.png)top center no-repeat;
+    background: url(/fudao/images/3.png)top center no-repeat;
     background-size: 100% 100%;
 }
 .coach3_more{
@@ -2115,13 +2115,13 @@ a.more{
     outline: none;
 }
 .zy_flex .ffz{
-    background: url(../images/z1.png) no-repeat;
+    background: url(/fudao/images/z1.png) no-repeat;
     background-size: cover;
     left: -70px;
 }
 
 .zy_flex .ffy {
-    background: url(../images/y1.png) no-repeat;
+    background: url(/fudao/images/y1.png) no-repeat;
     background-size: cover;
     right: -70px;
 }
@@ -2139,14 +2139,14 @@ a.more{
     outline: none;
 }
 .zy .ffz{
-    background: url(../images/z1.png) no-repeat;
+    background: url(/fudao/images/z1.png) no-repeat;
     background-size: cover;
     top: 0;
     left: 0;
 }
 
 .zy .ffy {
-    background: url(../images/y1.png) no-repeat;
+    background: url(/fudao/images/y1.png) no-repeat;
     background-size: cover;
     bottom: 0;
     right: 0%;
@@ -2250,13 +2250,13 @@ a.more{
     outline: none;
 }
 .coach6_con .ggz{
-    background: url(../images/zz.png) no-repeat;
+    background: url(/fudao/images/zz.png) no-repeat;
     background-size: cover;
     left: 2px;
 }
 
 .coach6_con .ggy {
-    background: url(../images/yy.png) no-repeat;
+    background: url(/fudao/images/yy.png) no-repeat;
     background-size: cover;
     right: 2px;
 }
@@ -2580,7 +2580,7 @@ a.hk3_more{
     color: #ffffff;
     padding: 60px;
     padding-bottom: 40px;
-    background: url(../images/b.png)top center no-repeat;
+    background: url(/fudao/images/b.png)top center no-repeat;
     background-size: cover;
     overflow: hidden;
 }
@@ -2647,13 +2647,13 @@ a.hk3_more{
     outline: none;
 }
 .lb_zy .fz{
-    background: url(../images/z1.png) no-repeat;
+    background: url(/fudao/images/z1.png) no-repeat;
     background-size: cover;
     left: -100px;
 }
 
 .lb_zy .fy {
-    background: url(../images/y1.png) no-repeat;
+    background: url(/fudao/images/y1.png) no-repeat;
     background-size: cover;
     right: -100px;
 }
@@ -2716,7 +2716,7 @@ a.hk3_more{
     color: #ffffff;
     padding: 30px 30px;
     margin-left: -3.49%;
-    background: url(../images/h61.png)left center no-repeat;
+    background: url(/fudao/images/h61.png)left center no-repeat;
     background-size: cover;
 }
 .hk6_ri>div{
@@ -2750,14 +2750,14 @@ a.hk3_more{
     outline: none;
 }
 .hk6_zy .hhz{
-    background: url(../images/hhz.png) no-repeat;
+    background: url(/fudao/images/hhz.png) no-repeat;
     background-size: cover;
     top: 0;
     left: 0;
 }
 
 .hk6_zy .hhy {
-    background: url(../images/hhy.png) no-repeat;
+    background: url(/fudao/images/hhy.png) no-repeat;
     background-size: cover;
     bottom: 0;
     right: 0%;
@@ -3025,7 +3025,7 @@ a.m0{
     font-weight: bold;
     padding-right: 40px;
     margin-bottom: 5px;
-    background: url(../images/by_jt.png)right 30px center no-repeat;
+    background: url(/fudao/images/by_jt.png)right 30px center no-repeat;
 }
 .by2_ri dl dd{
     font-size: 16px;
@@ -3085,7 +3085,7 @@ a.m0{
     margin-left: -39px;
     width: 78px;
     height: 78px;
-    background: url(../images/b41.png)no-repeat;
+    background: url(/fudao/images/b41.png)no-repeat;
 }
 .by3 ul li h3 span{
     font-size: 18px;
@@ -3099,7 +3099,7 @@ a.m0{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    background: url(../images/bx.png)left 35px bottom 15px no-repeat;
+    background: url(/fudao/images/bx.png)left 35px bottom 15px no-repeat;
 }
 .by3 ul li:nth-child(2){
     margin-top: 45px;
@@ -3114,11 +3114,11 @@ a.m0{
 }
 .by3 ul li:nth-child(2) h3:after{
     top: -94px;
-    background: url(../images/b42.png)no-repeat;
+    background: url(/fudao/images/b42.png)no-repeat;
     background-size: 100%;
 }
 .by3 ul li:nth-child(2) .by3_url a{
-    background: url(../images/bx1.png)left 20px bottom 15px no-repeat;
+    background: url(/fudao/images/bx1.png)left 20px bottom 15px no-repeat;
 
 }
 .by3_more{
@@ -3250,11 +3250,11 @@ img.tan{
     padding: 20px 0;
     border-radius: 10px;
     overflow: hidden;
-    background: url(../images/lz.png)top center no-repeat;;
+    background: url(/fudao/images/lz.png)top center no-repeat;;
     background-size: cover !important;
 }
 .lun2_main ul li:nth-child(2){
-    background: url(../images/ly.png)top center no-repeat;
+    background: url(/fudao/images/ly.png)top center no-repeat;
 }
 .lun2_lf{
     width: 32.8%;
@@ -3449,7 +3449,7 @@ img.tan{
     width: 33px;
     height: 33px;
     margin-top: 0;
-    background: url(../images/lunz.png) no-repeat;
+    background: url(/fudao/images/lunz.png) no-repeat;
     background-size: 100%;
 }
 
@@ -3458,7 +3458,7 @@ img.tan{
     width: 33px;
     height: 33px;
     margin-top: 0;
-    background: url(../images/luny.png) no-repeat;
+    background: url(/fudao/images/luny.png) no-repeat;
     background-size: 100%;
 }
 .yuyan1{
@@ -3467,7 +3467,7 @@ img.tan{
     color: #33758d;
     text-align: center;
     padding: 60px 0;
-    background: url(../images/yy1.jpg) top center no-repeat;
+    background: url(/fudao/images/yy1.jpg) top center no-repeat;
 }
 .w820{
     position: relative;
@@ -3507,7 +3507,7 @@ img.tan{
     color: #121212;
     margin-bottom: 10px;
     padding-right: 25px;
-    background: url(../images/yjt.png)top 6px right no-repeat;
+    background: url(/fudao/images/yjt.png)top 6px right no-repeat;
 }
 .yy2_tit a.yy2_more{
     display: inline-block;
@@ -3532,7 +3532,7 @@ img.tan{
     padding-bottom: 25px;
 }
 .yuyan2 ul li:hover .yy2_tit h3{
-    background: url(../images/yjt1.png)top 6px right no-repeat;
+    background: url(/fudao/images/yjt1.png)top 6px right no-repeat;
 }
 .yuyan2 ul li:hover a.yy2_more{
     color: #ffffff;
@@ -3575,7 +3575,7 @@ img.tan{
     color: #121212;
     margin-bottom: 2px;
     padding-right: 25px;
-    background: url(../images/yjt.png)top 4px right no-repeat;
+    background: url(/fudao/images/yjt.png)top 4px right no-repeat;
 }
 .yy3_con h5{
     font-size: 16px;
@@ -3587,7 +3587,7 @@ img.tan{
     color: var(--bs-primary-700);
 }
 .yuyan3 ul li:hover .yy3_con h4{
-    background: url(../images/yjt1.png)top 4px right no-repeat;
+    background: url(/fudao/images/yjt1.png)top 4px right no-repeat;
 }
 .yuyan4{
     padding: 60px 0 45px;
@@ -3608,25 +3608,25 @@ img.tan{
     margin-right: 5%;
     margin-bottom: 45px;
     padding-left: 60px;
-    background: url(../images/y41.png)left top 3px no-repeat;
+    background: url(/fudao/images/y41.png)left top 3px no-repeat;
 }
 .yuyan4 ul li:nth-child(3n){
     margin-right: 0;
 }
 .yuyan4 ul li:nth-child(2){
-    background: url(../images/y42.png)left top 3px no-repeat;
+    background: url(/fudao/images/y42.png)left top 3px no-repeat;
 }
 .yuyan4 ul li:nth-child(3){
-    background: url(../images/y43.png)left top 3px no-repeat;
+    background: url(/fudao/images/y43.png)left top 3px no-repeat;
 }
 .yuyan4 ul li:nth-child(4){
-    background: url(../images/y44.png)left top 3px no-repeat;
+    background: url(/fudao/images/y44.png)left top 3px no-repeat;
 }
 .yuyan4 ul li:nth-child(5){
-    background: url(../images/y45.png)left top 3px no-repeat;
+    background: url(/fudao/images/y45.png)left top 3px no-repeat;
 }
 .yuyan4 ul li:nth-child(6){
-    background: url(../images/y46.png)left top 3px no-repeat;
+    background: url(/fudao/images/y46.png)left top 3px no-repeat;
 }
 .yuyan4 ul li h3{
     font-size: 20px;
@@ -3646,7 +3646,7 @@ img.tan{
 }
 .yuyan5{
     padding: 90px 0 30px;
-    background: url(../images/y5.png)bottom left no-repeat;
+    background: url(/fudao/images/y5.png)bottom left no-repeat;
     background-size: cover;
 }
 .yy5_ri{
@@ -3849,16 +3849,16 @@ a.modify2_ri{
     margin-bottom: 25px;
     padding-left: 60px;
     padding-right: 1%;
-    background: url(../images/m31.png)left top no-repeat;
+    background: url(/fudao/images/m31.png)left top no-repeat;
 }
 .modify3_lf ul li:nth-child(2){
-    background: url(../images/m32.png)left 5px top no-repeat;
+    background: url(/fudao/images/m32.png)left 5px top no-repeat;
 }
 .modify3_lf ul li:nth-child(3){
-    background: url(../images/m33.png)left top no-repeat;
+    background: url(/fudao/images/m33.png)left top no-repeat;
 }
 .modify3_lf ul li:nth-child(4){
-    background: url(../images/m34.png)left top no-repeat;
+    background: url(/fudao/images/m34.png)left top no-repeat;
 }
 .modify4{
     padding: 90px 0 75px;
@@ -3954,7 +3954,7 @@ a.modify2_ri{
     bottom: -18px;
     width: 76px;
     height: 78px;
-    background: url(../images/fx.png)no-repeat;
+    background: url(/fudao/images/fx.png)no-repeat;
 }
 .fail1 ul li h3{
     font-size: 22px;
@@ -3968,7 +3968,7 @@ a.modify2_ri{
 }
 .fail2{
     padding: 100px 0 50px;
-    background: url(../images/gk2.png)center no-repeat;
+    background: url(/fudao/images/gk2.png)center no-repeat;
     background-size: cover;
 }
 .fail2_flex{
@@ -4041,7 +4041,7 @@ a.modify2_ri{
     color: #090909;
     margin-bottom: 10px;
     padding-left: 25px;
-    background: url(../images/f2.png)left center no-repeat;
+    background: url(/fudao/images/f2.png)left center no-repeat;
 }
 .fail2_ri ul li:nth-child(2n){
     width: 59%;
@@ -4130,7 +4130,7 @@ a.modify2_ri{
 }
 .guide2{
     padding: 75px 0 30px;
-    background: url(../images/g2_02.jpg)top right no-repeat;
+    background: url(/fudao/images/g2_02.jpg)top right no-repeat;
     background-size: cover;
 }
 .w900{
@@ -4296,7 +4296,7 @@ a.guide2_more:hover{
     color: #ffffff;
     font-weight: bold;
     text-align: center;
-    background: url(../images/g41_02.png)bottom center no-repeat;
+    background: url(/fudao/images/g41_02.png)bottom center no-repeat;
     background-size: 100%;
 }
 .guide4_more{
@@ -4334,12 +4334,12 @@ a.guide2_more:hover{
     outline: none;
 }
 .zhan .swiper-button-prev{
-    background: url(../images/z1.png) no-repeat;
+    background: url(/fudao/images/z1.png) no-repeat;
     background-size: cover;
     left: 0;
 }
 .zhan .swiper-button-next {
-    background: url(../images/y1.png) no-repeat;
+    background: url(/fudao/images/y1.png) no-repeat;
     background-size: cover;
     right: 0;
 }
@@ -4449,7 +4449,7 @@ a.guide2_more:hover{
     width: 35.5%;
 /*    color: #ffffff;
     padding: 90px 55px 45px;
-    background: url(../images/pre2_02.png)center no-repeat;
+    background: url(/fudao/images/pre2_02.png)center no-repeat;
     background-size: cover;*/
 }
 .pre2_tit{
@@ -4484,22 +4484,22 @@ a.guide2_more:hover{
     margin-right: 4.1%;
     margin-top: 30px;
     padding-left: 85px;
-    background: url(../images/pr21.png)left top no-repeat;
+    background: url(/fudao/images/pr21.png)left top no-repeat;
 }
 .pre2_ri ul li:nth-child(3n){
     margin-right: 0;
 }
 .pre2_ri ul li:nth-child(2){
-    background: url(../images/pr22.png)left top no-repeat;
+    background: url(/fudao/images/pr22.png)left top no-repeat;
 }
 .pre2_ri ul li:nth-child(3){
-    background: url(../images/pr23.png)left top no-repeat;
+    background: url(/fudao/images/pr23.png)left top no-repeat;
 }
 .pre2_ri ul li:nth-child(4){
-    background: url(../images/pr24.png)left top no-repeat;
+    background: url(/fudao/images/pr24.png)left top no-repeat;
 }
 .pre2_ri ul li:nth-child(5){
-    background: url(../images/pr25.png)left top no-repeat;
+    background: url(/fudao/images/pr25.png)left top no-repeat;
 }
 .pre2_ri ul li:nth-child(6){
     background: url(https://www.highmarktutor.com/images/pr26.png)left top no-repeat;
@@ -4655,13 +4655,13 @@ a.pre2_more{
     line-height: 30px;
     color: #121212;
     padding-left: 58px;
-    background: url(../images/t21.png)left top no-repeat;
+    background: url(/fudao/images/t21.png)left top no-repeat;
 }
 .test2 ul li:nth-child(2){
-    background: url(../images/t22.png)left top no-repeat;
+    background: url(/fudao/images/t22.png)left top no-repeat;
 }
 .test2 ul li:nth-child(3){
-    background: url(../images/t23.png)left top no-repeat;
+    background: url(/fudao/images/t23.png)left top no-repeat;
 }
 .test2 ul li:last-child{
     margin-right: 0;
@@ -4677,7 +4677,7 @@ a.pre2_more{
     bottom: 0;
     width: 100%;
     height: 83%;
-    background: url(../images/t3.png)top left no-repeat;
+    background: url(/fudao/images/t3.png)top left no-repeat;
     background-size: cover;
     z-index: -1;
 }
@@ -4759,16 +4759,16 @@ a.pre2_more{
     color: #ffffff;
     margin-bottom: 35px;
     padding: 20px 70px 20px 30px;
-    background: #13c0eb url(../images/t41.png)right center no-repeat;
+    background: #13c0eb url(/fudao/images/t41.png)right center no-repeat;
 }
 .test4_ri ul li:nth-child(2){
-    background: #f5c771 url(../images/t42.png)right -10px center no-repeat;;
+    background: #f5c771 url(/fudao/images/t42.png)right -10px center no-repeat;;
 }
 .test4_ri ul li:nth-child(3){
-    background: var(--bs-primary-700) url(../images/t43.png)right -10px center no-repeat;;
+    background: var(--bs-primary-700) url(/fudao/images/t43.png)right -10px center no-repeat;;
 }
 .test4_ri ul li:nth-child(4){
-    background: #80c6df url(../images/t44.png)right -10px center no-repeat;;
+    background: #80c6df url(/fudao/images/t44.png)right -10px center no-repeat;;
 }
 .test5{
     padding: 40px 0 110px;
@@ -4842,13 +4842,13 @@ a.pre2_more{
     outline: none;
 }
 .test5_zy .test5z{
-    background: url(../images/z1.png) no-repeat;
+    background: url(/fudao/images/z1.png) no-repeat;
     background-size: cover;
     left: -50px;
 }
 
 .test5_zy .test5y {
-    background: url(../images/y1.png) no-repeat;
+    background: url(/fudao/images/y1.png) no-repeat;
     background-size: cover;
     right: -50px;
 }
@@ -5154,7 +5154,7 @@ a.pre2_more{
     width: 33px;
     height: 33px;
     margin-top: -16px;
-    background: url(../images/lunz.png) no-repeat;
+    background: url(/fudao/images/lunz.png) no-repeat;
     background-size: 100%;
 }
 
@@ -5163,7 +5163,7 @@ a.pre2_more{
     width: 33px;
     height: 33px;
     margin-top: -16px;
-    background: url(../images/luny.png) no-repeat;
+    background: url(/fudao/images/luny.png) no-repeat;
     background-size: 100%;
 }
 #lea5 .swiper-slide-active span{
@@ -5299,7 +5299,7 @@ a.pre2_more{
 .task2_ri ul li{
     padding-left: 25px;
     margin-bottom: 20px;
-    background: url(../images/tf2.png)left top 8px no-repeat;
+    background: url(/fudao/images/tf2.png)left top 8px no-repeat;
 }
 .task2_ri ul li h3{
     font-size: 20px;
@@ -5524,7 +5524,7 @@ a.task4_more:hover{
 }
 .level3{
     padding: 35px 0;
-    background: url(../images/le3.jpg)top center no-repeat;
+    background: url(/fudao/images/le3.jpg)top center no-repeat;
     background-size: cover !important;
 }
 .level3_flex{
@@ -5568,7 +5568,7 @@ a.level3_ri{
     height: 310px;
 }
 .xinxi_solution_main ul li {
-    background: url(../images/le41.jpg)top center no-repeat;
+    background: url(/fudao/images/le41.jpg)top center no-repeat;
     background-size: cover !important;
     height: 100%;
     float: left;
@@ -5579,19 +5579,19 @@ a.level3_ri{
     transition: all 0.5s;
 }
 .xinxi_solution_main ul li:nth-child(2) { 
-    background: url('../images/le42.jpg')top center no-repeat; 
+    background: url('/fudao/images/le42.jpg')top center no-repeat; 
 }
 .xinxi_solution_main ul li:nth-child(3) { 
-    background: url('../images/le43.jpg')top center no-repeat; 
+    background: url('/fudao/images/le43.jpg')top center no-repeat; 
 }
 .xinxi_solution_main ul li:nth-child(4) { 
-    background: url('../images/le44.jpg')top center no-repeat; 
+    background: url('/fudao/images/le44.jpg')top center no-repeat; 
 }
 .xinxi_solution_main ul li:nth-child(5) { 
-    background: url('../images/le45.jpg')top center no-repeat; 
+    background: url('/fudao/images/le45.jpg')top center no-repeat; 
 }
 .xinxi_solution_main ul li:nth-child(6) { 
-    background: url('../images/le46.jpg')top center no-repeat; 
+    background: url('/fudao/images/le46.jpg')top center no-repeat; 
 }
 .xinxi_solution_main ul li .left_top { 
     position: absolute; 
@@ -5662,14 +5662,14 @@ a.level3_ri{
     content: "";
     width: 20px;
     height: 11px;
-    background: url(../images/ley.png)no-repeat;
+    background: url(/fudao/images/ley.png)no-repeat;
 }
 .right_top dl dd:before{
     display: none;
     content: "";
     width: 20px;
     height: 11px;
-    background: url(../images/lez.png)no-repeat;
+    background: url(/fudao/images/lez.png)no-repeat;
 }
 .right_top dl dd:hover{
     background: #ffffff;
@@ -5928,32 +5928,32 @@ a.level3_ri{
     color: #303131;
 }
 .ap3{
-    background: url(../images/ap3.jpg)top center no-repeat;
+    background: url(/fudao/images/ap3.jpg)top center no-repeat;
 }
 .ap4 .xinxi_solution_main ul li{
     width: 10.3%;
-    background: url('../images/ap41_03.jpg')top center no-repeat;
+    background: url('/fudao/images/ap41_03.jpg')top center no-repeat;
 }
 .ap4 .xinxi_solution_main ul li.on {
     width: 38.2%;
 }
 .ap4 .xinxi_solution_main ul li:nth-child(2) { 
-    background: url('../images/ap42_03.jpg')top center no-repeat; 
+    background: url('/fudao/images/ap42_03.jpg')top center no-repeat; 
 }
 .ap4 .xinxi_solution_main ul li:nth-child(3) { 
-    background: url('../images/ap43_03.jpg')top center no-repeat; 
+    background: url('/fudao/images/ap43_03.jpg')top center no-repeat; 
 }
 .ap4 .xinxi_solution_main ul li:nth-child(4) { 
-    background: url('../images/ap44_03.jpg')top center no-repeat; 
+    background: url('/fudao/images/ap44_03.jpg')top center no-repeat; 
 }
 .ap4 .xinxi_solution_main ul li:nth-child(5) { 
-    background: url('../images/ap45_03.jpg')top center no-repeat; 
+    background: url('/fudao/images/ap45_03.jpg')top center no-repeat; 
 }
 .ap4 .xinxi_solution_main ul li:nth-child(6) { 
-    background: url('../images/ap46_03.jpg')top center no-repeat; 
+    background: url('/fudao/images/ap46_03.jpg')top center no-repeat; 
 }
 .ap4 .xinxi_solution_main ul li:nth-child(7) { 
-    background: url('../images/ap47_03.jpg')top center no-repeat; 
+    background: url('/fudao/images/ap47_03.jpg')top center no-repeat; 
 }
 .ap6{
     padding: 80px 0;
@@ -6073,12 +6073,12 @@ a.level3_ri{
     color: var(--bs-primary-700);
     padding: 0 15px 0 50px;
     border-radius: 30px;
-    background: #fceed4 url(../images/tzx.png)left 15px center no-repeat;
+    background: #fceed4 url(/fudao/images/tzx.png)left 15px center no-repeat;
 }
 .tutor1_lf a:hover{
     color: #ffffff;
     background-color: var(--bs-primary-700);
-    background-image: url(../images/tzx1.png);
+    background-image: url(/fudao/images/tzx1.png);
 }
 .tutor1_con{
     width: 50%;
@@ -6098,7 +6098,7 @@ a.level3_ri{
     min-height: 58px;
     color: #272727;
     padding-left: 35px;
-    background: url(../images/tms1.png)left top 5px no-repeat;
+    background: url(/fudao/images/tms1.png)left top 5px no-repeat;
 }
 .tutor1_con dl{
     font-size: 0;
@@ -6128,13 +6128,13 @@ a.level3_ri{
     font-size: 16px;
     color: #272727;
     padding-left: 50px;
-    background: url(../images/tu11.png)left 10px center no-repeat;
+    background: url(/fudao/images/tu11.png)left 10px center no-repeat;
 }
 .tutor1_ri dl:nth-child(2){
-    background: url(../images/tu12.png)left 10px center no-repeat;
+    background: url(/fudao/images/tu12.png)left 10px center no-repeat;
 }
 .tutor1_ri dl:nth-child(3){
-    background: url(../images/tu13.png)left 15px center no-repeat;
+    background: url(/fudao/images/tu13.png)left 15px center no-repeat;
 }
 .tutor1_ri dl+dl{
     margin-top: 35px;
@@ -6151,7 +6151,7 @@ a.level3_ri{
     border: none;
     cursor: pointer;
     outline: none;
-    background: var(--bs-primary-700) url(../images/dao.png)right 10px center no-repeat;
+    background: var(--bs-primary-700) url(/fudao/images/dao.png)right 10px center no-repeat;
 }
 .button_none{
     display: none;
@@ -6183,7 +6183,7 @@ a.level3_ri{
     transform: translate(-50%,0);
     width: 24px;
     height: 19px;
-    background: url(../images/tu2_jt.png)no-repeat;
+    background: url(/fudao/images/tu2_jt.png)no-repeat;
 }
 .tutor2_tit{
     margin-bottom: 12px;
@@ -6214,7 +6214,7 @@ a.level3_ri{
     background: var(--bs-primary-800);
 }
 .tutor2 .swiper-slide:hover .tutor2_con:after{
-    background: url(../images/tu2_jt1.png)no-repeat;
+    background: url(/fudao/images/tu2_jt1.png)no-repeat;
 }
 .tutor2_img img{
     width: 134px;
@@ -6231,13 +6231,13 @@ a.level3_ri{
     outline: none;
 }
 .tutor2_zy .tutor2_z{
-    background: url(../images/z1.png) no-repeat;
+    background: url(/fudao/images/z1.png) no-repeat;
     background-size: cover;
     left: -65px;
 }
 
 .tutor2_zy .tutor2_y {
-    background: url(../images/y1.png) no-repeat;
+    background: url(/fudao/images/y1.png) no-repeat;
     background-size: cover;
     right: -65px;
 }
@@ -6317,13 +6317,13 @@ a.level3_ri{
     outline: none;
 }
 .tutor4_ri .swiper-button-prev{
-    background: url(../images/z1.png) no-repeat;
+    background: url(/fudao/images/z1.png) no-repeat;
     background-size: cover;
     left: 0;
 }
 
 .tutor4_ri .swiper-button-next {
-    background: url(../images/y1.png) no-repeat;
+    background: url(/fudao/images/y1.png) no-repeat;
     background-size: cover;
     right: 0;
 }
@@ -6347,7 +6347,7 @@ a.level3_ri{
     line-height: 30px;
     color: #7b7979;
     padding-left: 50px;
-    background: url(../images/dz.png)left center no-repeat;
+    background: url(/fudao/images/dz.png)left center no-repeat;
 }
 .about1_zy{
     display: flex;
@@ -6406,12 +6406,12 @@ a.level3_ri{
     height: 119px;
     margin-left: -59px;
     margin-top: -59px;
-    background: url(../images/bofang.png)center no-repeat;
+    background: url(/fudao/images/bofang.png)center no-repeat;
     background-size: cover;
 }
 .about3{
     padding: 80px 0 10px;
-    background: url(../images/ab3.jpg)top center no-repeat;
+    background: url(/fudao/images/ab3.jpg)top center no-repeat;
     background-size: cover;
 }
 .ab3_tit{
@@ -6441,7 +6441,7 @@ a.level3_ri{
     top: 0;
     width: 11px;
     height: 249px;
-    background: url(../images/ab31.png)top center no-repeat;
+    background: url(/fudao/images/ab31.png)top center no-repeat;
 }
 .ab3 .swiper-slide h3{
     font-size: 30px;
@@ -6477,13 +6477,13 @@ a.level3_ri{
     outline: none;
 }
 .ab3_zy .ab3z{
-    background: url(../images/ab3z.png) no-repeat;
+    background: url(/fudao/images/ab3z.png) no-repeat;
     background-size: cover;
     left: 0;
 }
 
 .ab3_zy .ab3y {
-    background: url(../images/ab3y.png) no-repeat;
+    background: url(/fudao/images/ab3y.png) no-repeat;
     background-size: cover;
     right: 0;
 }
@@ -6508,11 +6508,11 @@ a.level3_ri{
     width: 47.8%;
     min-height: 160px;
     padding: 35px 215px 15px 35px;
-    background: url(../images/ab41.png)right center no-repeat;
+    background: url(/fudao/images/ab41.png)right center no-repeat;
     box-shadow: 0 1px 18px rgba(116, 116, 116, 0.11);
 }
 .about4 ul li:nth-child(2){
-    background: url(../images/ab42.png)right center no-repeat;
+    background: url(/fudao/images/ab42.png)right center no-repeat;
 }
 .about4 ul li h3{
     position: relative;
@@ -6566,28 +6566,28 @@ a.level3_ri{
     margin-right: 2%;
     margin-bottom: 20px;
     padding-left: 75px;
-    background: url(../images/ab51.jpg)left center no-repeat;
+    background: url(/fudao/images/ab51.jpg)left center no-repeat;
 }
 .about5 ul li:nth-child(2){
-    background: url(../images/ab52.jpg)left center no-repeat;
+    background: url(/fudao/images/ab52.jpg)left center no-repeat;
 }
 .about5 ul li:nth-child(3){
-    background: url(../images/ab53.jpg)left center no-repeat;
+    background: url(/fudao/images/ab53.jpg)left center no-repeat;
 }
 .about5 ul li:nth-child(4){
-    background: url(../images/ab54.jpg)left center no-repeat;
+    background: url(/fudao/images/ab54.jpg)left center no-repeat;
 }
 .about5 ul li:nth-child(5){
-    background: url(../images/ab55.jpg)left center no-repeat;
+    background: url(/fudao/images/ab55.jpg)left center no-repeat;
 }
 .about5 ul li:nth-child(6){
-    background: url(../images/ab56.jpg)left center no-repeat;
+    background: url(/fudao/images/ab56.jpg)left center no-repeat;
 }
 .about5 ul li:nth-child(7){
-    background: url(../images/ab57.jpg)left center no-repeat;
+    background: url(/fudao/images/ab57.jpg)left center no-repeat;
 }
 .about5 ul li:nth-child(8){
-    background: url(../images/ab58.jpg)left center no-repeat;
+    background: url(/fudao/images/ab58.jpg)left center no-repeat;
 }
 .about5 ul li:nth-child(3n){
     margin-right: 0;
@@ -6617,29 +6617,29 @@ a.level3_ri{
     margin-bottom: 36px;
     padding: 20px;
     background-color: #d0f1fd;
-    background-image: url(../images/ab61.png);
+    background-image: url(/fudao/images/ab61.png);
     background-position: left 35% center;
     background-repeat: no-repeat;
     box-shadow: 0 1px 18px rgba(116, 116, 116, 0.11);
 }
 .about6 ul li:nth-child(2){
-    background-image: url(../images/ab62.png);
+    background-image: url(/fudao/images/ab62.png);
     background-position: left 25% bottom 10px;
 }
 .about6 ul li:nth-child(3){
-    background-image: url(../images/ab63.png);
+    background-image: url(/fudao/images/ab63.png);
     background-position: left 15% bottom 20px;
 }
 .about6 ul li:nth-child(4){
-    background-image: url(../images/ab64.png);
+    background-image: url(/fudao/images/ab64.png);
     background-position: left 10% bottom 5px;
 }
 .about6 ul li:nth-child(5){
-    background-image: url(../images/ab65.png);
+    background-image: url(/fudao/images/ab65.png);
     background-position: left 35% center;
 }
 .about6 ul li:nth-child(6){
-    background-image: url(../images/ab66.png);
+    background-image: url(/fudao/images/ab66.png);
     background-position: left 15% bottom 20px;
 }
 .about6 ul li:nth-child(3n){
@@ -6798,7 +6798,7 @@ img.ewm_img{
     color: #ffffff;
     text-align: center;
     padding: 85px 0 75px;
-    background: url(../images/lx3.jpg)top center no-repeat;
+    background: url(/fudao/images/lx3.jpg)top center no-repeat;
     background-size: cover;
 }
 .lx3 h3{
@@ -6867,7 +6867,7 @@ img.ewm_img{
     padding: 35px 5px 35px 0;
     border-radius: 8px;
     box-shadow: 0 0 6px rgba(3, 57, 133, 0.18);
-/*    background: url(../images/bz11.png)left 12px center no-repeat;*/
+/*    background: url(/fudao/images/bz11.png)left 12px center no-repeat;*/
 }
 .ser1_lf{
     width: 70px;
@@ -6880,19 +6880,19 @@ img.ewm_img{
     flex: 1;
 }
 /*.service1 ul li:nth-child(2){
-    background: url(../images/bz12.png)left 12px center no-repeat;
+    background: url(/fudao/images/bz12.png)left 12px center no-repeat;
 }
 .service1 ul li:nth-child(3){
-    background: url(../images/bz13.png)left 12px center no-repeat;
+    background: url(/fudao/images/bz13.png)left 12px center no-repeat;
 }
 .service1 ul li:nth-child(4){
-    background: url(../images/bz14.png)left 12px center no-repeat;
+    background: url(/fudao/images/bz14.png)left 12px center no-repeat;
 }
 .service1 ul li:nth-child(5){
-    background: url(../images/bz15.png)left 12px center no-repeat;
+    background: url(/fudao/images/bz15.png)left 12px center no-repeat;
 }
 .service1 ul li:nth-child(6){
-    background: url(../images/bz16.png)left 12px center no-repeat;
+    background: url(/fudao/images/bz16.png)left 12px center no-repeat;
 }*/
 .service1 ul li:nth-child(3n){
     margin-right: 0;
@@ -6910,7 +6910,7 @@ img.ewm_img{
 .service2{
     margin-bottom: 30px;
     padding: 40px 0 90px;
-    background: url(../images/bz2.jpg)top center no-repeat;
+    background: url(/fudao/images/bz2.jpg)top center no-repeat;
     background-size: cover;
 }
 .service2 .title{
@@ -7098,7 +7098,7 @@ img.ewm_img{
     color: #464545;
     margin-bottom: 25px;
     padding-left: 55px;
-    background: url(../images/art1.png)left center no-repeat;
+    background: url(/fudao/images/art1.png)left center no-repeat;
 }
 .art1_ri ul li:last-child{
     margin-bottom: 0;
@@ -7185,14 +7185,14 @@ img.ewm_img{
 .art3 .swiper-slide{
 /*    margin-left: -1px;*/
     min-height: 310px;
-    background: url(../images/d31_03.jpg)top center no-repeat;
+    background: url(/fudao/images/d31_03.jpg)top center no-repeat;
     background-size: cover !important;
 }
 .art3 .swiper-slide:nth-child(2){
-    background: url(../images/d32_03.jpg)top center no-repeat;
+    background: url(/fudao/images/d32_03.jpg)top center no-repeat;
 }
 .art3 .swiper-slide:nth-child(3){
-    background: url(../images/d33_03.jpg)top center no-repeat;
+    background: url(/fudao/images/d33_03.jpg)top center no-repeat;
 }
 .art3_po{
     position: relative;
@@ -7205,13 +7205,13 @@ img.ewm_img{
     outline: none;
 }
 .art3_po .aaz{
-    background: url(../images/art6zz.png) no-repeat;
+    background: url(/fudao/images/art6zz.png) no-repeat;
     background-size: cover;
     left: -15px;
 }
 
 .art3_po .aay {
-    background: url(../images/art6yy.png) no-repeat;
+    background: url(/fudao/images/art6yy.png) no-repeat;
     background-size: cover;
     right: -15px;
 }
@@ -7404,7 +7404,7 @@ a.art3_more{
     justify-content: space-between;
     min-height: 420px;
     padding: 15px 80px 30px 40px;
-    background: url(../images/art6.png)no-repeat;
+    background: url(/fudao/images/art6.png)no-repeat;
     background-size: 100% 100%;
 }
 .art6_ri{
@@ -7460,13 +7460,13 @@ a.art3_more{
     outline: none;
 }
 .art6_po .art6z{
-    background: url(../images/art6zz.png) no-repeat;
+    background: url(/fudao/images/art6zz.png) no-repeat;
     background-size: cover;
     left: -80px;
 }
 
 .art6_po .art6y {
-    background: url(../images/art6yy.png) no-repeat;
+    background: url(/fudao/images/art6yy.png) no-repeat;
     background-size: cover;
     right: -80px;
 }
@@ -7533,7 +7533,7 @@ a.art3_more{
 .art7 ul li:last-child .art7_con:after{
     right: -72px;
     width: 72px;
-    background: url(../images/art7_02.png)no-repeat;
+    background: url(/fudao/images/art7_02.png)no-repeat;
     background-size: cover;
 }
 .art7 ul li:hover a:after{
@@ -7543,7 +7543,7 @@ a.art3_more{
     top: 0;
     width: 58px;
     height: 49px;
-    background: url(../images/art7.png)top center no-repeat;
+    background: url(/fudao/images/art7.png)top center no-repeat;
     background-size: cover;
 }
 .faq{
@@ -7639,7 +7639,7 @@ a.art3_more{
     top: 0;
     width: 38px;
     height: 38px;
-    background: url(../images/dq.png)no-repeat;
+    background: url(/fudao/images/dq.png)no-repeat;
     background-size: cover !important;
 }
 .faq_ms{
@@ -7663,7 +7663,7 @@ a.art3_more{
     top: 6px;
     width: 26px;
     height: 26px;
-    background: url(../images/xq.png)no-repeat;
+    background: url(/fudao/images/xq.png)no-repeat;
     background-size: cover !important;
 }
 .faq_ul ul li h5{
@@ -7684,10 +7684,10 @@ a.art3_more{
     color: #ffffff;
 }
 .faq_ul ul li:hover h3:after{
-    background: url(../images/dq1.png)no-repeat;
+    background: url(/fudao/images/dq1.png)no-repeat;
 }
 .faq_ul ul li:hover .faq_ms:after{
-    background: url(../images/xq1.png)no-repeat;
+    background: url(/fudao/images/xq1.png)no-repeat;
 }
 .faq_ul ul li:hover h5{
     display: none;
@@ -7782,7 +7782,7 @@ a.art3_more{
     width: 9px;
     height: 9px;
     margin-top: -4px;
-    background: url(../images/lan.png)no-repeat;
+    background: url(/fudao/images/lan.png)no-repeat;
     background-size: cover;
 }
 .open h3 img{
@@ -7875,12 +7875,12 @@ a.art3_more{
 }
 .join3_ri .swiper-button-prev{
     display: none;
-    background: url(../images/jz.png) no-repeat;
+    background: url(/fudao/images/jz.png) no-repeat;
     background-size: cover;
     left: 5px;
 }
 .join3_one .join3_ri .swiper-button-next{
-    background: url(../images/jzz.png) no-repeat;
+    background: url(/fudao/images/jzz.png) no-repeat;
     background-size: cover;
     left: 0;
 }
@@ -7912,7 +7912,7 @@ a.art3_more{
     margin-left: -40%;
 }
 .join3_two .join3_ri .swiper-button-next{
-    background: url(../images/jy.png) no-repeat;
+    background: url(/fudao/images/jy.png) no-repeat;
     background-size: cover;
     right: 5px;
 }
@@ -8071,22 +8071,22 @@ a.art3_more{
 .job2 dl{
     color: #4c4b4b;
     padding-left: 70px;
-    background: url(../images/job21.png)left top no-repeat;
+    background: url(/fudao/images/job21.png)left top no-repeat;
 }
 .job2 ul li:nth-child(2) dl{
-    background: url(../images/job22.png)left top no-repeat;
+    background: url(/fudao/images/job22.png)left top no-repeat;
 }
 .job2 ul li:nth-child(3) dl{
-    background: url(../images/job23.png)left top no-repeat;
+    background: url(/fudao/images/job23.png)left top no-repeat;
 }
 .job2 ul li:hover dl{
-    background-image: url(../images/job211.png);
+    background-image: url(/fudao/images/job211.png);
 }
 .job2 ul li:nth-child(2):hover dl{
-    background-image: url(../images/job222.png);
+    background-image: url(/fudao/images/job222.png);
 }
 .job2 ul li:nth-child(3):hover dl{
-    background-image: url(../images/job223.png);
+    background-image: url(/fudao/images/job223.png);
 }
 .job2 dl dt{
     font-size: 18px;
@@ -8137,29 +8137,29 @@ a.art3_more{
     color: #ffffff;
     padding: 45px 30px 45px 85px;
     background-color: var(--bs-primary-800);
-    background-image: url(../images/job41.png);
+    background-image: url(/fudao/images/job41.png);
     background-repeat: no-repeat;
     background-position: left 20px top 40px;
 }
 .job4 ul li:nth-child(2){
     background-color: #086586;
-    background-image: url(../images/job42.png);
+    background-image: url(/fudao/images/job42.png);
 }
 .job4 ul li:nth-child(3){
-    background-image: url(../images/job43.png);
+    background-image: url(/fudao/images/job43.png);
     background-position: left 20px top 45px;
 }
 .job4 ul li:nth-child(4){
     background-color: #086586;
-    background-image: url(../images/job44.png);
+    background-image: url(/fudao/images/job44.png);
 }
 .job4 ul li:nth-child(5){
-    background-image: url(../images/job45.png);
+    background-image: url(/fudao/images/job45.png);
     background-position: left 15px top 40px;
 }
 .job4 ul li:nth-child(6){
     background-color: #086586;
-    background-image: url(../images/job46.png);
+    background-image: url(/fudao/images/job46.png);
     background-position: left 15px top 40px;
 }
 .job4 ul li:hover{
@@ -8223,13 +8223,13 @@ a.art3_more{
     outline: none;
 }
 .job5_swiper .swiper-button-prev{
-    background: url(../images/art6zz.png) no-repeat;
+    background: url(/fudao/images/art6zz.png) no-repeat;
     background-size: cover;
     left: -50px;
 }
 
 .job5_swiper .swiper-button-next {
-    background: url(../images/art6yy.png) no-repeat;
+    background: url(/fudao/images/art6yy.png) no-repeat;
     background-size: cover;
     right: -50px;
 }
@@ -8464,7 +8464,7 @@ a.job8_more{
     background-image: linear-gradient(to right, #4e8ea7 , #50b2d5);
 }
 .mat2 ul li:hover{
-    background: url(../images/mat2.png)top center no-repeat;
+    background: url(/fudao/images/mat2.png)top center no-repeat;
     background-size: cover;
 }
 .mat2 ul li:hover h3,.mat2 ul li:hover .mat2_con{
@@ -8478,7 +8478,7 @@ a.job8_more{
 }
 .mat3{
     padding: 90px 0 45px;
-    background: url(../images/mat3.jpg)top left no-repeat;
+    background: url(/fudao/images/mat3.jpg)top left no-repeat;
     background-size: cover;
 }
 .mat3_lf{
@@ -8622,13 +8622,13 @@ a.job8_more{
     outline: none;
 }
 .mat5_swiper .swiper-button-prev{
-    background: url(../images/z1.png) no-repeat;
+    background: url(/fudao/images/z1.png) no-repeat;
     background-size: cover;
     left: 0;
 }
 
 .mat5_swiper .swiper-button-next {
-    background: url(../images/y1.png) no-repeat;
+    background: url(/fudao/images/y1.png) no-repeat;
     background-size: cover;
     right: 0;
 }
@@ -8724,7 +8724,7 @@ a.job8_more{
     text-shadow: 0 0 16px rgba(10, 109, 145, 0.67);
 }
 .new_banner{
-    background: url(../images/new_03.jpg)top center no-repeat;
+    background: url(/fudao/images/new_03.jpg)top center no-repeat;
     background-size: cover;
 }
 .new_des{
@@ -8834,7 +8834,7 @@ a.job8_more{
     color: #585656;
     padding-left: 20px;
     margin-bottom: 13px;
-    background: url(../images/rm.png)left top 7px no-repeat;
+    background: url(/fudao/images/rm.png)left top 7px no-repeat;
 }
 .remen ul li:hover{
     color: #50b2d5;
@@ -8858,7 +8858,7 @@ a.rm_more:hover{
 }
 .ketang_banner{
     padding: 45px 10px;
-    background: url(../images/kt_03.jpg)top center no-repeat;
+    background: url(/fudao/images/kt_03.jpg)top center no-repeat;
     background-size: cover;
 }
 .kt_nav{
@@ -9013,7 +9013,7 @@ p.ti_ms{
     color: #212020;
     text-align: left;
     padding: 20px 55px 15px 15px;
-    background: #ffffff url(../images/yjt.png)top 40px right 30px no-repeat
+    background: #ffffff url(/fudao/images/yjt.png)top 40px right 30px no-repeat
 }
 .audition_tit h3{
     font-size: 24px;
@@ -9046,7 +9046,7 @@ p.ti_ms{
     font-size: 16px;
     color: #ffffff;
     padding-left: 30px;
-    background: url(../images/yj.png)left center no-repeat;
+    background: url(/fudao/images/yj.png)left center no-repeat;
 }
 .audition_hg h5{
     float: right;
@@ -9101,7 +9101,7 @@ p.ti_ms{
     color: #121212;
 /*    min-height:102px;*/
     margin-bottom: 5px;
-    background: url(../images/bh.png)left top 8px no-repeat;
+    background: url(/fudao/images/bh.png)left top 8px no-repeat;
     padding-left: 25px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -9127,7 +9127,7 @@ p.ti_ms{
 .new_fw{
     padding-left: 25px;
     padding-right: 15px;
-    background: url(../images/yj1.png)left center no-repeat;
+    background: url(/fudao/images/yj1.png)left center no-repeat;
 }
 .new_zuo ul li:hover .new_ms h3 a{
     color: #50b2d5;
@@ -9181,7 +9181,7 @@ a.hgjt img{
     line-height: 24px;
     color: #ffffff;
     padding: 8px 23px 8px 14px;
-    background: #3aaad2 url(../images/lbjt.png) right 8px center no-repeat;
+    background: #3aaad2 url(/fudao/images/lbjt.png) right 8px center no-repeat;
 }
 .lubo_con p{
     text-overflow: ellipsis;
@@ -9348,7 +9348,7 @@ a.hgjt img{
     left: -45px;
     width: 32px;
     height: 26px;
-    background: url(../images/ex1.png)no-repeat;
+    background: url(/fudao/images/ex1.png)no-repeat;
 }
 .ex_con:after {
     content: "";
@@ -9357,7 +9357,7 @@ a.hgjt img{
     right: 10px;
     width: 32px;
     height: 26px;
-    background: url(../images/ex11.png)no-repeat;
+    background: url(/fudao/images/ex11.png)no-repeat;
 }
 .experience_flex .swiper-button-prev,.experience_flex .swiper-button-next{
     width: 50px;
@@ -9366,21 +9366,21 @@ a.hgjt img{
     outline: none;
 }
 .experience_flex .swiper-button-prev{
-    background: url(../images/exz.png) no-repeat;
+    background: url(/fudao/images/exz.png) no-repeat;
     background-size: 100% 100%;
     left: -20px;
 }
 .experience_flex .swiper-button-next{
-    background: url(../images/exy.png) no-repeat;
+    background: url(/fudao/images/exy.png) no-repeat;
     background-size: 100% 100%;
     right: -20px;
 }
 .experience_flex .swiper-button-prev:hover{
-    background: url(../images/exz1.png) no-repeat;
+    background: url(/fudao/images/exz1.png) no-repeat;
     background-size: 100% 100%;
 }
 .experience_flex .swiper-button-next:hover{
-    background: url(../images/exy1.png) no-repeat;
+    background: url(/fudao/images/exy1.png) no-repeat;
     background-size: 100% 100%;
 }
 .choice{
@@ -9390,7 +9390,7 @@ a.hgjt img{
     color: #ffffff;
     text-align: center;
     padding: 75px 0 80px;
-    background: url(../images/ch.jpg)top center no-repeat;
+    background: url(/fudao/images/ch.jpg)top center no-repeat;
 }
 .choice_tit p{
     font-size: 15px;
@@ -9565,7 +9565,7 @@ a.hgjt img{
     margin-bottom: 18px;
     padding-left: 15px;
     padding-right: 1%;
-    background: url(../images/gg.png)left center no-repeat;
+    background: url(/fudao/images/gg.png)left center no-repeat;
 }
 .sparkle{
     padding: 90px 0;
@@ -9672,13 +9672,13 @@ a.hgjt img{
     outline: none;
 }
 .Proofreader .swiper-button-prev{
-    background: url(../images/prz.png)center no-repeat;
+    background: url(/fudao/images/prz.png)center no-repeat;
     background-size: cover;
     left: 38px;
 }
 
 .Proofreader .swiper-button-next {
-    background: url(../images/pry.png)center no-repeat;
+    background: url(/fudao/images/pry.png)center no-repeat;
     background-size: cover;
     right: 38px;
 }
@@ -9887,21 +9887,21 @@ a.hgjt img{
     outline: none;
 }
 .feed_swp .swiper-button-prev{
-    background: url(../images/exz.png)center no-repeat;
+    background: url(/fudao/images/exz.png)center no-repeat;
     background-size: 100% 100%;
     left: -80px;
 }
 .feed_swp .swiper-button-next {
-    background: url(../images/exy.png)center no-repeat;
+    background: url(/fudao/images/exy.png)center no-repeat;
     background-size: 100% 100%;
     right: -80px;
 }
 .feed_swp .swiper-button-prev:hover{
-    background: url(../images/exz1.png)center no-repeat;
+    background: url(/fudao/images/exz1.png)center no-repeat;
     background-size: 100% 100%;
 }
 .feed_swp .swiper-button-next:hover{
-    background: url(../images/exy1.png)center no-repeat;
+    background: url(/fudao/images/exy1.png)center no-repeat;
     background-size: 100% 100%;
 }
 .feed_flex{
@@ -9928,7 +9928,7 @@ a.hgjt img{
     top: 0;
     width: 108px;
     height: 100%;
-    background: url(../images/tu66_01.png) no-repeat;
+    background: url(/fudao/images/tu66_01.png) no-repeat;
     background-size: 100% 100%;
 }
 .feed_con h3{
@@ -10072,13 +10072,13 @@ a.hgjt img{
 }
 .appeal_tu .swiper-button-prev{
     display: none;
-    background: url(../images/prz.png)center no-repeat;
+    background: url(/fudao/images/prz.png)center no-repeat;
     background-size: cover;
     left: 0;
 }
 
 .appeal_tu .swiper-button-next {
-    background: url(../images/pry.png)center no-repeat;
+    background: url(/fudao/images/pry.png)center no-repeat;
     background-size: cover;
     right: 0;
 }
@@ -10147,13 +10147,13 @@ a.hgjt img{
     outline: none;
 }
 .language_swiper .swiper-button-prev{
-    background: url(../images/z1.png)center no-repeat;
+    background: url(/fudao/images/z1.png)center no-repeat;
     background-size: 100% 100%;
     left: -80px;
 }
 
 .language_swiper .swiper-button-next {
-    background: url(../images/y1.png)center no-repeat;
+    background: url(/fudao/images/y1.png)center no-repeat;
     background-size: 100% 100%;
     right: -80px;
 }
@@ -10244,13 +10244,13 @@ a.hgjt img{
     outline: none;
 }
 .teacher_swiper .swiper-button-prev{
-    background: url(../images/z1.png)center no-repeat;
+    background: url(/fudao/images/z1.png)center no-repeat;
     background-size: 100% 100%;
     left: -65px;
 }
 
 .teacher_swiper .swiper-button-next {
-    background: url(../images/y1.png)center no-repeat;
+    background: url(/fudao/images/y1.png)center no-repeat;
     background-size: 100% 100%;
     right: -65px;
 }
@@ -10345,7 +10345,7 @@ a.hgjt img{
     font-weight: bold;
     margin-bottom: 20px;
     padding-left: 50px;
-    background: url(../images/pj.png)left center no-repeat;
+    background: url(/fudao/images/pj.png)left center no-repeat;
 }
 .playback_con{
     font-size: 18px;
@@ -10578,7 +10578,7 @@ a.hgjt img{
     line-height: 24px;
     margin-bottom: 20px;
     padding-left: 20px;
-    background: url(../images/m.png)left center no-repeat;
+    background: url(/fudao/images/m.png)left center no-repeat;
     background-size: 15px;
 }
 .xw_lf{
@@ -10713,7 +10713,7 @@ a.hgjt img{
     padding: 40px 0;
 }
 .common_banner{
-    background: url(../images/common_02.png)top center no-repeat;
+    background: url(/fudao/images/common_02.png)top center no-repeat;
     background-size: cover;
 }
 .common_flex{
@@ -10753,7 +10753,7 @@ a.hgjt img{
     font-weight: bold;
     margin-bottom: 8px;
     padding-left: 30px;
-    background: url(../images/faq.png)left center no-repeat;
+    background: url(/fudao/images/faq.png)left center no-repeat;
 }
 .common_con{
     font-size: 16px;
@@ -10787,7 +10787,7 @@ a.hgjt img{
 }*/
 .paper1{
     padding: 80px 0 45px;
-    background: url(../images/paper1.png)bottom center no-repeat;
+    background: url(/fudao/images/paper1.png)bottom center no-repeat;
 }
 .paper1_con{
     position: relative;
@@ -10806,14 +10806,14 @@ a.hgjt img{
     margin-right: 70px;
     margin-bottom: 45px;
     padding: 0 60px 0 30px;
-    background: url(../images/pa11.png)top left no-repeat;
+    background: url(/fudao/images/pa11.png)top left no-repeat;
     background-size: 100% 100%;
 }
 .paper1_con marquee span:last-child{
     margin-right: 0;
 }
 .paper1_con marquee span:nth-child(2n){
-    background: url(../images/pa211.png)top left no-repeat;
+    background: url(/fudao/images/pa211.png)top left no-repeat;
     background-size: 100% 100%;
 }
 .paper2{
@@ -11033,7 +11033,7 @@ a.paper_more:hover{
 }
 .paper5_con ul li{
     padding-left: 30px;
-    background: url(../images/pa5.png)left 5px center no-repeat;
+    background: url(/fudao/images/pa5.png)left 5px center no-repeat;
 }
 .paper5_ri{
     width: 41%;
@@ -11095,7 +11095,7 @@ a.paper_more:hover{
     padding: 30px 0;
 }
 .biao_banner .banner6{
-    background: url(../images/biao_02.png)top center no-repeat;
+    background: url(/fudao/images/biao_02.png)top center no-repeat;
     background-size: cover;
 }
 .input{
@@ -11192,7 +11192,7 @@ a.paper_more:hover{
     -webkit-appearance:none;
     -moz-appearance:none;
     appearance:none;
-    background: url(../images/select.png)center right 8px no-repeat;
+    background: url(/fudao/images/select.png)center right 8px no-repeat;
 }
 .input_ri select::-ms-expand {
         display: none;
@@ -11445,7 +11445,7 @@ a.paper_more:hover{
 }
 .major_banner {
     padding: 100px 0;
-    background: url(../images/banner100.jpg)top center no-repeat;
+    background: url(/fudao/images/banner100.jpg)top center no-repeat;
     background-size: cover;
 }
 .daxue{
@@ -11700,7 +11700,7 @@ a.paper_more:hover{
     top: -8px;
     width: 134px;
     height: 146px;
-    background: url(../images/tutu.png)no-repeat;
+    background: url(/fudao/images/tutu.png)no-repeat;
     background-size: 100% 100%;
     z-index: -1;
 }
@@ -11713,7 +11713,7 @@ a.paper_more:hover{
     padding: 15px 0;
 }
 .banner_two{
-    background: url(../images/wenda_02.jpg)top center no-repeat;
+    background: url(/fudao/images/wenda_02.jpg)top center no-repeat;
     background-size: cover;
 }
 .learning_banner{
@@ -11882,7 +11882,7 @@ a.paper_more:hover{
     color:#7C7C7C
 }
 .banner_three{
-    background: url(../images/zixun_02.jpg)top center no-repeat;
+    background: url(/fudao/images/zixun_02.jpg)top center no-repeat;
     background-size: cover;
 }
 .information_img img{
@@ -12082,7 +12082,7 @@ a.paper_more:hover{
 }
 .rp2{
     padding: 50px 0 25px;
-    background: url(../images/rp2.jpg)top center no-repeat;
+    background: url(/fudao/images/rp2.jpg)top center no-repeat;
     background-size: cover;
 }
 .rp2_flex{
@@ -12272,7 +12272,7 @@ a.paper_more:hover{
     color: #474747;
 }
 .rp5_ul{
-    background: url(../images/rp5.png)bottom 35px center no-repeat;
+    background: url(/fudao/images/rp5.png)bottom 35px center no-repeat;
     background-size: 39.3%;
 }
 .rp6{
@@ -12295,13 +12295,13 @@ a.paper_more:hover{
     outline: none;
 }
 .container .swiper-button-prev{
-    background: url(../images/z1.png)center no-repeat;
+    background: url(/fudao/images/z1.png)center no-repeat;
     background-size: 100% 100%;
     left: 0;
 }
 
 .container .swiper-button-next {
-    background: url(../images/y1.png)center no-repeat;
+    background: url(/fudao/images/y1.png)center no-repeat;
     background-size: 100% 100%;
     right: 0;
 }
@@ -12327,7 +12327,7 @@ a.paper_more:hover{
     bottom: 0;
     width: 55px;
     height: 55px;
-    background: url(../images/+.png)no-repeat;
+    background: url(/fudao/images/+.png)no-repeat;
     background-size: cover;
 }
 .rp6_lf img{
@@ -12668,7 +12668,7 @@ a.essay_more{
     color: #014057;
     margin-bottom: 5px;
     padding-left: 30px;
-    background: url(../images/h1.png)left center no-repeat;
+    background: url(/fudao/images/h1.png)left center no-repeat;
 }
 .highlights_con h5{
     font-size: 16px;
@@ -12682,37 +12682,37 @@ a.essay_more{
     color: #ffffff;
 }
 .highlights ul li:nth-child(2) .highlights_con h3{
-    background: url(../images/h2.png)left center no-repeat;
+    background: url(/fudao/images/h2.png)left center no-repeat;
 }
 .highlights ul li:nth-child(3) .highlights_con h3{
-    background: url(../images/h3.png)left center no-repeat;
+    background: url(/fudao/images/h3.png)left center no-repeat;
 }
 .highlights ul li:nth-child(4) .highlights_con h3{
-    background: url(../images/h4.png)left center no-repeat;
+    background: url(/fudao/images/h4.png)left center no-repeat;
 }
 .highlights ul li:nth-child(5) .highlights_con h3{
-    background: url(../images/h5.png)left center no-repeat;
+    background: url(/fudao/images/h5.png)left center no-repeat;
 }
 .highlights ul li:nth-child(6) .highlights_con h3{
-    background: url(../images/h6.png)left center no-repeat;
+    background: url(/fudao/images/h6.png)left center no-repeat;
 }
 .highlights ul li:hover .highlights_con h3{
-    background: url(../images/h11.png)left center no-repeat;
+    background: url(/fudao/images/h11.png)left center no-repeat;
 }
 .highlights ul li:nth-child(2):hover .highlights_con h3{
-    background: url(../images/h122.png)left center no-repeat;
+    background: url(/fudao/images/h122.png)left center no-repeat;
 }
 .highlights ul li:nth-child(3):hover .highlights_con h3{
-    background: url(../images/h33.png)left center no-repeat;
+    background: url(/fudao/images/h33.png)left center no-repeat;
 }
 .highlights ul li:nth-child(4):hover .highlights_con h3{
-    background: url(../images/h44.png)left center no-repeat;
+    background: url(/fudao/images/h44.png)left center no-repeat;
 }
 .highlights ul li:nth-child(5):hover .highlights_con h3{
-    background: url(../images/h55.png)left center no-repeat;
+    background: url(/fudao/images/h55.png)left center no-repeat;
 }
 .highlights ul li:nth-child(6):hover .highlights_con h3{
-    background: url(../images/h66.png)left center no-repeat;
+    background: url(/fudao/images/h66.png)left center no-repeat;
 }
 a.ind10_more1{
     display: block;
@@ -12857,22 +12857,22 @@ a.ind10_more1{
     display: none;
 }
 .ib3 .xinxi_solution_main ul li {
-    background: url(../images/ib31.jpg)top center no-repeat;
+    background: url(/fudao/images/ib31.jpg)top center no-repeat;
 }
 .ib3 .xinxi_solution_main ul li:nth-child(2) {
-    background: url(../images/ap43_03.jpg)top center no-repeat;
+    background: url(/fudao/images/ap43_03.jpg)top center no-repeat;
 }
 .ib3 .xinxi_solution_main ul li:nth-child(3) {
-    background: url(../images/ib33.jpg)top center no-repeat;
+    background: url(/fudao/images/ib33.jpg)top center no-repeat;
 }
 .ib3 .xinxi_solution_main ul li:nth-child(4) {
-    background: url(../images/ap42_03.jpg)top center no-repeat;
+    background: url(/fudao/images/ap42_03.jpg)top center no-repeat;
 }
 .ib3 .xinxi_solution_main ul li:nth-child(5) {
-    background: url(../images/ap41_03.jpg)top center no-repeat;
+    background: url(/fudao/images/ap41_03.jpg)top center no-repeat;
 }
 .ib3 .xinxi_solution_main ul li:nth-child(6) {
-    background: url(../images/ib36.jpg)top center no-repeat;
+    background: url(/fudao/images/ib36.jpg)top center no-repeat;
 }
 .ib3 .right_top {
     padding: 30px 15px 10px;
@@ -12891,7 +12891,7 @@ a.ind10_more1{
 }
 .ib4 {
     padding: 30px 0;
-    background: url(../images/ib4.jpg)top center no-repeat;
+    background: url(/fudao/images/ib4.jpg)top center no-repeat;
 }
 .level3_lf font {
     margin-bottom: 5px;
@@ -12955,7 +12955,7 @@ a.ind10_more1{
     color: #ffffff;
     text-align: center;
     padding: 30px 0;
-    background: url(../images/ib4.jpg)top center no-repeat;
+    background: url(/fudao/images/ib4.jpg)top center no-repeat;
     background-size: cover !important;
 }
 .ig3 h2 {
@@ -13092,16 +13092,16 @@ a.ind10_more1{
     height: 295px;
     text-align: center;
     border-radius: 9px;
-    background: url(../images/ig51.png)no-repeat;
+    background: url(/fudao/images/ig51.png)no-repeat;
     background-size: cover;
     overflow: hidden;
 }
 .ig5 ul li:nth-child(2){
-    background: url(../images/ig52.png)no-repeat;
+    background: url(/fudao/images/ig52.png)no-repeat;
     background-size: cover;
 }
 .ig5 ul li:nth-child(3){
-    background: url(../images/ig53.png)no-repeat;
+    background: url(/fudao/images/ig53.png)no-repeat;
     background-size: cover;
 }
 .ig5 ul li h3{
@@ -13175,7 +13175,7 @@ a.ind10_more1{
     content: "<<";
     font-size: 18px;
     color: #4a98c4;
-/*    background: url(../images/ley.png)no-repeat;
+/*    background: url(/fudao/images/ley.png)no-repeat;
 */}
 .ig5_hg dl dd:before{
     display: block;
@@ -13184,7 +13184,7 @@ a.ind10_more1{
     color: #4a98c4;
 /*    width: 20px;
     height: 11px;
-    background: url(../images/lez.png)no-repeat;
+    background: url(/fudao/images/lez.png)no-repeat;
 */}
 .ig5_hg dl dd:hover{
     color: #ffffff;
@@ -13237,7 +13237,7 @@ a.ind10_more1{
 }
 .appeal2_one{
     padding: 40px 0 20px;
-    background: url(../images/app2_03.png)left top no-repeat;
+    background: url(/fudao/images/app2_03.png)left top no-repeat;
     background-size: auto 100%;
 }
 .app2{
@@ -13319,10 +13319,10 @@ a.ind10_more1{
     margin-top: 45px;
     padding: 30px 0 20px;
     overflow: hidden;
-    background: url(../images/app221_03.png)left top no-repeat;
+    background: url(/fudao/images/app221_03.png)left top no-repeat;
 }
 .appeal2_two ul li:nth-child(2){
-    background: url(../images/app222_03.png)left top no-repeat;
+    background: url(/fudao/images/app222_03.png)left top no-repeat;
 
 }
 .app2_ul{
@@ -13418,7 +13418,7 @@ a.ind10_more1{
 .appeal5 .hk6_ri {
     min-height: 535px;
     padding: 135px 25px 90px;
-    background: url(../images/app5.png)left center no-repeat;
+    background: url(/fudao/images/app5.png)left center no-repeat;
 }
 .hk6_img img {
     border-radius: 10px;
@@ -13447,7 +13447,7 @@ a.ind10_more1{
    top: 15%;
    width: 100%;
    height: 72%;
-   background: url(../images/app6_02.png)top center no-repeat;
+   background: url(/fudao/images/app6_02.png)top center no-repeat;
    background-size: cover;
 }
 .app6 .swiper-container{
@@ -13498,13 +13498,13 @@ a.ind10_more1{
     outline: none;
 }
 .app6 .app6z{
-    background: url(../images/hhz.png) no-repeat;
+    background: url(/fudao/images/hhz.png) no-repeat;
     background-size: cover;
     left: 10px;
 }
 
 .app6 .app6y {
-    background: url(../images/hhy.png) no-repeat;
+    background: url(/fudao/images/hhy.png) no-repeat;
     background-size: cover;
     right: 10px;
 }
@@ -13562,7 +13562,7 @@ a.ind10_more1{
     width: 100%;
     height: 51%;
     z-index: -1;
-    background: url(../images/app1.jpg)top center no-repeat;
+    background: url(/fudao/images/app1.jpg)top center no-repeat;
 }
 .apply2{
     padding: 80px 0;
@@ -13625,7 +13625,7 @@ a.ind10_more1{
     -moz-appearance: none;
     appearance: none;
     border-radius: 0 5px 5px 0;
-    background: #ffffff url(../images/select.png)center right 8px no-repeat;
+    background: #ffffff url(/fudao/images/select.png)center right 8px no-repeat;
 }
 .apply2_form button{
     display: block;
@@ -13665,7 +13665,7 @@ a.ind10_more1{
   content: "";
   width: 10px;
   height: 18px;
-  background: url(../images/pop1.png) no-repeat;
+  background: url(/fudao/images/pop1.png) no-repeat;
   transition: 0.5s;
 }
 .pop{
@@ -13860,7 +13860,7 @@ a.ind10_more1{
     color: #3e3f3f;
 }
 .tutoring_two{
-    background: url(../images/tut_03.png)top center no-repeat;
+    background: url(/fudao/images/tut_03.png)top center no-repeat;
     background-size: cover;
 }
 .tutoring_two ul{
@@ -13953,7 +13953,7 @@ a.ind10_more1{
     min-height: 209px;
     padding: 20px 0;
     border-radius: 6px;
-    background: url(../images/les1_03.png)center no-repeat;
+    background: url(/fudao/images/les1_03.png)center no-repeat;
     background-size: cover;
 }
 .lesson_con p{
@@ -14012,7 +14012,7 @@ a.ind10_more1{
 .teaching{
     margin-bottom: 100px;
     padding-bottom: 60px;
-    background: url(../images/teach.png)no-repeat;
+    background: url(/fudao/images/teach.png)no-repeat;
     background-size: cover;
 }
 .teaching .title{
@@ -14062,7 +14062,7 @@ a.ind10_more1{
     transform: translate(0,-50%);
     width: 16px;
     height: 19px;
-    background: url(../images/teachz.png)no-repeat;
+    background: url(/fudao/images/teachz.png)no-repeat;
 }
 .teaching_z a.cur:after{
     position: absolute;
@@ -14072,7 +14072,7 @@ a.ind10_more1{
     transform: translate(0,-50%);
     width: 16px;
     height: 19px;
-    background: url(../images/teachy.png)no-repeat;
+    background: url(/fudao/images/teachy.png)no-repeat;
 }
 .teaching_ri{
     flex: 1;
@@ -14116,7 +14116,7 @@ a.ind10_more1{
     width: 17.16%;
     overflow: hidden;
     transition: all 0.5s;
-    background: url(../images/hh1.jpg)top center no-repeat;
+    background: url(/fudao/images/hh1.jpg)top center no-repeat;
     background-size: cover !important;
 }
 .gongkai_main ul li img{
@@ -14124,13 +14124,13 @@ a.ind10_more1{
     object-fit: cover;
 }
 .gongkai_main ul li:nth-child(2) {
-    background: url(../images/hh2.jpg)top left 35% no-repeat;
+    background: url(/fudao/images/hh2.jpg)top left 35% no-repeat;
 }
 .gongkai_main ul li:nth-child(3) {
-    background: url(../images/hh3.jpg)top right 15% no-repeat;
+    background: url(/fudao/images/hh3.jpg)top right 15% no-repeat;
 }
 .gongkai_main ul li:nth-child(4) {
-    background: url(../images/hh4.jpg)top left 20% no-repeat;
+    background: url(/fudao/images/hh4.jpg)top left 20% no-repeat;
 }
 @media only screen and (max-width: 1152px){
 .gongkai_main ul {
@@ -14189,7 +14189,7 @@ a.ind10_more1{
 .relevant{
     padding: 0 20px 30px;
     border-radius: 9px;
-    background: url(../images/re12_03.png)center no-repeat;
+    background: url(/fudao/images/re12_03.png)center no-repeat;
     background-size: cover;
 }
 .relevant_ul ul{
@@ -14290,13 +14290,13 @@ a.ind10_more1{
     outline: none;
 }
 .supervisor .swiper-button-prev{
-    background: url(../images/zzq.png) no-repeat;
+    background: url(/fudao/images/zzq.png) no-repeat;
     background-size: cover;
     left: -20px;
 }
 
 .supervisor .swiper-button-next {
-    background: url(../images/yyq.png) no-repeat;
+    background: url(/fudao/images/yyq.png) no-repeat;
     background-size: cover;
     right: -20px;
 }
@@ -14410,13 +14410,13 @@ a.ind10_more1{
     outline: none;
 }
 .zzyy .swiper-button-prev{
-    background: url(../images/zzq.png) no-repeat;
+    background: url(/fudao/images/zzq.png) no-repeat;
     background-size: cover;
     left: -50px;
 }
 
 .zzyy .swiper-button-next {
-    background: url(../images/yyq.png) no-repeat;
+    background: url(/fudao/images/yyq.png) no-repeat;
     background-size: cover;
     right: -50px;
 }
@@ -14459,7 +14459,7 @@ a.ind10_more1{
     font-size: 22px;
     color: #090909;
     padding: 20px 25px 20px 0;
-    background: url(../images/fiz.png)right 10px center no-repeat;
+    background: url(/fudao/images/fiz.png)right 10px center no-repeat;
 }
 .field_ti img{
     margin-right: 10px;
@@ -14495,7 +14495,7 @@ a.ind10_more1{
     border-radius: 8px;
     border: 1px solid #80c6df;
     padding: 0 20px 0 10px;
-    background: url(../images/finav.png)right 8px center no-repeat;
+    background: url(/fudao/images/finav.png)right 8px center no-repeat;
 }
 .field_erji{
     display: none;
@@ -14617,7 +14617,7 @@ a.ind10_more1{
 }
 .banner33{
     padding: 100px 0;
-    background: url(../images/ban33.jpg)top center no-repeat;
+    background: url(/fudao/images/ban33.jpg)top center no-repeat;
     background-size: cover;
 }
 .banner33 h1{
@@ -14656,7 +14656,7 @@ a.ind10_more1{
     height: 45px;
     border: none;
     cursor: pointer;
-    background: url(../images/ban3_sou.png)center no-repeat;
+    background: url(/fudao/images/ban3_sou.png)center no-repeat;
 }
 .w1500{
     width: 94%;
@@ -14729,7 +14729,7 @@ a.ind10_more1{
 
 .beyond1{
     padding: 85px 0;
-    background: url(../images/bey1.png)top center no-repeat;
+    background: url(/fudao/images/bey1.png)top center no-repeat;
     background-size: cover;
 }
 .beyond1 .main{
@@ -14997,13 +14997,13 @@ a.ind10_more1{
     box-shadow: 0 8px 20px rgba(53, 136, 165, 0.25);
 }
 .bey3_zy .swiper-button-prev{
-    background: url(../images/bey3z.png)center no-repeat;
+    background: url(/fudao/images/bey3z.png)center no-repeat;
     background-size: 100% 100%;
     left: 18%;
 }
 
 .bey3_zy .swiper-button-next {
-    background: url(../images/bey3y.png)center no-repeat;
+    background: url(/fudao/images/bey3y.png)center no-repeat;
     background-size: 100% 100%;
     right: 18%;
 }
@@ -15038,13 +15038,13 @@ a.ind10_more1{
     outline: none;
 }
 .bey4 .swiper-button-prev{
-    background: url(../images/bey4z.png)center no-repeat;
+    background: url(/fudao/images/bey4z.png)center no-repeat;
     background-size: 100% 100%;
     left: 0;
 }
 
 .bey4 .swiper-button-next {
-    background: url(../images/bey4y.png)center no-repeat;
+    background: url(/fudao/images/bey4y.png)center no-repeat;
     background-size: 100% 100%;
     right: 0;
 }
@@ -15064,7 +15064,7 @@ a.ind10_more1{
 }
 .beyond5{
     padding: 35px 0 55px;
-    background: url(../images/bey5_03.jpg)top right no-repeat;
+    background: url(/fudao/images/bey5_03.jpg)top right no-repeat;
     background-size: cover;
 }
 .beyond5 ul{
@@ -15130,7 +15130,7 @@ a.ind10_more1{
     font-weight: bold;
     margin-bottom: 15px;
     padding-left: 25px;
-    background: url(../images/bey6sj.png)left top 8px no-repeat;
+    background: url(/fudao/images/bey6sj.png)left top 8px no-repeat;
 }
 .bey6 .swiper-button-prev,.bey6 .swiper-button-next{
     width: 50px;
@@ -15139,21 +15139,21 @@ a.ind10_more1{
     outline: none;
 }
 .bey6 .swiper-button-prev{
-    background: url(../images/bey6z.png) no-repeat;
+    background: url(/fudao/images/bey6z.png) no-repeat;
     background-size: cover;
     left: 0;
 }
 .bey6 .swiper-button-next {
-    background: url(../images/bey6y.png) no-repeat;
+    background: url(/fudao/images/bey6y.png) no-repeat;
     background-size: cover;
     right: 0;
 }
 .bey6 .swiper-button-prev:hover{
-    background: url(../images/bey6zz.png) no-repeat;
+    background: url(/fudao/images/bey6zz.png) no-repeat;
     background-size: cover;
 }
 .bey6 .swiper-button-next:hover{
-    background: url(../images/bey6yy.png) no-repeat;
+    background: url(/fudao/images/bey6yy.png) no-repeat;
     background-size: cover;
 }
 .beyond7{
@@ -15330,11 +15330,11 @@ a.ind10_more1{
     margin-top: -12px;
     width: 20px;
     height: 23px;
-    background: url(../images/na2j.png)no-repeat;
+    background: url(/fudao/images/na2j.png)no-repeat;
     background-size: cover!important;
 }
 .nation2_lf ul li:hover h5:after{
-    background: url(../images/na2j1.png)no-repeat;
+    background: url(/fudao/images/na2j1.png)no-repeat;
 }
 .nation2_lf ul li p{
     flex: 1;
@@ -15388,7 +15388,7 @@ a.ind10_more1{
     flex: 1;
     padding-right: 85px;
     border-bottom: 1px solid #898787;
-    background: url(../images/na3j.png)right center no-repeat;
+    background: url(/fudao/images/na3j.png)right center no-repeat;
 }
 .nation3_ri h5{
     font-size: 24px;
@@ -15413,7 +15413,7 @@ a.ind10_more1{
     color: #898787;
 }
 .nation3 ul li:hover .nation3_ri{
-    background: url(../images/na3j1.png)right center no-repeat;
+    background: url(/fudao/images/na3j1.png)right center no-repeat;
 }
 .nation3 ul li:hover h5{
     color: var(--bs-primary-700);
@@ -15483,7 +15483,7 @@ a.ind10_more1{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    background: url(../images/na5.png)left 10px center no-repeat;
+    background: url(/fudao/images/na5.png)left 10px center no-repeat;
 }
 .nation5_con{
     font-size: 18px;
@@ -15554,7 +15554,7 @@ a.ind10_more1{
     min-height: 530px;
     padding: 20px 3%;
     height: 100%;
-    background: url(../images/sat1.jpg)top center no-repeat;
+    background: url(/fudao/images/sat1.jpg)top center no-repeat;
     background-size: cover;
 }
 .sat1_tit{
@@ -15731,11 +15731,11 @@ a.ind10_more1{
     margin-bottom: 10px;
     border: 2px solid #1089b5;
     cursor: pointer;
-    background: #ffffff url(../images/sat3_1.png)right 15px center no-repeat;
+    background: #ffffff url(/fudao/images/sat3_1.png)right 15px center no-repeat;
 }
 .sat3_nav a.cur{
     color: #ffffff;
-    background: #1089b5 url(../images/sat3_2.png)right 15px center no-repeat;
+    background: #1089b5 url(/fudao/images/sat3_2.png)right 15px center no-repeat;
 }
 .sat3_dl{
     padding-left: 190px;
@@ -15785,7 +15785,7 @@ a.ind10_more1{
     text-align: center;
     margin-top: 25px;
     border: 5px solid #cacfcf;
-    background: url(../images/sat31_03.png)center no-repeat;
+    background: url(/fudao/images/sat31_03.png)center no-repeat;
     background-size: cover;
 }
 .sat3_dl dl a span{
@@ -15806,7 +15806,7 @@ a.ind10_more1{
 }
 .sat3_dl dl a.sat3_tu{
     min-height: 390px;
-    background: url(../images/sat32_02.png)center no-repeat;
+    background: url(/fudao/images/sat32_02.png)center no-repeat;
     background-size: cover;
 }
 .sat4 {
@@ -16038,7 +16038,7 @@ a.ind10_more1{
     color: #393939;
     margin-bottom: 30px;
     padding: 25px 25px 10px;
-    background: url(../images/ty.png)right bottom no-repeat;
+    background: url(/fudao/images/ty.png)right bottom no-repeat;
     box-shadow: 0 3px 7px rgba(18, 116, 118, 0.35);
 }
 .sat6 ul li:after{
@@ -16048,7 +16048,7 @@ a.ind10_more1{
     right: 30px;
     width: 34px;
     height: 8px;
-    background: url(../images/tyd.png)no-repeat;
+    background: url(/fudao/images/tyd.png)no-repeat;
 }
 .sat6 ul li h3{
    font-size: 22px;
@@ -16159,12 +16159,12 @@ a.ind10_more1{
     outline: none;
 }
 .gre1_zy .gre1z{
-    background: url(../images/gre1z.png) no-repeat;
+    background: url(/fudao/images/gre1z.png) no-repeat;
     background-size: cover;
     left: 0;
 }
 .gre1_zy .gre1y {
-    background: url(../images/gre1y.png) no-repeat;
+    background: url(/fudao/images/gre1y.png) no-repeat;
     background-size: cover;
     right: 0;
 }
@@ -16266,7 +16266,7 @@ a.ind10_more1{
 }
 .gre3{
     padding-top: 50px;
-    background: url(../images/gre3.jpg)top center no-repeat;
+    background: url(/fudao/images/gre3.jpg)top center no-repeat;
 }
 .gre3 ul{
     display: flex;
@@ -16423,7 +16423,7 @@ a.ind10_more1{
     text-align: center;
     color: #ffffff;
     padding: 50px 0;
-    background: url(../images/book4.jpg)top center no-repeat;
+    background: url(/fudao/images/book4.jpg)top center no-repeat;
     background-size: cover;
 }
 .book4 h3{
@@ -16438,7 +16438,7 @@ a.ind10_more1{
     font-weight: bold;
     margin: 0 auto;
     padding: 0 20px;
-    background: url(../images/book41.png)center no-repeat;
+    background: url(/fudao/images/book41.png)center no-repeat;
     background-size: cover;
 }
 .book5{
@@ -16473,7 +16473,7 @@ a.ind10_more1{
 }
 .book6_pl{
     padding-left: 80px;
-    background: url(../images/book61.png)left top no-repeat;
+    background: url(/fudao/images/book61.png)left top no-repeat;
 }
 .book6_ti{
     display: flex;
@@ -16519,12 +16519,12 @@ a.ind10_more1{
     outline: none;
 }
 .book6_zy .book6_z{
-    background: url(../images/book6z.png) no-repeat;
+    background: url(/fudao/images/book6z.png) no-repeat;
     background-size: cover;
     left: 0;
 }
 .book6_zy .book6_y {
-    background: url(../images/book6y.png) no-repeat;
+    background: url(/fudao/images/book6y.png) no-repeat;
     background-size: cover;
     right: 0;
 }
@@ -16892,7 +16892,7 @@ a.ind10_more1{
     height: auto;
     border-radius: 13px;
     box-shadow: 0 5px 5px rgba(80, 178, 213, 0.5);
-    background: url(../images/pe1_03.jpg)top center no-repeat;
+    background: url(/fudao/images/pe1_03.jpg)top center no-repeat;
     background-size: cover;
 }
 .personal_img{
@@ -16953,11 +16953,11 @@ a.ind10_more1{
     margin-top: 10px;
     padding: 10px 5px 10px;
     border-radius: 7px;
-    background: #ffffff url(../images/dzhz_03.png)left center no-repeat;
+    background: #ffffff url(/fudao/images/dzhz_03.png)left center no-repeat;
     box-shadow: 0 4px 2px rgba(193, 231, 250, 0.93);
 }
 .preview2 dl dt:hover{
-    background-image: url(../images/dzhz1_03.png);
+    background-image: url(/fudao/images/dzhz1_03.png);
 }
 .pre2_img{
     width: 15%;

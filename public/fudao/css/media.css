@@ -443,7 +443,7 @@ a.ind6_more {
 }
 .art2_po {
     padding: 10px 50px;
-    background: #50b2d5 url(../images/art2.png)right 15px center no-repeat;
+    background: #50b2d5 url(/fudao/images/art2.png)right 15px center no-repeat;
 }
 .art2_po h3 {
     font-size: 26px;
@@ -1213,7 +1213,7 @@ a.ind6_more {
     margin: 0 auto;
 }
 .by3_url a {
-    background: url(../images/bx.png)left 20px bottom 15px no-repeat;
+    background: url(/fudao/images/bx.png)left 20px bottom 15px no-repeat;
 }
 .lun1 .coach_tit {
     margin-bottom: 25px;
@@ -1534,7 +1534,7 @@ a.modify2_ri {
     font-size: 16px;
     line-height: 36px;
     padding: 0 10px 0 40px;
-    background: #fceed4 url(../images/tzx.png)left 8px center no-repeat;
+    background: #fceed4 url(/fudao/images/tzx.png)left 8px center no-repeat;
 }
 .tutor1_con {
     width: 46%;
@@ -1770,7 +1770,7 @@ a.modify2_ri {
     display: block;
 }
 .join3_one .join3_ri .swiper-button-next{
-    background: url(../images/jy.png) no-repeat;
+    background: url(/fudao/images/jy.png) no-repeat;
     background-size: cover;
     left: auto;
     right: 5px;
@@ -3534,7 +3534,7 @@ img.pc{
     padding: 2vw 0;
 }
 .by2_ri dl dt {
-    background: url(../images/by_jt.png)right center no-repeat;
+    background: url(/fudao/images/by_jt.png)right center no-repeat;
 }
 .ind9m_con{
     min-height: 48.5vw;
@@ -3793,7 +3793,7 @@ a.task4_more {
     font-size: 3.6vw;
     line-height: 6vw;
     padding: 0 2vw 0 9vw;
-    background: #fceed4 url(../images/tzx.png)left 2vw center no-repeat;
+    background: #fceed4 url(/fudao/images/tzx.png)left 2vw center no-repeat;
     background-size: 5vw;
 }
 .tutor1_con {
@@ -3811,7 +3811,7 @@ a.task4_more {
     font-size: 3.25vw;
     line-height: 5vw;
     min-height: 10vw;
-    background: url(../images/tms1.png)left top no-repeat;
+    background: url(/fudao/images/tms1.png)left top no-repeat;
 }
 .tutor1_con dl {
     padding: 0;
@@ -3833,15 +3833,15 @@ a.task4_more {
     line-height: 5vw;
     text-align: center;
     padding: 6.5vw 0 0;
-    background: url(../images/tu11.png)top 1vw center no-repeat;
+    background: url(/fudao/images/tu11.png)top 1vw center no-repeat;
     background-size: 5vw;
 }
 .tutor1_ri dl:nth-child(2) {
-    background: url(../images/tu12.png)top 1vw center no-repeat;
+    background: url(/fudao/images/tu12.png)top 1vw center no-repeat;
     background-size: 7vw;
 }
 .tutor1_ri dl:nth-child(3) {
-    background: url(../images/tu13.png)top center no-repeat;
+    background: url(/fudao/images/tu13.png)top center no-repeat;
     background-size: 5vw;
 }
 .tutor1_ri dl+dl {
@@ -3852,7 +3852,7 @@ a.task4_more {
     padding: 0 5vw 0 2vw;
     font-size: 3.6vw;
     line-height: 7vw;
-    background: var(--bs-primary-700) url(../images/dao.png)right 1vw center no-repeat;
+    background: var(--bs-primary-700) url(/fudao/images/dao.png)right 1vw center no-repeat;
 }
 .tutor2_con {
     margin-bottom: 5vw;
@@ -4400,7 +4400,7 @@ a.task4_more {
 }
 .international {
     padding: 7vw 0;
-    background: url(../images/9_03.jpg)top center no-repeat;
+    background: url(/fudao/images/9_03.jpg)top center no-repeat;
     background-size: cover;
 }
 .rp2_lf a.ind6_more {
@@ -4870,7 +4870,7 @@ a.task4_more {
     line-height: 6vw;
     margin-bottom: 2vw;
     padding-left: 6vw;
-    background: url(../images/bey6sj.png)left top 1vw no-repeat;
+    background: url(/fudao/images/bey6sj.png)left top 1vw no-repeat;
     background-size: 4vw;
 }
 .beyond7 {
@@ -5372,10 +5372,10 @@ body{
 .by3_url a {
     font-size: 3.6vw;
     padding: 2vw 3vw;
-    background: url(../images/bx.png)left 10px center no-repeat;
+    background: url(/fudao/images/bx.png)left 10px center no-repeat;
 }
 .by3 ul li:nth-child(2) .by3_url a {
-    background: url(../images/bx1.png)left 10px center no-repeat;
+    background: url(/fudao/images/bx1.png)left 10px center no-repeat;
 }
 .by3_more a {
     height: 8vw;
@@ -5487,11 +5487,11 @@ body{
     font-size: 4vw;
     line-height: 6vw;
     margin-bottom: 6px;
-    background: url(../images/yjt.png)top 3px right no-repeat;
+    background: url(/fudao/images/yjt.png)top 3px right no-repeat;
     background-size: 5vw !important;
 }
 .yuyan2 ul li:hover .yy2_tit h3 {
-    background: url(../images/yjt1.png)top 3px right no-repeat;
+    background: url(/fudao/images/yjt1.png)top 3px right no-repeat;
 }
 .yuyan2 ul li:hover .yy2_tit {
     padding-bottom: 10px;
@@ -5514,11 +5514,11 @@ body{
 .yy3_con h4 {
     font-size: 4vw;
     margin-bottom: 5px;
-    background: url(../images/yjt.png)top 3px right no-repeat;
+    background: url(/fudao/images/yjt.png)top 3px right no-repeat;
     background-size: 4.2vw !important;
 }
 .yuyan3 ul li:hover .yy3_con h4 {
-    background: url(../images/yjt1.png)top 3px right no-repeat;
+    background: url(/fudao/images/yjt1.png)top 3px right no-repeat;
 }
 .yy3_con h5 {
     font-size: 3.25vw;
@@ -6180,7 +6180,7 @@ a.pre2_more {
 .task2_ri ul li {
     padding-left: 5vw;
     margin-bottom: 3vw;
-    background: url(../images/tf2.png)left top 1.5vw no-repeat;
+    background: url(/fudao/images/tf2.png)left top 1.5vw no-repeat;
     background-size: 3vw;
 }
 .task2_ri ul li h3 {
@@ -6406,13 +6406,13 @@ a.level3_ri{
     padding: 0 6.5vw;
 }
 .tutor2_zy .tutor2_z{
-    background: url(../images/z1.png) no-repeat;
+    background: url(/fudao/images/z1.png) no-repeat;
     background-size: cover;
     left: -6.5vw;
 }
 
 .tutor2_zy .tutor2_y {
-    background: url(../images/y1.png) no-repeat;
+    background: url(/fudao/images/y1.png) no-repeat;
     background-size: cover;
     right: -6.5vw;
 }
@@ -7460,7 +7460,7 @@ p.ti_ms {
 }
 .audition_tit {
     padding: 2vw 1vw;
-    background: #ffffff url(../images/yjt.png)top 2.5vw right 1vw no-repeat;
+    background: #ffffff url(/fudao/images/yjt.png)top 2.5vw right 1vw no-repeat;
     background-size: 5vw;
 }
 .audition_tit h3 {
@@ -7539,7 +7539,7 @@ p.ti_ms {
     line-height: 5.5vw;
     min-height: 11vw;
     margin-bottom: 3vw;
-    background: url(../images/bh.png)left top 1vw no-repeat;
+    background: url(/fudao/images/bh.png)left top 1vw no-repeat;
     background-size: 3.5vw;
     padding-left: 4.5vw;
     display: -webkit-box;
@@ -7579,7 +7579,7 @@ a.morebbb {
     line-height: 5.5vw;
     padding-left: 3vw;
     margin-bottom: 2vw;
-    background: url(../images/rm.png)left top 2vw no-repeat;
+    background: url(/fudao/images/rm.png)left top 2vw no-repeat;
 }
 a.rm_more {
     font-size: 4.2vw;
@@ -7602,7 +7602,7 @@ a.hgjt img {
     font-size: 3.25vw;
     line-height: 4.5vw;
     padding: 2vw 5vw 2vw 1vw;
-    background: #3aaad2 url(../images/lbjt.png) right 1vw center no-repeat;
+    background: #3aaad2 url(/fudao/images/lbjt.png) right 1vw center no-repeat;
     background-size: 3vw;
 }
 .model {
@@ -7958,7 +7958,7 @@ a.hk3_more {
     font-size: 3.75vw;
     margin-bottom: 2vw;
     padding-left: 3vw;
-    background: url(../images/gg.png)left center no-repeat;
+    background: url(/fudao/images/gg.png)left center no-repeat;
 }
 .level7_ul {
     margin-bottom: 3vw;
@@ -8532,7 +8532,7 @@ a.paper_more {
 .paper5_con ul li {
     margin-bottom: 1vw;
     padding-left: 6vw;
-    background: url(../images/pa5.png)left 0 top 1vw no-repeat;
+    background: url(/fudao/images/pa5.png)left 0 top 1vw no-repeat;
     background-size: 5vw;
 }
 .pay {
@@ -8606,7 +8606,7 @@ a.paper_more {
     line-height: 8vw;
     padding-left: 2vw;
     border: 1px solid #dedede;
-    background: url(../images/select.png)center right 1vw no-repeat;
+    background: url(/fudao/images/select.png)center right 1vw no-repeat;
     background-size: 10px;
 }
 .zhankai1 dl{
@@ -9685,7 +9685,7 @@ a.ind10_more1 {
     font-size: 4vw;
     line-height: 7vw;
     padding: 1vw 1vw 1vw 7vw;
-    background: url(../images/na5.png)left 1vw center no-repeat;
+    background: url(/fudao/images/na5.png)left 1vw center no-repeat;
     background-size: 5vw;
 }
 .nation5_con{
@@ -9786,11 +9786,11 @@ a.ind10_more1 {
     padding: 0;
     margin-bottom: 2vw;
     border: 1px solid #1089b5;
-    background: #ffffff url(../images/sat3_1.png)right 2vw center no-repeat;
+    background: #ffffff url(/fudao/images/sat3_1.png)right 2vw center no-repeat;
 }
 .sat3_nav a.cur{
     color: #ffffff;
-    background: #1089b5 url(../images/sat3_2.png)right 2vw center no-repeat;
+    background: #1089b5 url(/fudao/images/sat3_2.png)right 2vw center no-repeat;
 }
 .sat3_dl ul {
     padding: 0 3vw 5vw;
