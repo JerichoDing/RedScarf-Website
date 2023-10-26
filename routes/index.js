@@ -89,6 +89,7 @@ const frontRouters = [
 	'contact-us',
 	'404',
 	'common',
+	'course-guidance',// 课程预习
 	'course-guidance/Preview',// 课程预习
 	'course-guidance/Course', // 课程辅导
 	'course-guidance/CoursePaper', // 论文辅导
@@ -107,7 +108,18 @@ frontRouters.forEach((el) => {
 		if (ctx.query.signature) {
 			return;
 		}
-		const fileName = el === '' ? 'index' : el;
+		let fileName = '';
+		switch (el) {
+			case '':
+				fileName = 'index'
+				break;
+			case 'course-guidance':
+				fileName = 'course-guidance/Course'
+				break;
+			default:
+				fileName = el
+		}
+		
 		EndSkin.setRoot(path.resolve(__dirname, '../pages/components/'));
 
 		const Template = EndSkin.create(
