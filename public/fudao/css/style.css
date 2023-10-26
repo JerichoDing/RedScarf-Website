@@ -16980,3 +16980,11 @@ a.ind10_more1{
 .preview2 dl dt:hover img.tu2{
     display: block;
 }
+
+
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
+    content: ''!important;
+}
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
+    content: ''!important;
+}
