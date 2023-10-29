@@ -108,8 +108,14 @@ function fileDisplay(filePath){
 	return successRoute
 }
 
-
-const successRoutes = fileDisplay(pathName).map((el) =>`application-cases${el}`)
+const filesPath = fileDisplay(pathName);
+let fileNameObj = {}
+const successRoutes = filesPath.map((el) =>{
+	const name = el.substring(1,el.lastIndexOf('/')) 
+	let resultRoute = `application-cases/${encodeURIComponent(name)}/index`;
+	fileNameObj[resultRoute] = `application-cases/${name}/index`;
+	return resultRoute
+})
 
 //TODO: 手动添加前端路由
 let frontRouters = [
@@ -136,7 +142,6 @@ let frontRouters = [
 	'course-guidance/ModelEssay', // 高分范文
 	...successRoutes
 ];
-console.log(111,JSON.stringify(frontRouters));
 frontRouters.forEach((el) => {
 	router.get(`/${el}`, async (ctx) => {
 		// 微信的请求路由，不做处理
@@ -157,7 +162,7 @@ frontRouters.forEach((el) => {
 		EndSkin.setRoot(path.resolve(__dirname, '../pages/components/'));
 
 		const Template = EndSkin.create(
-			path.resolve(__dirname, `../pages/${fileName}.html`)
+			path.resolve(__dirname, `../pages/${fileNameObj[fileName] || fileName}.html`)
 		);
 		let isPrd = domain.indexOf('redscarfappeal') > 0? 1:0
 		Template.assign({
