@@ -568,6 +568,23 @@ section {
 	font-weight: 500;
 	color: #111;
 }
+.entry-content {
+    font-size: 16px;
+}
+.p-item {
+    padding: 0px;
+    margin: 10px 0px;
+    clear: both;
+}
+.item-cont {
+    padding: 10px;
+    line-height: 30px;
+}
+.ft-label {
+    background: #e3e3e3;
+    color: #de4520;
+    padding: 10px;
+}
 /* successful cases  end*/
 
 
