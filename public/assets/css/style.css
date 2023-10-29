@@ -538,6 +538,40 @@ section {
 		left: -100%;
 	}
 }
+/* successful cases  start*/
+
+.success-box .fl-module{
+	padding-top: 0px;
+}
+
+.fl-col.fl-col-small.wr-bd {
+	position: relative;
+	border: 1px solid var(--bs-primary);
+}
+.check-detail{
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
+.fl-rich-text{
+	font-size: 16px;
+}
+.fl-rich-text p{
+	margin-bottom: 8px;
+}
+.fl-row{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.ft-gray{
+	font-weight: 500;
+	color: #111;
+}
+/* successful cases  end*/
+
+
+
 /* advantage  start*/
 #advantage {
 	font-size: 18px;

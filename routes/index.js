@@ -1,5 +1,6 @@
 const router = require('koa-router')();
 const EndSkin = require('endskin');
+const fs = require('fs');
 const path = require('path');
 const menu = require('../wechat/menu');
 const sha1 = require('sha1');
@@ -79,10 +80,42 @@ router.get('/getUserInfo', async (ctx, next) => {
 	}
 });
 
+
+
+
+var pathName = path.resolve(__dirname, '../pages/application-cases/')
+var successRoute = []
+// 写一个函数来解析需要遍历的文件，然后把遍历到的文件路径push到一个数组中，如遇到文件夹则继续递归调用，并返回这个数组
+function fileDisplay(filePath){
+	//根据文件路径读取文件，返回文件列表
+	var files = fs.readdirSync(filePath);
+	//遍历读取到的文件列表
+	files.forEach(function(filename){
+		//获取当前文件的绝对路径
+		var filedir = path.join(filePath,filename);
+		//根据文件路径获取文件信息，返回一个fs.Stats对象
+		var stats = fs.statSync(filedir);
+		var isFile = stats.isFile();//是文件
+		var isDir = stats.isDirectory();//是文件夹
+		if(isFile){
+			// 读取文件内容
+			successRoute.push(filedir.replace(pathName,'').replace('.html',''))
+		}
+		if(isDir){
+			fileDisplay(filedir);//递归，如果是文件夹，就继续遍历该文件夹下面的文件
+		}
+	});
+	return successRoute
+}
+
+
+const successRoutes = fileDisplay(pathName).map((el) =>`application-cases${el}`)
+
 //TODO: 手动添加前端路由
-const frontRouters = [
+let frontRouters = [
 	'', //首页
 	'index',
+	'successful-cases',
 	'academic-appeals',
 	'non-academic-appeals',
 	'third-appeals',
@@ -101,7 +134,9 @@ const frontRouters = [
 	'course-guidance/ArtTutorial', // 艺术类课业辅导
 	'course-guidance/PhDRp', // 博士RP辅导
 	'course-guidance/ModelEssay', // 高分范文
+	...successRoutes
 ];
+console.log(111,JSON.stringify(frontRouters));
 frontRouters.forEach((el) => {
 	router.get(`/${el}`, async (ctx) => {
 		// 微信的请求路由，不做处理
@@ -119,14 +154,12 @@ frontRouters.forEach((el) => {
 			default:
 				fileName = el
 		}
-		
 		EndSkin.setRoot(path.resolve(__dirname, '../pages/components/'));
 
 		const Template = EndSkin.create(
 			path.resolve(__dirname, `../pages/${fileName}.html`)
 		);
 		let isPrd = domain.indexOf('redscarfappeal') > 0? 1:0
-		console.log(111,isPrd);
 		Template.assign({
 			// 传给html的变量
 			domain: domain,
@@ -136,5 +169,6 @@ frontRouters.forEach((el) => {
 		ctx.body = Template.html();
 	});
 });
+
 
 module.exports = router;
