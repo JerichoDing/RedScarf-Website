@@ -83,7 +83,7 @@ router.get('/getUserInfo', async (ctx, next) => {
 
 
 
-var pathName = path.resolve(__dirname, '../pages/application-cases/')
+var pathName = path.resolve(__dirname, '../pages/successful-cases/')
 var successRoute = []
 // 写一个函数来解析需要遍历的文件，然后把遍历到的文件路径push到一个数组中，如遇到文件夹则继续递归调用，并返回这个数组
 function fileDisplay(filePath){
@@ -122,8 +122,8 @@ const filesPath = fileDisplay(pathName);
 let fileNameObj = {}
 const successRoutes = filesPath.map((el) =>{
 	const name = el.substring(1,el.lastIndexOf('/')) 
-	let resultRoute = `application-cases/${encodeURIComponent(name)}/index`;
-	fileNameObj[resultRoute] = `application-cases/${name}/index`;
+	let resultRoute = `successful-cases/${encodeURIComponent(name)}/index`;
+	fileNameObj[resultRoute] = `successful-cases/${name}/index`;
 	return resultRoute
 })
 
