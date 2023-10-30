@@ -752,7 +752,7 @@ section {
 #non-appeals-area .policy-detail {
 	color: var(--bs-second-font-color);
 	font-size: 14px;
-	padding: 0 30px;
+	padding: 0 30px 0 10px;
 }
 /* appeals-intro   start */
 #appeals-intro {

@@ -135,6 +135,8 @@ let frontRouters = [
 	'academic-appeals',
 	'non-academic-appeals',
 	'third-appeals',
+	'vocation-training',
+	'scarf-information',
 	'contact-us',
 	'404',
 	'common',
