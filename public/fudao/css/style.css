@@ -2178,11 +2178,12 @@ a.more{
     content: "";
     position: absolute;
     top: 0;
-    left: 10.5%;
-    width: 79%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
     height: 100%;
     border-radius: 10px;
-    background: #c0e6f8;
+    background: var(--bs-primary-400);
     z-index: -1;
 }
 .coach6_con .swiper-slide{
