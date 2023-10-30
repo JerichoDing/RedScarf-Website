@@ -47,6 +47,9 @@ a,
 	text-decoration: none;
 	cursor: pointer;
 }
+a.white-text{
+	color: var(--bs-white);
+}
 .hover-text {
 	display: inline-block;
 	color: var(--bs-white);
@@ -1392,6 +1395,14 @@ section {
 	background-repeat: no-repeat;
 	background-position: center;
 }
+#hero .banner-box-left .banner-left-top.information-banner {
+	width: 600px;
+	height: 350px;
+	background-image: url('/assets/images/banner-info.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
 #hero .banner-box-left .banner-left-intro {
 	margin-bottom: 30px;
 }
@@ -1413,9 +1424,13 @@ section {
 	z-index: 2;
 }
 #hero .banner-box-right img:nth-of-type(3) {
-	top: 60px;
+	top: 90px;
 	overflow: hidden;
 	z-index: 3;
+	width: 200px;
+	right: 150px;
+	transform: skew(135deg,22deg); 
+	border-radius: 10px;
 }
 @media (min-width: 1024px) {
 	#hero {
@@ -1895,7 +1910,6 @@ section {
 /* apply start */
 #apply {
 	background-color: var(--bs-white);
-	margin-top: 100px;
 }
 .apply-top-bg {
 	width: 375px;
@@ -2045,6 +2059,13 @@ section {
 #video-section {
 	padding-top: 0;
 	position: relative;
+}
+.ac-video{
+	position: absolute;
+    right: 210px;
+    top: 200px;
+	width: 863px;
+    height: 482.5px;
 }
 
 .video-img-box-2 {

@@ -1,15 +1,126 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    {include head.html}
+{include head.html}
 <body>
-    
     {include header.html}
-    <div>
-        <section id="hero" class="d-flex align-items-center">
-            
+    <section id="hero" class="third-appeal">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="banner-box-left d-flex flex-column mt-2">
+                        <div class="banner-left-top information-banner"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col"></div>
+            </div>
+        </div>
+    </section>
+    <!-- End Hero -->
+    <main id="main">
+        <div class="container third-appeal-2 mt-5">
+           
+        </div>
+
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col d-flex flex-column justify-content-center align-items-end">
+                    <img class="title-img" src="/assets/images/contact-hr-title.png" alt="">
+                    <p class="active-text mt-3">如果你想获取一份申诉老师的岗位，或者想要和我们一起工作。</p>
+                    <button class="text-center rsa-btn  circle">立即查看 <i class="bi bi-chevron-right"></i> </button>
+                </div>
+                <div class="col">
+                    <img height="500" src="/assets/images/contact-hr-right.png" alt="">
+                </div>
+            </div>
+        </div>
+        <section id="contact-us-2" >
+            <div class="appeals-intro-top fixed-section-icon fixed-left">
+            </div>
+            <div class="container mb-5">
+                <div class="row d-flex align-items-center">
+                    <div class="col d-flex justify-content-end">
+                        <img height="500" src="/assets/images/contact-hr-right.png" alt="">
+                    </div>
+                    <div class="col d-flex flex-column pl-2">
+                        <img class="title-img mb-4" src="/assets/images/business-cooperation.png" alt="">
+                        <div class="email-form-contact font-18 text-center  d-flex align-items-center pl-5">
+                            <img class="email-bg" src="/assets/images/email-bg.png" alt="">
+                            <img class="email-bg-1" src="/assets/images/email-bg-1.png" alt="">
+                            <img class="email-bg-2" src="/assets/images/email-bg-2.png" alt="">
+                            <span class="email-content ">邮箱联系 | zhangxi@ledgeknowedu.com</span>
+                        </div>
+                        <ul class="contact-middle-info active-text">
+                            <li class="items">社交媒体</li>
+                            <div class="items-content">
+                                <span>广告</span>
+                                <span>软文</span>
+                                <span>第三方媒介</span>
+                            </div>
+                            <li class="items">业务合作</li>
+                            <div class="items-content">
+                                <span>留资</span>
+                                <span>移民</span>
+                                <span>咨询</span>
+                                <span>猎头</span>
+                            </div>
+                            <div class="items-content">
+                                手机号：
+                                <input type="text" name="mobile" placeholder="请输入手机号">
+                            </div>
+                        </ul>
+                        <button class="text-center rsa-btn mt-5 circle ">立即提交 <i class="bi bi-chevron-right"></i> </button>
+                    </div>
+                </div>
+            </div>
+            <div class="container hr-center">
+                <img class="title-img" src="/assets/images/emigrate-title.png" alt="">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-6 d-flex align-items-start mb-5 mb-lg-0 flex-column">
+                        <img src="/assets/images/overseas-video-1.png" alt="">
+                        <span class="font-20 active-text bold mt-1">海外</span>
+                        <span class="mt-2 mb-2">租房、买房、海外生活</span>
+                        <button class="text-center rsa-btn  circle">查看详情<i class="bi bi-chevron-right"></i></button>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6 d-flex align-items-start mb-5 mb-lg-0 flex-column">
+                        <img src="/assets/images/overseas-video-2.png" alt="">
+                        <span class="font-20 active-text bold  mt-1">留学生回国求职</span>
+                        <span class="mt-2 mb-2">有机会通过红领巾的绿色通道渠道世界500强就业</span>
+                        <button  class="text-center rsa-btn  circle">了解更多<i class="bi bi-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="order-section">
+            {include team-number.html}
+            <div class="container mt-5">
+                <div class="row">
+                    <div class="col d-flex flex-column justify-content-center align-items-end">
+                        <img class="title-img" src="/assets/images/emigrate-title.png" alt="">
+                        <p class="active-text mt-3">我们为您提供符合留学生个人规划的房地产信息获取路径</p>
+                        <div>
+                            <button class="text-center rsa-btn  circle">立即查看</button>
+                            <button class="text-center rsa-btn  circle">开始订阅</button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img height="300" src="/assets/images/right-left.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="apply">
+			<div class="apply-top-bg fixed-section-icon fixed-left">
+			</div>
+			<!-- apply-top-circle  semi-circle -->
+			{include scroll-svg.html}
+			{include apply-box.html}
 		</section>
-    </div>
-    {include footer.html}
-    {include source.html}
+
+
+    </main>
+
+    {include footer.html} {include source.html}
 </body>
+
 </html>
