@@ -109,8 +109,6 @@ function fileDisplay(filePath){
 			// let temp = content.replace(pattern, '')
 			// fs.writeFileSync(filedir, temp, 'utf8')
 				// 直接替换文件内容
-			
-
 			successRoute.push(filedir.replace(pathName,'').replace('.html',''))
 		}
 		if(isDir){
