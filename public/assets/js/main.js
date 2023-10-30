@@ -60,32 +60,13 @@
 	};
 
 	let backtotop = select('.back-to-top');
-	let navbarlinks = select('#navbar .scrollto', true);
+	let navbarlinks = select('#navbar .nav-link', true);
 	let preloader = select('#preloader');
 	let selectHeader = select('#header');
 
 	/**
 	 * Navbar links active state on scroll
 	 */
-
-	// const navbarlinksActive = () => {
-	// 	let position = window.scrollY + 200;
-	// 	navbarlinks.forEach((navbarlink) => {
-	// 		if (!navbarlink.hash) return;
-	// 		let section = select(navbarlink.hash);
-	// 		if (!section) return;
-	// 		if (
-	// 			position >= section.offsetTop &&
-	// 			position <= section.offsetTop + section.offsetHeight
-	// 		) {
-	// 			navbarlink.classList.add('active');
-	// 		} else {
-	// 			navbarlink.classList.remove('active');
-	// 		}
-	// 	});
-	// };
-	// window.addEventListener('load', navbarlinksActive);
-	// onscroll(document, navbarlinksActive);
 
 	/**
 	 * Scrolls to an element with header offset
@@ -323,42 +304,46 @@
 	translate.language.setLocal('chinese_simplified');
 	translate.execute();
 
-
 	on('click', '.language-icon', function (e) {
 		const languageLocal = translate.language.getLocal() || 'chinese_simplified';
 		languageLocal === 'english'
 			? translate.language.setLocal('chinese_simplified')
 			: translate.language.setLocal('english');
-		console.log(122222, languageLocal);
 		translate.execute();
 	});
 
 	let policyItems = select('.policy-tabs .policy-tab-item', true);
-	on('click','.policy-tabs',function(e){
-		let val = e.target.getAttribute('data-val')
-		let resultObj={
-			'特殊情况':'Extenuating Circumstances/ Special Circumstances/Mitigating Circumstances/Good Cause/ Special Consideration，这些都是属于特殊情况的指代。学校叫法可能不同，例如澳洲就叫SC,而英国多称它为MC/EC，实际上它们都是同一种申诉方式，中文原意都叫做特殊情况。简称EC/SC/MC/GC。',
-			'补考挂科':'出国留学，一遇上期末考试，每年都不乏有挂科的学生，国内挂科其实还算好解决，只要你好好准备，还是很好通过的，但是不同于国内，海外院校对于学生的学业要求会更高且更严格，如果补考出现挂科的情况，极有可能会被学校给予退学的处分。当遇到这种情况时，及时找到红领巾留学申诉，可以挽救同学们的学业，争取再一次的机会。',
-			'无上限补考':'通常情况下，大多数学校原本给予的补考机会都是有分数上限的，即最高分数为及格分。这是因为补考通常是为了让学生能够及时补救挂科课程至及格线，从而让学生能够顺利毕业。有些学校可能会给予学生一些特殊情况下的额外机会，例如在学生提供特定的证明文件或者在一些特殊的课程中。这种补考机会通常是没有分数上限的，也就是说，学生可以在这些特殊的补考中获得更高的分数，而不仅仅是及格分。',
-			'毕业论文挂科':'毕业论文/设计在海外留学过程中，是最重要的一个环节，直接关系到学生是否能顺利拿到学位证的一个评判标准，那么如果同学们不幸Fail掉毕业论文/设计，就是无法正常毕业获取学位证的状态了，之前付出的金钱以及精力就算白费了。不过不用担心，找到红领巾留学申诉团队，依然能帮挂科的你们争取到新的递交机会，助同学们可以顺利毕业。',
-			'学位申诉':'GPA达不到学校的基本要求，出勤率不够，同一门科目反复挂科等，这些情况情况的发生对于留学生正常毕业获取学位证来说都是尤其不利的，海外院校都是出了名的“宽进严出”。每年都会有一大批的留学生因这样或那样的原因导致被学校劝退，这种时候，需要做的就是学位申诉，帮助同学获取继续学业的机会，争取拿到degree。',
+	on('click', '.policy-tabs', function (e) {
+		let val = e.target.getAttribute('data-val');
+		let resultObj = {
+			特殊情况:
+				'Extenuating Circumstances/ Special Circumstances/Mitigating Circumstances/Good Cause/ Special Consideration，这些都是属于特殊情况的指代。学校叫法可能不同，例如澳洲就叫SC,而英国多称它为MC/EC，实际上它们都是同一种申诉方式，中文原意都叫做特殊情况。简称EC/SC/MC/GC。',
+			补考挂科:
+				'出国留学，一遇上期末考试，每年都不乏有挂科的学生，国内挂科其实还算好解决，只要你好好准备，还是很好通过的，但是不同于国内，海外院校对于学生的学业要求会更高且更严格，如果补考出现挂科的情况，极有可能会被学校给予退学的处分。当遇到这种情况时，及时找到红领巾留学申诉，可以挽救同学们的学业，争取再一次的机会。',
+			无上限补考:
+				'通常情况下，大多数学校原本给予的补考机会都是有分数上限的，即最高分数为及格分。这是因为补考通常是为了让学生能够及时补救挂科课程至及格线，从而让学生能够顺利毕业。有些学校可能会给予学生一些特殊情况下的额外机会，例如在学生提供特定的证明文件或者在一些特殊的课程中。这种补考机会通常是没有分数上限的，也就是说，学生可以在这些特殊的补考中获得更高的分数，而不仅仅是及格分。',
+			毕业论文挂科:
+				'毕业论文/设计在海外留学过程中，是最重要的一个环节，直接关系到学生是否能顺利拿到学位证的一个评判标准，那么如果同学们不幸Fail掉毕业论文/设计，就是无法正常毕业获取学位证的状态了，之前付出的金钱以及精力就算白费了。不过不用担心，找到红领巾留学申诉团队，依然能帮挂科的你们争取到新的递交机会，助同学们可以顺利毕业。',
+			学位申诉:
+				'GPA达不到学校的基本要求，出勤率不够，同一门科目反复挂科等，这些情况情况的发生对于留学生正常毕业获取学位证来说都是尤其不利的，海外院校都是出了名的“宽进严出”。每年都会有一大批的留学生因这样或那样的原因导致被学校劝退，这种时候，需要做的就是学位申诉，帮助同学获取继续学业的机会，争取拿到degree。',
 
-			'澳大利亚(Ombusman)':'澳大利亚的监察专员 (Ombudsman)是一个独立的公共机构，负责调查、解决和提供关于公共服务和某些私营部门服务的投诉的建议。 以下是澳大利亚监察专员的主要职能和服务范围',
-			'北爱尔兰 (NIPSO)':'北爱尔兰公共服务监察专员办公室（NIPSO）是一个独立的公共机构，负责调查北爱尔兰公共服务提供方的程序不当投诉',
-			'苏格兰 (SPSO)':'苏格兰公共服务监察专员（SPSO）是一个涵盖三个主要功能的机构，致力于确保苏格兰公共服务的透明度和公正性。',
-			'英格兰/威尔士 (OIA)':'英国的办公室独立调解人（OIA，Office of the Independent Adjudicator）是一家独立的机构，负责审查英国高等教育机构的学生申诉。OIA的主要目的是提供公正、透明的申诉处理程序，以解决学生与大学之间的纠纷。 OIA不是法院或法律机构，但它的决定通常被认为是具有约束力的。OIA处理的申诉类型可能涉及学术成绩、学生福利、歧视、学费和资金等问题',
-		}
-		if(val && resultObj[val]){
+			'澳大利亚(Ombusman)':
+				'澳大利亚的监察专员 (Ombudsman)是一个独立的公共机构，负责调查、解决和提供关于公共服务和某些私营部门服务的投诉的建议。 以下是澳大利亚监察专员的主要职能和服务范围',
+			'北爱尔兰 (NIPSO)':
+				'北爱尔兰公共服务监察专员办公室（NIPSO）是一个独立的公共机构，负责调查北爱尔兰公共服务提供方的程序不当投诉',
+			'苏格兰 (SPSO)':
+				'苏格兰公共服务监察专员（SPSO）是一个涵盖三个主要功能的机构，致力于确保苏格兰公共服务的透明度和公正性。',
+			'英格兰/威尔士 (OIA)':
+				'英国的办公室独立调解人（OIA，Office of the Independent Adjudicator）是一家独立的机构，负责审查英国高等教育机构的学生申诉。OIA的主要目的是提供公正、透明的申诉处理程序，以解决学生与大学之间的纠纷。 OIA不是法院或法律机构，但它的决定通常被认为是具有约束力的。OIA处理的申诉类型可能涉及学术成绩、学生福利、歧视、学费和资金等问题',
+		};
+		if (val && resultObj[val]) {
 			select('.policy-detail').innerHTML = resultObj[val];
 			policyItems.forEach(function (el) {
 				el.classList.remove('hover-text');
 			});
 			e.target.classList.add('hover-text');
 		}
-	})
-
-
-
+	});
 
 	/**
 	 * translate.js end
@@ -379,29 +364,50 @@
 	// 	location.reload();
 	// });
 
+	// 特殊情况的切换
 
+	let player = new Player({
+		id: 'mse',
+		url: '/assets/video/香港科技大学研究生学术不端.mp4',
+		autoplay: false,
+		volume: 0.3,
+		playsinline: true,
+		width: 870,
+		height: 482.5,
+	});
 
-// 特殊情况的切换
-
-
-
-let player = new Player({
-	id: 'mse',
-	url: '/assets/video/香港科技大学研究生学术不端.mp4',
-	autoplay: false,
-	volume: 0.3,
-	playsinline: true,
-	width: 870,
-    height: 482.5,
-  });
-
-
-
+	const RouteMapping = {
+		'index': '首页',
+		'international-policy': '国际申诉政策',
+		'course-guidance': '课程辅导',
+		'successful-cases': '成功案例',
+		'academic-appeals': '学术申诉',
+		'non-academic-appeals': '非学术申诉',
+		'third-appeals': '第三方申诉',
+		'vocation-training': 'vocation-training',
+		'scarf-information': '红领巾资讯',
+		'contact-us': '联系导师',
+	};
+	let path = window.location.pathname.substring(1);
+	if( path.split('/').length>1){
+		path = path.split('/')[0]
+	}
+	if (path === '') {
+		path = 'index';
+	}
+	if (path && RouteMapping[path] ) {
+		navbarlinks.forEach((el) => {
+			el.classList.remove('active');
+			if(el.getAttribute('data-key') === RouteMapping[path]){
+				el.classList.add('active');
+			}
+		})
+	}
 
 	/**
 	 * Initiate Pure Counter
 	 */
-	
+
 	new PureCounter({
 		separator: ',',
 	});

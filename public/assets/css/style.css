@@ -724,6 +724,7 @@ section {
 /* non-appeals-sort   start */
 #non-appeals-sort {
 	position: relative;
+	padding-top: 0;
 }
 
 #non-appeals-sort .appeals-intro-bottom {

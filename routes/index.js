@@ -132,6 +132,7 @@ let frontRouters = [
 	'', //首页
 	'index',
 	'successful-cases',
+	'international-policy',
 	'academic-appeals',
 	'non-academic-appeals',
 	'third-appeals',
