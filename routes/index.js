@@ -99,6 +99,18 @@ function fileDisplay(filePath){
 		var isDir = stats.isDirectory();//是文件夹
 		if(isFile){
 			// 读取文件内容
+			// var content = fs.readFileSync(filedir, 'utf-8');
+			// 正则获取以<article开头  article>结尾的内容
+			// var pattern = /<div class="p-item" style="text-align:center;([\s\S]*?)<\/article>/i;
+			// var pattern = /<img\b[^>]*>/g;
+			// let matches = content.match(pattern)
+
+			// let targetContent = matches
+			// let temp = content.replace(pattern, '')
+			// fs.writeFileSync(filedir, temp, 'utf8')
+				// 直接替换文件内容
+			
+
 			successRoute.push(filedir.replace(pathName,'').replace('.html',''))
 		}
 		if(isDir){
