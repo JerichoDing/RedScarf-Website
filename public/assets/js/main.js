@@ -345,6 +345,15 @@
 		}
 	});
 
+	
+	// on('mouseleave','a.show-pop',(e)=>{
+	// 	if(e.target.getAttribute('data-type') === 'img'){
+	// 		$('a.show-pop').webuiPopover('destroy')
+	// 	}
+	// })
+
+
+
 	/**
 	 * translate.js end
 	 */

@@ -84,6 +84,9 @@ li {
 	cursor: pointer;
 	user-select: none;
 }
+.h-450 {
+	height: 450px;
+}
 .h-500 {
 	height: 500px;
 }
@@ -241,6 +244,9 @@ input,textarea{
 }
 .pl-5 {
 	padding-left: 50px;
+}
+.pl-10 {
+	padding-left: 100px;
 }
 .mt-10 {
 	margin-top: 100px;
@@ -641,7 +647,7 @@ section {
 .what-is-non-academic-appeal {
 	width: 220px;
 	height: 440px;
-	background-image: url('/assets/images/what-is-non-appeal.png');
+	/* background-image: url('/assets/images/what-is-non-appeal.png'); */
 	background-position: 0 0;
 	background-size: 100%;
 	background-repeat: no-repeat;
@@ -1650,7 +1656,6 @@ section {
 	background-color: var(--bs-white);
 	color: var(--bs-primary-800);
 	padding: 8px 15px;
-	margin-right: 10px;
 	font-size: 18px;
 }
 
@@ -1816,6 +1821,9 @@ section {
 .service-member-name.sort-5 {
 	background-image: url('/assets/images/avatar-5-1.png');
 }
+.service-member-name.sort-6 {
+	background-image: url('/assets/images/avatar-6-1.png');
+}
 .service-team .service-member-title {
 	font-style: italic;
 	color: #bc15d0;
@@ -1910,9 +1918,7 @@ section {
 
 /* team end */
 /* apply start */
-#apply {
-	background-color: var(--bs-white);
-}
+
 .apply-top-bg {
 	width: 375px;
 	height: 750px;
@@ -1920,15 +1926,15 @@ section {
 	border-radius: 0 375px 375px 0;
 	margin-left: -100px;
 	margin-top: -50px;
-	z-index: 0;
+	z-index: -1;
 }
 
-#apply .apply-box {
+ .apply-box {
 	position: relative;
 	z-index: 1;
 	margin-top: -220px;
 }
-#apply .apply-box .apply-form-bg {
+.apply-box .apply-form-bg {
 	padding: 0 120px;
 }
 .apply-left-envelope{
@@ -2023,7 +2029,6 @@ section {
 /* tutor start */
 #tutor{
 	padding-top: 0;
-	margin-top: -200px;
 }
 #tutor .container {
 	padding-top: 100px;
@@ -2111,7 +2116,7 @@ section {
 .feedback-sub-btn {
 	margin-top: 20px;
 }
-#train {
+.train-box {
 	position: relative;
 	height: 600px;
 	background-image: url('/assets/images/train-bg.png');
