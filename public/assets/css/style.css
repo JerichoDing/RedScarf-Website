@@ -1040,9 +1040,15 @@ section {
 }
 .center-circle .center-circle-img-4 {
 	bottom: 70px;
-	right: 200px;
-	width: 80px;
+	right: 130px;
+	width: 100px;
 	animation: circle-up-down 3s ease-in-out infinite reverse;
+}
+.center-circle .center-circle-img-5 {
+	bottom: 10px;
+    right: 250px;
+	width: 80px;
+	animation: circle-up-down 2s ease-in-out infinite;
 }
 .center-circle .center-circle-img:hover {
 	animation-play-state: paused;
