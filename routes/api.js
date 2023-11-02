@@ -29,7 +29,7 @@ rooter.get('/login', async (ctx, next) => {
 });
 
 
-// 后台分页查询接口
+//TODO: 后台分页查询接口
 rooter.get('/queryAllUserByLimit', async (ctx, next) => {
 	const {account, password, openid  } = ctx.query
 	return userController.findAllUsers(ctx, {name:account, password, openid });
