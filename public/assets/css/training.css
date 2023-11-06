@@ -1,0 +1,115 @@
+#training{
+
+}
+.training-banner{
+    height: 400px;
+    background-image: url('/assets/images/training/redscarf-bf.png');
+    background-size: 782px 346px;
+    background-repeat: no-repeat;
+    background-position: top right ;
+    display: flex;
+    justify-content:flex-end;
+    align-items: end;
+
+}
+.training-banner>div{
+    font-size: 33px;
+    font-family: Source Han Sans CN;
+    font-weight: bold;
+    font-style: italic;
+    color: #F5A220;
+    line-height: 39px;
+}
+.training-banner-three{
+    height:420px;
+    margin-top:90px;
+    display: flex;
+    justify-content: space-between;
+}
+.training-banner-three-1{
+    width:230px;
+    height:338px;
+}
+.training-banner-three-2{
+    width:469px;
+    height:417px;
+}
+.training-banner-three-3{
+    width:360px;
+    height:349px;
+}
+.autumn-recruitment{
+    display: flex;
+    justify-content: space-between;
+}
+.autumn-recruitment-left{
+    margin-top:108px;
+}
+.autumn-recruitment-left>img.autumn-recruitment-left-desc{
+    width:513px;
+    height:174px;
+}
+.autumn-recruitment-left>div{
+    margin-top:40px;
+    cursor: pointer;
+}
+.autumn-recruitment-right{
+    flex: 0 0 588px;
+    height:616px;
+}
+.service-scheme{
+    width:100%;
+    height:646px;
+    margin:183px 0 166px;
+    background-image: url('/assets/images/training/7.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top right;
+    padding:100px 180px  0;
+   
+}
+.service-scheme-img{
+    margin-left:82px;
+}
+.service-scheme-desc{
+    text-align: center;
+    height: 39px;
+    font-size:28px;
+    color: #D4D4D4;
+    line-height: 39px;
+    margin:67px 0 56px ;
+}
+.service-scheme-input-box{
+    position: relative;
+}
+.service-scheme-input-box>img{
+    position: absolute;
+    top:17px;
+    left:25px;
+    width:26px;
+    height:26px;
+}
+.service-scheme-input{
+    font-size:24px;
+    outline: none;
+    width:100%;
+    height:60px;
+    line-height:60px;
+    border-radius: 30px;
+    padding:0 60px;
+    color:#fff;
+    background-color: rgba(142, 142, 142,.3);
+}
+.service-scheme-input::placeholder{
+    color:#fff;
+}
+.service-scheme-keyword{
+    margin-top:30px;
+    padding:0 250px;
+    display: flex;
+    color:#fff;
+    justify-content: space-between;
+}
+.service-scheme-keyword>p{
+    cursor: pointer;
+}
