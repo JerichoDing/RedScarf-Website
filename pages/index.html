@@ -79,7 +79,6 @@
 				</div>
 			</div>
 		</section>
-		<!-- TODO:下面整个模块过高 -->
 		<section id="featured">
 			<div class="d-flex justify-content-center">
 				<div class="d-flex justify-content-center featured-title">
@@ -362,6 +361,7 @@
 			<img class="video-img-left " src="/assets/images/left-circle.png" alt="">
 			<div class="video-img-box ">
 			</div>
+			<div id="mse-index"></div>
 		</section>
 
 
@@ -391,3 +391,17 @@
 </body>
 
 </html>
+
+<script>
+	new Player({
+	id: 'mse-index',
+	url: '/assets/video/UCL大三学生三门考试与他人共谋.mp4',
+	// 封面
+	poster: '/assets/video/UCL大三学生三门考试与他人共谋.jpg',
+	autoplay: false,
+	volume: 0.3,
+	playsinline: true,
+	width: 492,
+	height: 285,
+});
+</script>

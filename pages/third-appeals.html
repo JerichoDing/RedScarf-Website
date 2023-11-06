@@ -86,7 +86,9 @@
 							澳大利亚的监察专员 (Ombudsman)是一个独立的公共机构，负责调查、解决和提供关于公共服务和某些私营部门服务的投诉的建议。 以下是澳大利亚监察专员的主要职能和服务范围:
 						</div> -->
 					</div>
-					<div class="col video-img-box-third"></div>
+					<div class="col video-img-box-third">
+						<div id="mse-third"></div>
+					</div>
 				</div>
 			</div>
 			<div class="container appeal-list">
@@ -247,6 +249,7 @@
 </body>
 
 </html>
+
 <script>
 	var swiper = new Swiper('.swiper-container', {
 		slidesPerView: 3,
@@ -259,4 +262,16 @@
 			uniqueNavElements: false,
 		},
 	});
+
+	new Player({
+	id: 'mse-third',
+	url: '/assets/video/新西兰奥克兰开卷考试学术不端.mp4',
+	// 封面
+	poster: '/assets/video/新西兰奥克兰开卷考试学术不端.jpg',
+	autoplay: false,
+	volume: 0.3,
+	playsinline: true,
+	width: 382,
+	height: 224,
+});
 </script>

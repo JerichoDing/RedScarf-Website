@@ -1,6 +1,6 @@
 let els = document.querySelectorAll('.hover-img');
 els.forEach((el) => {
-   let perspective = el.getAttribute('data-p') || 300
+   let perspective = el.getAttribute('data-p') || 300;
     el.addEventListener('mousemove', (e) => {
         let thisPX = el.getBoundingClientRect().left;
         let thisPY = el.getBoundingClientRect().top;

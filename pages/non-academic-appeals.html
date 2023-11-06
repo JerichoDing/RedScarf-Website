@@ -260,8 +260,11 @@
 				<div class="row right-fixed d-flex align-items-end flex-column">
 					<img src="/assets/images/non-ac-video-title.png" alt="">
 				</div>
+				
 			</div>
-			<div class="container video-img-box-2"> </div>
+			<div class="container video-img-box-2">
+				<div id="mse-2"></div>
+			</div>
 		</section>
 		<section>
 			<div class="we-can-get ml-5"> </div>
@@ -311,3 +314,18 @@
 </body>
 
 </html>
+
+
+<script>
+	new Player({
+	id: 'mse-2',
+	url: '/assets/video/美国UC本科大三GPA过低被开除.mp4',
+	// 封面
+	poster: '/assets/video/美国UC本科大三GPA过低被开除.jpg',
+	autoplay: false,
+	volume: 0.3,
+	playsinline: true,
+	width: 870,
+	height: 482.5,
+});
+</script>
