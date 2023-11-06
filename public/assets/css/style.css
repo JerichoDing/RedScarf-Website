@@ -100,6 +100,9 @@ li {
 .h-800 {
 	height: 800px;
 }
+.w-500{
+	width: 500px;
+}
 .fixed-section-icon {
 	position: absolute;
 }
@@ -634,7 +637,7 @@ section {
 }
 .what-is-academic-appeal-intro {
 	padding-top: 0;
-	margin-top: -50px;
+	margin-top: 10px;
 }
 .what-is-academic-appeal-top {
 	position: relative;
@@ -648,14 +651,37 @@ section {
 	background-repeat: no-repeat;
 	z-index: -1;
 }
-.what-is-non-academic-appeal {
+.what-is-non-academic-appeal-title {
 	width: 220px;
-	height: 440px;
-	/* background-image: url('/assets/images/what-is-non-appeal.png'); */
+	height: 60px;
+	background-image: url('/assets/images/什么是申诉.png');
 	background-position: 0 0;
 	background-size: 100%;
 	background-repeat: no-repeat;
 	z-index: -1;
+}
+.what-is-non-academic-appeal-title.appeal-banner-title{
+	background-image: url('/assets/images/留学生申诉的困境.png');
+	width: 350px;
+	margin-top: 30px;
+}
+.what-is-academic-appeal-title {
+	width: 840px;
+	height: 280px;
+	background-image: url('/assets/images/什么是留学申诉呢.png');
+	background-position: 0 0;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	margin-bottom: 30px;
+}
+.what-is-non-academic-appeal {
+	width: 420px;
+	height: 280px;
+	background-image: url('/assets/images/什么是留学申诉.png');
+	background-position: 0 0;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	margin-top: 30px;
 }
 
 .non-academic-appeal-intro {
@@ -1396,6 +1422,10 @@ section {
 	background-repeat: no-repeat;
 	background-position: center;
 }
+#hero .banner-box-left .banner-left-top.none {
+	
+	background-image: url('/assets/images/REDSCARF学术申诉.png');
+}
 #hero .banner-box-left .banner-left-top.third {
 	width: 600px;
 	height: 300px;
@@ -1428,7 +1458,7 @@ section {
 	margin-top: 140px;
 }
 #hero .banner-box-right img {
-	width: 300px;
+	width: 400px;
 	position: absolute;
 	right: 100px;
 }
@@ -1444,7 +1474,7 @@ section {
 	top: 90px;
 	overflow: hidden;
 	z-index: 3;
-	width: 200px;
+	width: 280px;
 	right: 150px;
 	transform: skew(135deg,22deg); 
 	border-radius: 10px;
@@ -1938,7 +1968,18 @@ section {
 	margin-top: -50px;
 	z-index: -1;
 }
+.non-appeal-feedback{
+	margin-top: -300px;
+}
+.feedback-container{
+	max-width: 900px;
+	overflow-x: scroll;
 
+}
+
+#non-appeal-box .apply-box{
+	margin-top: 0;
+}
  .apply-box {
 	position: relative;
 	z-index: 1;
@@ -1947,6 +1988,7 @@ section {
 .apply-box .apply-form-bg {
 	padding: 0 120px;
 }
+
 .apply-left-envelope{
 	position: absolute;
 	top: 200px;
@@ -2223,7 +2265,26 @@ section {
 }
 /* feedback start */
 .feedback-box {
-	margin-top: 30px;
+	max-width: 900px;
+	overflow-x: scroll;
+	margin: 30px auto 0;
+	position: relative;
+}
+.feedback-box .bi-twins{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 40px;
+	color: var(--bs-primary-300);
+}
+.feedback-box .bi-twins:hover{
+	color: var(--bs-primary-700);;
+}
+.feedback-box .bi-twins:nth-of-type(1){
+	right: 0;
+}
+.feedback-box .bi-twins:nth-of-type(2){
+	left: 0;
 }
 .feedback-box .col {
 	width: 250px;
@@ -2236,6 +2297,7 @@ section {
 	color: var(--bs-white);
 	padding: 20px 8px 30px;
 	font-size: 14px;
+	user-select: none;
 }
 .feedback-box .col:nth-of-type(1) {
 	background-image: url('/assets/images/feedback-1.png');
@@ -2246,6 +2308,12 @@ section {
 }
 .feedback-box .col:nth-of-type(3) {
 	background-image: url('/assets/images/feedback-3.png');
+}
+.feedback-box .col:nth-of-type(4) {
+	background-image: url('/assets/images/feedback-2.png');
+}
+.feedback-box .col:nth-of-type(5) {
+	background-image: url('/assets/images/feedback-1.png');
 }
 .feedback-box .col img {
 	width: 45px;
