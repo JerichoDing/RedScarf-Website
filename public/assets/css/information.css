@@ -1,0 +1,262 @@
+p{
+  margin:0;
+}
+#information {
+  position: relative;
+}
+
+#information .information-banner {
+  width: 911px;
+  height: 230px;
+  background-image: url('/assets/images/banner-info.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 134px;
+  position: relative;
+}
+#information .information-banner-text {
+  font-size: 50px;
+  font-family: Source Han Sans CN;
+  font-weight: bold;
+  font-style: italic;
+  color: #f5a220;
+  line-height: 59px;
+  position: absolute;
+  bottom: 0;
+  padding-left: 113px;
+}
+
+#information .information-video {
+  /* width: 1182px; */
+  height: 614px;
+  margin-top: 87px;
+  background-image: url('/assets/images/scarf-information-video-bg.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.information-guide {
+  margin-top: 273px;
+  width: 100%;
+}
+.information-guide-title{
+  width: 100%;
+  height: 130px;
+  background-image: url('/assets/images/guide.png');
+  background-size: 611px 74px;
+  background-repeat: no-repeat;
+  background-position: top left;
+  font-size: 32px;
+  font-weight: 500;
+  color: #EC3B82;
+  line-height: 32px;
+  position: relative;
+  z-index: 2;
+  display:flex;
+  align-items:flex-end;
+  padding-left:50px;
+}
+.information-guide-content{
+  display: flex;
+  justify-content: space-between;
+  margin-top:62px;
+}
+.information-guide-conten-list{
+  flex: 0 0 32%;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.information-guide-conten-list .conten-list-title{
+  height:155px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #FFFFFF;
+  line-height: 35px;
+  background-size: 414px 155px;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding:45px 0;
+}
+.conten-list-title-1-bg{
+  background-image: url('/assets/images/study-abroad-1.png');
+}
+.conten-list-title-2-bg{
+  background-image: url('/assets/images/study-abroad-2.png');
+}
+.conten-list-title-3-bg{
+  background-image: url('/assets/images/study-abroad-3.png');
+}
+.information-guide-conten-list .conten-list-wrap{
+  padding-top:52px;
+  padding-bottom:43px;
+  background-color: #ECECEC;
+}
+.conten-list-wrap .conten-list-wrap-item{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding:0 34px;
+  cursor: pointer;
+}
+.conten-list-wrap-item-text{
+  flex: 1;
+  color: #000000;
+}
+.conten-list-wrap-item-more{
+  flex: 0 0 4em;
+  color:#717171;
+}
+.icon-dark{
+  display: inline-block;
+  width:20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #EC3B82;
+  color:#fff;
+  font-size:14px;
+  margin-right:8px;
+}
+.icon-light{
+  display: inline-block;
+  width:20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #000000;
+  margin-right:8px;
+}
+.information-job{
+  margin-top: 144px;
+  width: 100%;
+}
+.information-job-title {
+  margin-top: 144px;
+  width: 100%;
+  height: 130px;
+  background-image: url('/assets/images/job.png');
+  background-size: 711px 72px;
+  background-repeat: no-repeat;
+  background-position: top left;
+  font-size: 32px;
+  font-weight: 500;
+  color: #EC3B82;
+  line-height: 32px;
+  position: relative;
+  z-index: 2;
+  display:flex;
+  align-items:flex-end;
+}
+.information-job-content{
+  padding:46px 0 160px;
+}
+.information-job-content-img{
+  width:100%;
+  height:auto;
+}
+.information-job-content .content-wrap{
+  display: flex;
+  justify-content: space-between;
+  padding-top:54px;
+}
+.content-wrap .content-wrap-item{
+  flex: 0 0 32%;
+  font-size:27px;
+}
+.content-wrap-item-img{
+  width: 100%;
+  height:auto;
+}
+.content-wrap-item-bottom{
+  display: flex;
+  margin-top:16px;
+}
+.content-wrap-item-bottom > img{
+  flex: 0 0 70px;
+  height: 70px;
+  margin-right:20px;
+}
+.content-wrap-item-bottom-desc >p{
+  line-height: 35px;
+}
+.content-wrap-item-bottom-desc .date{
+  color: #737373;
+}
+#information .tabs{
+  padding-bottom:16px ;
+  border-bottom: 2.5px solid #C7C7C7;
+  /* background-image: url('/assets/images/cross-line.png');
+  background-size: 100% 2.5px;
+  background-repeat: no-repeat;
+  background-position: bottom left; */
+}
+
+#information .tabs>div{
+  color:#EC3B82;
+  font-size:33px;
+  line-height: 48px;
+  text-align: center;
+  padding:0 24px;
+  margin-right: 40px;
+  cursor: pointer;
+}
+#information .tabs>div.active{
+  color:#fff;
+  background-color:#EC3B82;
+  border-radius: 24px;
+}
+.tabs-america{
+    margin-top:55px;
+    color:#EC3B82;
+    font-size:31px;
+    line-height: 45px;
+   
+}
+.tabs-america .tabs-america-item>img{
+  width: 328px;
+  height:auto;
+  margin-bottom:20px ;
+}
+.tabs-america .tabs-america-item>p .text{
+  font-weight: 300;
+}
+.information-left-bg {
+  width: 138.5px;
+  height: 606.7px;
+  background-image: url('/assets/images/information-ellipse.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.information-bg {
+  position: absolute;
+  top: 978px;
+  left: 0;
+  right: 0;
+  height: 626px;
+  z-index: 11;
+  display: flex;
+  justify-content: space-between;
+}
+.information-bg .information-bg-left {
+  width: 138px;
+  height: 606px;
+  background-image: url('/assets/images/information-ellipse.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top:70px;
+}
+.information-bg .information-bg-right {
+  width: 280px;
+  height: 371px;
+  background-image: url('/assets/images/information-monkey.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
