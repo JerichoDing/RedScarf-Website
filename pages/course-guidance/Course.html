@@ -49,9 +49,9 @@
     </div> -->
     <div class="coach2">
         <div class="coach2_flex main">
-            <div class="coach2_lf">
-                <video src="https://www.highmarktutor.com/video/c17.mp4" width="100%" height="100%" controls autobuffer
-                       poster="/fudao/uploadfile/2022/0621/20220621101612508.jpg"></video>
+            <div class="coach2_lf" id="mse-fudao">
+                <!-- <video src="https://www.highmarktutor.com/video/c17.mp4" width="100%" height="100%" controls autobuffer
+                       poster="/fudao/uploadfile/2022/0621/20220621101612508.jpg"></video> -->
             </div>
             <div class="coach2_ri">
                 <div class="coach2_tit">
@@ -318,3 +318,17 @@
 </body>
 
 </html>
+
+<script>
+    new Player({
+	id: 'mse-fudao',
+	url: '/assets/video/考试作弊学术不端.mp4',
+	// 封面
+	poster: '/assets/video/考试作弊学术不端.jpg',
+	autoplay: false,
+	volume: 0.3,
+	playsinline: true,
+	width: 492,
+	height: 285,
+});
+</script>

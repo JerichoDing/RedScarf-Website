@@ -375,15 +375,7 @@
 
 	// 特殊情况的切换
 
-	let player = new Player({
-		id: 'mse',
-		url: '/assets/video/香港科技大学研究生学术不端.mp4',
-		autoplay: false,
-		volume: 0.3,
-		playsinline: true,
-		width: 870,
-		height: 482.5,
-	});
+
 
 	const RouteMapping = {
 		'index': '首页',
@@ -420,4 +412,7 @@
 	new PureCounter({
 		separator: ',',
 	});
+
+
+
 })();

@@ -17,9 +17,8 @@
 					<div class="col-md-6  d-flex  mb-5 mb-lg-0 advantage-top-img justify-content-start">
 					</div>
 					<div class="col-md-6 d-flex  mb-5 mb-lg-0 justify-content-end ">
-						<button class="text-center rsa-btn rsa-btn-link">
-							<a href="/scarf-information">了解更多</a>
-						</button>
+
+						<a href="/scarf-information"> <button class="text-center rsa-btn rsa-btn-link">了解更多</button></a>
 
 					</div>
 				</div>
@@ -47,18 +46,18 @@
 				<div class="row">
 					<a class="col-sm-8 col-md-4 col-lg-4 d-flex align-items-center mb-5 mb-lg-0 flex-column "
 					   href="/academic-appeals">
-						<img src="/assets/images/academic-appeal.png" alt="">
+						<img src="/assets/images/academic/1.jpg" alt="">
 						<h5 class="mt-2"> 学术申诉 </h5>
 					</a>
 					<a class="col-sm-8 col-md-4 col-lg-4 d-flex align-items-center mb-5 mb-lg-0 flex-column"
 					   href="/non-academic-appeals">
-						<img src="/assets/images/non-acadamic-appeal.png" alt="">
+						<img src="/assets/images/academic/2.jpg" alt="">
 						<h5 class="mt-2"> 非学术申诉 </h5>
 
 					</a>
 					<a class="col-sm-8 col-md-4 col-lg-4 d-flex align-items-center mb-5 mb-lg-0 flex-column"
 					   href="/third-appeals">
-						<img src="/assets/images/third-appeal.png" alt="">
+						<img src="/assets/images/academic/3.jpg" alt="">
 						<h5 class="mt-2"> 第三方申诉 </h5>
 					</a>
 				</div>
@@ -67,20 +66,19 @@
 				<div class="row">
 					<a class="col-sm-8 col-md-4 col-lg-4 d-flex align-items-center mb-5 mb-lg-0 flex-column"
 					   href="/course-guidance">
-						<img src="/assets/images/academic-counseling.png" alt="">
+						<img src="/assets/images/academic/4.jpg" alt="">
 						<h5 class="mt-2"> 课程辅导 </h5>
 
 					</a>
 					<a class="col-sm-8 col-md-4 col-lg-4 d-flex align-items-center mb-5 mb-lg-0 flex-column"
 					   href="/vocation-training">
-						<img src="/assets/images/course-guidance.png" alt="">
+						<img src="/assets/images/academic/5.jpg" alt="">
 						<h5 class="mt-2"> 职业培训 </h5>
 					</a>
 
 				</div>
 			</div>
 		</section>
-		<!-- TODO:下面整个模块过高 -->
 		<section id="featured">
 			<div class="d-flex justify-content-center">
 				<div class="d-flex justify-content-center featured-title">
@@ -188,12 +186,12 @@
 			<div class="apply-top-bg fixed-section-icon fixed-left">
 			</div>
 			<!-- apply-top-circle  semi-circle -->
-		
+
 
 
 		</section>
 
-		<section id="area" >
+		<section id="area">
 			<div class="container">
 				<img class="title-img mb-3" style="width: 400px;" src="/assets/images/title-image-2.png" alt="">
 				<div class="container">
@@ -314,7 +312,7 @@
 			{include scroll-svg.html}
 
 			{include apply-box.html}
-			<div class="container" >
+			<div class="container">
 				<img class="title-img-right " src="/assets/images/why-us.png" alt="">
 				<div class="container">
 					<div class="row mb-5">
@@ -356,13 +354,14 @@
 				</div>
 			</div>
 		</section>
-		
+
 
 		<!-- 视频 -->
 		<section id="video">
 			<img class="video-img-left " src="/assets/images/left-circle.png" alt="">
 			<div class="video-img-box ">
 			</div>
+			<div id="mse-index"></div>
 		</section>
 
 
@@ -392,3 +391,17 @@
 </body>
 
 </html>
+
+<script>
+	new Player({
+	id: 'mse-index',
+	url: '/assets/video/UCL大三学生三门考试与他人共谋.mp4',
+	// 封面
+	poster: '/assets/video/UCL大三学生三门考试与他人共谋.jpg',
+	autoplay: false,
+	volume: 0.3,
+	playsinline: true,
+	width: 492,
+	height: 285,
+});
+</script>

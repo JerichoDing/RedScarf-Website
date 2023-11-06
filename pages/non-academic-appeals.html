@@ -55,17 +55,17 @@
 				<div class="container mt-5 appeal-list" data-aos="fade-up">
 					<div class="row">
 						<div class="col-sm-8 col-md-4 col-lg-4 d-flex align-items-center mb-5 mb-lg-0 flex-column ">
-							<img src="/assets/images/academic-appeal.png" alt="">
+							<img src="/assets/images/course/1.jpg" alt="">
 							<h5 class="mt-2"> 特殊情况 </h5>
 
 						</div>
 						<div class="col-sm-8 col-md-4 col-lg-4 d-flex align-items-center mb-5 mb-lg-0 flex-column">
-							<img src="/assets/images/non-acadamic-appeal.png" alt="">
+							<img src="/assets/images/course/2.jpg" alt="">
 							<h5 class="mt-2"> 无上限补考 </h5>
 
 						</div>
 						<div class="col-sm-8 col-md-4 col-lg-4 d-flex align-items-center mb-5 mb-lg-0 flex-column">
-							<img src="/assets/images/third-appeal.png" alt="">
+							<img src="/assets/images/course/3.jpg" alt="">
 							<h5 class="mt-2"> 补考挂科 </h5>
 						</div>
 					</div>
@@ -73,12 +73,12 @@
 				<div class="container mt-5 appeal-list" data-aos="fade-up">
 					<div class="row">
 						<div class="col-sm-8 col-md-4 col-lg-4 d-flex align-items-center mb-5 mb-lg-0 flex-column">
-							<img src="/assets/images/academic-counseling.png" alt="">
+							<img src="/assets/images/course/4.jpg" alt="">
 							<h5 class="mt-2"> 毕业论文 </h5>
 
 						</div>
 						<div class="col-sm-8 col-md-4 col-lg-4 d-flex align-items-center mb-5 mb-lg-0 flex-column">
-							<img src="/assets/images/course-guidance.png" alt="">
+							<img src="/assets/images/course/5.jpg" alt="">
 							<h5 class="mt-2"> 学位申诉 </h5>
 						</div>
 					</div>
@@ -90,7 +90,7 @@
 			<section id="non-appeals-area">
 				<div class="container mb-3 pl-5">
 					<div class="row">
-						<img src="/assets/images/policy-title.png" alt="">
+						<img style="width: 800px;" class="mb-5" src="/assets/images/policy-title.png" alt="">
 					</div>
 					<div class="tabs area-tabs d-flex align-items-center">
 						<div class="area-tab-item active-text bold hover-text">欧洲</div>
@@ -103,14 +103,14 @@
 				<div class="container appeal-list" data-aos="fade-up">
 					<div class="row">
 						<div class="col-sm-8 col-md-4 col-lg-4 d-flex align-items-center mb-5 mb-lg-0 flex-column ">
-							<img src="/assets/images/academic-appeal.png" alt="">
+							<img src="/assets/images/academic/6.jpg" alt="">
 						</div>
 						<div class="col-sm-8 col-md-4 col-lg-4 d-flex align-items-center mb-5 mb-lg-0 flex-column">
-							<img src="/assets/images/non-acadamic-appeal.png" alt="">
+							<img src="/assets/images/academic/7.jpg" alt="">
 
 						</div>
 						<div class="col-sm-8 col-md-4 col-lg-4 d-flex align-items-center mb-5 mb-lg-0 flex-column">
-							<img src="/assets/images/third-appeal.png" alt="">
+							<img src="/assets/images/academic/5.jpg" alt="">
 						</div>
 					</div>
 				</div>
@@ -151,12 +151,11 @@
 							<div class="area-item-btn">
 								<span class="hover-text mb-2 cursor">北美</span>
 								<span class="hover-text mb-2 cursor">欧洲</span>
+								<br />
+
 								<span class="hover-text mb-2 cursor">澳洲</span>
-								<span class="hover-text mb-2 cursor">亚洲</span> <br />
-								<span class="hover-text mb-2 cursor">北美</span>
-								<span class="hover-text mb-2 cursor">欧洲</span>
-								<span class="hover-text mb-2 cursor">澳洲</span>
-								<span class="hover-text mb-2 cursor">亚洲</span>
+								<span class="hover-text mb-2 cursor">亚洲</span> 
+								
 							</div>
 						</div>
 					</div>
@@ -261,8 +260,11 @@
 				<div class="row right-fixed d-flex align-items-end flex-column">
 					<img src="/assets/images/non-ac-video-title.png" alt="">
 				</div>
+				
 			</div>
-			<div class="container video-img-box-2"> </div>
+			<div class="container video-img-box-2">
+				<div id="mse-2"></div>
+			</div>
 		</section>
 		<section>
 			<div class="we-can-get ml-5"> </div>
@@ -312,3 +314,18 @@
 </body>
 
 </html>
+
+
+<script>
+	new Player({
+	id: 'mse-2',
+	url: '/assets/video/美国UC本科大三GPA过低被开除.mp4',
+	// 封面
+	poster: '/assets/video/美国UC本科大三GPA过低被开除.jpg',
+	autoplay: false,
+	volume: 0.3,
+	playsinline: true,
+	width: 870,
+	height: 482.5,
+});
+</script>
