@@ -637,7 +637,7 @@ section {
 }
 .what-is-academic-appeal-intro {
 	padding-top: 0;
-	margin-top: -50px;
+	margin-top: 10px;
 }
 .what-is-academic-appeal-top {
 	position: relative;
@@ -659,6 +659,20 @@ section {
 	background-size: 100%;
 	background-repeat: no-repeat;
 	z-index: -1;
+}
+.what-is-non-academic-appeal-title.appeal-banner-title{
+	background-image: url('/assets/images/留学生申诉的困境.png');
+	width: 350px;
+	margin-top: 30px;
+}
+.what-is-academic-appeal-title {
+	width: 840px;
+	height: 280px;
+	background-image: url('/assets/images/什么是留学申诉呢.png');
+	background-position: 0 0;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	margin-bottom: 30px;
 }
 .what-is-non-academic-appeal {
 	width: 420px;
@@ -1408,6 +1422,10 @@ section {
 	background-repeat: no-repeat;
 	background-position: center;
 }
+#hero .banner-box-left .banner-left-top.none {
+	
+	background-image: url('/assets/images/REDSCARF学术申诉.png');
+}
 #hero .banner-box-left .banner-left-top.third {
 	width: 600px;
 	height: 300px;
@@ -1953,6 +1971,12 @@ section {
 .non-appeal-feedback{
 	margin-top: -300px;
 }
+.feedback-container{
+	max-width: 900px;
+	overflow-x: scroll;
+
+}
+
 #non-appeal-box .apply-box{
 	margin-top: 0;
 }
@@ -2241,7 +2265,26 @@ section {
 }
 /* feedback start */
 .feedback-box {
-	margin-top: 30px;
+	max-width: 900px;
+	overflow-x: scroll;
+	margin: 30px auto 0;
+	position: relative;
+}
+.feedback-box .bi-twins{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 40px;
+	color: var(--bs-primary-300);
+}
+.feedback-box .bi-twins:hover{
+	color: var(--bs-primary-700);;
+}
+.feedback-box .bi-twins:nth-of-type(1){
+	right: 0;
+}
+.feedback-box .bi-twins:nth-of-type(2){
+	left: 0;
 }
 .feedback-box .col {
 	width: 250px;
@@ -2254,6 +2297,7 @@ section {
 	color: var(--bs-white);
 	padding: 20px 8px 30px;
 	font-size: 14px;
+	user-select: none;
 }
 .feedback-box .col:nth-of-type(1) {
 	background-image: url('/assets/images/feedback-1.png');
@@ -2264,6 +2308,12 @@ section {
 }
 .feedback-box .col:nth-of-type(3) {
 	background-image: url('/assets/images/feedback-3.png');
+}
+.feedback-box .col:nth-of-type(4) {
+	background-image: url('/assets/images/feedback-2.png');
+}
+.feedback-box .col:nth-of-type(5) {
+	background-image: url('/assets/images/feedback-1.png');
 }
 .feedback-box .col img {
 	width: 45px;
