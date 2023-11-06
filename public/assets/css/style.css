@@ -100,6 +100,9 @@ li {
 .h-800 {
 	height: 800px;
 }
+.w-500{
+	width: 500px;
+}
 .fixed-section-icon {
 	position: absolute;
 }
@@ -648,14 +651,23 @@ section {
 	background-repeat: no-repeat;
 	z-index: -1;
 }
-.what-is-non-academic-appeal {
+.what-is-non-academic-appeal-title {
 	width: 220px;
-	height: 440px;
-	/* background-image: url('/assets/images/what-is-non-appeal.png'); */
+	height: 60px;
+	background-image: url('/assets/images/什么是申诉.png');
 	background-position: 0 0;
 	background-size: 100%;
 	background-repeat: no-repeat;
 	z-index: -1;
+}
+.what-is-non-academic-appeal {
+	width: 420px;
+	height: 280px;
+	background-image: url('/assets/images/什么是留学申诉.png');
+	background-position: 0 0;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	margin-top: 30px;
 }
 
 .non-academic-appeal-intro {
@@ -1428,7 +1440,7 @@ section {
 	margin-top: 140px;
 }
 #hero .banner-box-right img {
-	width: 300px;
+	width: 400px;
 	position: absolute;
 	right: 100px;
 }
@@ -1444,7 +1456,7 @@ section {
 	top: 90px;
 	overflow: hidden;
 	z-index: 3;
-	width: 200px;
+	width: 280px;
 	right: 150px;
 	transform: skew(135deg,22deg); 
 	border-radius: 10px;
@@ -1938,7 +1950,12 @@ section {
 	margin-top: -50px;
 	z-index: -1;
 }
-
+.non-appeal-feedback{
+	margin-top: -300px;
+}
+#non-appeal-box .apply-box{
+	margin-top: 0;
+}
  .apply-box {
 	position: relative;
 	z-index: 1;
@@ -1947,6 +1964,7 @@ section {
 .apply-box .apply-form-bg {
 	padding: 0 120px;
 }
+
 .apply-left-envelope{
 	position: absolute;
 	top: 200px;
