@@ -131,6 +131,115 @@ p{
   color: #000000;
   margin-right:8px;
 }
+.study-wind{
+
+}
+.study-wind .study-wind-left{
+  flex: 0 0 526px;
+  margin-right:80px;
+}
+.study-wind .study-wind-left>img{
+  width:526px;
+  /* height:606px; */
+  border-radius:20px;
+  /* overflow: hidden; */
+}
+.study-wind-left .wind-left-bottom{
+  margin-top:30px;
+}
+.study-wind-left .wind-left-bottom>img {
+  width:90px;
+  height:auto;
+  border-radius: 10px;
+}
+.study-wind .study-wind-right{
+  flex:1;
+}
+.study-wind-right .wind-right-title{
+  font-size:27px;
+  color: #EC3B82;
+  line-height: 33px;
+  font-weight: 400;
+}
+.study-wind-right-icon{
+  margin-top:15px;
+  width:380px;
+  height:auto;
+}
+.study-wind-star-wrap{
+  display: flex;
+  line-height: 32px;
+  font-size: 28px;
+  color: #EC3B82;
+  margin:20px 0;
+}
+.study-wind-star{
+  display: flex;
+}
+.study-wind-star>img{
+  width:32px;
+  height:auto;
+}
+.study-wind-star-wrap>p{
+  margin:0 10px 0 15px;
+}
+.study-wind-news{
+  width:147px;
+  height: auto;
+}
+.study-wind-news-content{
+  margin:15px 0;
+}
+.study-wind-news-content .news-content-item{
+  color:#EC3B82;
+  font-size:20px;
+}
+.study-wind-news-content .news-content-item .news-content-item-title{
+  flex: 0 0 6em;
+  text-align: justify;
+  display: flex;
+  justify-content: space-between;
+}
+.study-wind-hot-search{
+  line-height: 32px;
+  font-weight: bold;
+  color: #EC3B82;
+  font-size: 20px;
+}
+.study-wind-hot-search-keywords{
+  margin:10px 0 ;
+}
+.study-wind-hot-search-keywords .hot-search-keywords-item{
+  background-color: #EC3B82;
+  height:32px;
+  line-height: 32px;
+  border-radius: 15px;
+  color:#fff;
+  font-size:20px;
+  padding:0 20px;
+}
+.hot-search-input{
+  width:100%;
+  font-size:23px;
+  background-color: #C7C7C7;
+  border-radius: 20px;
+  height: 50px;
+  line-height: 50px;
+  padding:0 20px;
+  outline: none;
+  color:#EC3B82;
+}
+.hot-search-btn{
+  background-color: #D630FF;
+  border-radius: 20px;
+  font-size: 27px;
+  color:#fff;
+  letter-spacing: 4px;
+  line-height: 50px;
+  text-align: center;
+  margin-top:10px;
+  cursor: pointer;
+}
 .information-job{
   margin-top: 144px;
   width: 100%;
