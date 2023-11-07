@@ -387,7 +387,7 @@
 		'third-appeals': '第三方申诉',
 		'vocation-training': 'vocation-training',
 		'scarf-information': '红领巾资讯',
-		'contact-us': '联系导师',
+		'contact-us': '联系我们',
 	};
 	let path = window.location.pathname.substring(1);
 	if( path.split('/').length>1){
